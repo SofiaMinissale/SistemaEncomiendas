@@ -20,7 +20,8 @@ namespace SistemaEncomiendas
             int costoEnvio = 5600;
             long NroSeguimiento = 828842;
             string estadoOrden = "En centro de Distribución";
-           
+            int nroingreso;
+
 
             Console.WriteLine(" ");
             Console.WriteLine("INGRESA UN NUMERO PARA NAVEGAR EN EL MENU");
@@ -45,6 +46,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("");
                     //PESO
                     Console.WriteLine("INGRESE EL PESO DEL PAQUETE (KG)");
+                    peso = Utils.solicitarPeso();
                     Console.ReadLine();
                     Console.Clear();
 
@@ -52,6 +54,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("SELECCIONE LA PRIORIDAD DE SU PEDIDO, si es NORMAL o URGENTE");
                     Console.WriteLine("1 - Normal");
                     Console.WriteLine("2 - Urgente");
+                    nroingreso = Utils.solcitarNumeroEntre(1, 2);
                     Console.ReadLine();
                     Console.Clear();
 
@@ -59,6 +62,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("SELECCIONE SI EL ORIGEN DEL ENVIO ES UN DOMICILIO O SUCURSAL");
                     Console.WriteLine("1 - Domicilio Particular");
                     Console.WriteLine("2 - Sucursarl");
+                    nroingreso = Utils.solcitarNumeroEntre(1, 2);
                     Console.ReadLine();
                     Console.Clear();
 
@@ -66,6 +70,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("SELECCIONE SI SU PEDIDO ES NACIONAL O INTERNACIONAL ");
                     Console.WriteLine("1 - Nacional");
                     Console.WriteLine("2 - Internacional");
+                    nroingreso = Utils.solcitarNumeroEntre(1, 2);
                     Console.ReadLine();
                     Console.Clear();
 
@@ -75,6 +80,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("2 - Metropolitana");
                     Console.WriteLine("3 - Norte");
                     Console.WriteLine("4 - Sur");
+                    nroingreso = Utils.solcitarNumeroEntre(1, 4);
                     Console.ReadLine();
                     Console.Clear();
 
@@ -94,6 +100,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("SELECCIONE SI EL DESTINO DEL ENVIO ES UN DOMICILIO O SUCURSAL");
                     Console.WriteLine("1 - Domicilio Particular");
                     Console.WriteLine("2 - Sucursarl");
+                    nroingreso = Utils.solcitarNumeroEntre(1, 2);
                     Console.ReadLine();
                     Console.Clear();
 
@@ -101,6 +108,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("SELECCIONE SI SU PEDIDO ES NACIONAL O INTERNACIONAL ");
                     Console.WriteLine("1 - Nacional");
                     Console.WriteLine("2 - Internacional");
+                    nroingreso = Utils.solcitarNumeroEntre(1, 2);
                     Console.ReadLine();
                     Console.Clear();
 
@@ -110,6 +118,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("2 - Metropolitana");
                     Console.WriteLine("3 - Norte");
                     Console.WriteLine("4 - Sur");
+                    nroingreso = Utils.solcitarNumeroEntre(1, 4);
                     Console.ReadLine();
                     Console.Clear();
 
@@ -121,6 +130,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("4 - Rio Negro");
                     Console.WriteLine("5 - Santa Cruz");
                     Console.WriteLine("6 - Tierra del Fuego");
+                    nroingreso = Utils.solcitarNumeroEntre(1, 6);
                     Console.ReadLine();
                     Console.Clear();
 
@@ -131,6 +141,9 @@ namespace SistemaEncomiendas
                     //DATOS DEL DESTINATARIO
 
                     Console.WriteLine("INGRESE NOMBRE DEL DESTINATARIO");
+                
+                    
+
                     Console.ReadLine();
                     Console.Clear();
 
@@ -178,6 +191,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("¿Desea consultar otra orden de servicio?");
                     Console.WriteLine("1 - SI");
                     Console.WriteLine("2 - NO");
+                    nroingreso = Utils.solcitarNumeroEntre(1, 2);
 
 
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");

@@ -32,6 +32,55 @@ namespace SistemaEncomiendas
             return nroIngresado;
         }
 
+        public static double solicitarPeso()
+        {
+            bool esPrimerIntento = true;
+            double nroIngresado;
+            bool esNumeroValido;
+
+            do
+            {
+                if (!esPrimerIntento)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("El peso de encomienda debe ser superior a 0.0 KG y menor a 30 KG");
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                }
+                esNumeroValido = double.TryParse(Console.ReadLine(), out nroIngresado);
+                esPrimerIntento = false;
+            }
+            while (nroIngresado == 0 || nroIngresado < 0 || nroIngresado > 30 || esNumeroValido == false);
+
+            return nroIngresado;
+        }
+
+        public static bool validarInputSiNO()
+        {
+            string valorIngresado;
+            bool esPrimerIntento = true;
+
+            do
+            {
+                if (!esPrimerIntento)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Recuerde que debe responder con 'SI' o 'NO'");
+                }
+                valorIngresado = Console.ReadLine().ToUpper();
+                esPrimerIntento = false;
+            } while (!valorIngresado.Equals("SI") && !valorIngresado.Equals("NO"));
+
+            Console.Clear();
+
+            if (valorIngresado.Equals("SI"))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
     }
 }
 
