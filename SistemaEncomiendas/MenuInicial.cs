@@ -6,12 +6,8 @@ namespace SistemaEncomiendas
 {
     public static class MenuInicial
     {
-        public static void mostrar()
-        {
-            MenuLogueo();
-        }
 
-        public static void MenuLogueo()
+        public static void mostrar()
         {
             /* USUARIO DE PRUEBA:  20306578636768; NicolasMartinez; usuario1  */
             string nombreUsuario = "NicolasMartinez";
