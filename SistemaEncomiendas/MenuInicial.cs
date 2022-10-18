@@ -9,39 +9,50 @@ namespace SistemaEncomiendas
         public static void mostrar()
         {
             MenuLogueo();
-            MenuPrincipal.mostrar();
         }
 
         public static void MenuLogueo()
         {
             /* USUARIO DE PRUEBA:  20306578636768; NicolasMartinez; usuario1  */
+            string nombreUsuario = "NicolasMartinez";
+            string cuit = "20306578636768";
+            string contraseña = "usuario1";
 
-            string nombreUsuario = "Nicolas Martinez";
-            long cuit = 20306578636768;
-            double peso = 5;
-            string sucursalOrigen = "Buenos Aires";
-            string sucursalDestino = "Tierra del Fuego";
-            long dni = 36966066;
-            int costoEnvio = 5600;
-            long NroSeguimiento = 828842;
-           
+            int numeroIntentos = 0;
+            string cuitIngresado;
+            string usuarioIngresado;
+            string contraseñaIngresada;
+
+            do
+            {
+                if (numeroIntentos >= 1)
+                {
+                    Console.WriteLine("Los datos ingresados son incorrectos, pulse una tecla para volver a intentarlo");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+
                 Console.WriteLine("INGRESE SU NUMERO DE CUIT");
-                string numeroCuit = Console.ReadLine();
+                cuitIngresado = Console.ReadLine();
                 Console.Clear();
 
                 Console.WriteLine("INGRESE SU USUARIO");
-                nombreUsuario = Console.ReadLine();
+                usuarioIngresado = Console.ReadLine();
                 Console.Clear();
 
                 Console.WriteLine("INGRESE SU CONTRASEÑA");
-                string contraseña = Console.ReadLine();
+                contraseñaIngresada = Console.ReadLine();
                 Console.Clear();
 
-                Console.WriteLine($"BIENVENIDO {nombreUsuario}");
+                numeroIntentos++;
 
-            }
+            } while (!cuitIngresado.Equals(cuit) ||
+                    !usuarioIngresado.Equals(nombreUsuario) ||
+                    !contraseñaIngresada.Equals(contraseña));
+            
+            Console.WriteLine($"BIENVENIDO {nombreUsuario}");
+            MenuPrincipal.mostrar();
         }
-
-
     }
+}
     
