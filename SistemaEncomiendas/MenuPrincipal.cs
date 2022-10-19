@@ -66,6 +66,7 @@ namespace SistemaEncomiendas
                         {
                             prioridad = "Normal";
                         }
+                        Console.Clear();
 
                         numeroIntentos++;
 
@@ -193,7 +194,6 @@ namespace SistemaEncomiendas
                         Console.WriteLine("3 - Norte");
                         Console.WriteLine("4 - Sur");
                         opcionSeleccionada = Utils.solcitarNumeroEntre(1, 4);
-                        Console.ReadLine();
                         Console.Clear();
 
                         numeroIntentos++;
@@ -224,7 +224,6 @@ namespace SistemaEncomiendas
                         {
                             direccionDestino = "Cordoba, Metropolitana";
                         }
-                        Console.ReadLine();
                         Console.Clear();
 
                         numeroIntentos++;
@@ -256,7 +255,6 @@ namespace SistemaEncomiendas
                     Console.WriteLine(" ");
                     Console.WriteLine("1- SI ");
                     Console.WriteLine("2 - NO");
-                    Console.Clear();
                     Console.WriteLine("");
                     Console.WriteLine(" ");
                     Console.WriteLine(" ");
