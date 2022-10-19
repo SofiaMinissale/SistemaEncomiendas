@@ -19,24 +19,30 @@ namespace SistemaEncomiendas
             string usuarioIngresado;
             string contraseñaIngresada;
 
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("              INICIAR SESION");
+            Console.WriteLine("------------------------------------------");
+
             do
             {
                 if (numeroIntentos >= 1)
                 {
                     Console.WriteLine("Los datos ingresados son incorrectos, pulse una tecla para volver a intentarlo");
                     Console.ReadLine();
-                    Console.Clear();
                 }
 
-                Console.WriteLine("INGRESE SU NUMERO DE CUIT");
+                Console.WriteLine("");
+                Console.WriteLine("Introduce tu numero de CUIT:");
                 cuitIngresado = Console.ReadLine();
-                Console.Clear();
+                //Console.Clear();
 
-                Console.WriteLine("INGRESE SU USUARIO");
+                Console.WriteLine("");
+                Console.WriteLine("Introduce tu nombre de usuario:");
                 usuarioIngresado = Console.ReadLine();
-                Console.Clear();
+                //Console.Clear();
 
-                Console.WriteLine("INGRESE SU CONTRASEÑA");
+                Console.WriteLine("");
+                Console.WriteLine("Introduce tu contraseña:");
                 contraseñaIngresada = Console.ReadLine();
                 Console.Clear();
 
@@ -45,8 +51,9 @@ namespace SistemaEncomiendas
             } while (!cuitIngresado.Equals(cuit) ||
                     !usuarioIngresado.Equals(nombreUsuario) ||
                     !contraseñaIngresada.Equals(contraseña));
-            
-            Console.WriteLine($"BIENVENIDO {nombreUsuario}");
+
+            Console.Clear();
+            Console.WriteLine($"BIENVENIDO {nombreUsuario}!");
             MenuPrincipal.mostrar();
         }
     }

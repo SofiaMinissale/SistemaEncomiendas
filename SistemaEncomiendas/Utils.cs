@@ -81,6 +81,26 @@ namespace SistemaEncomiendas
             return false;
         }
 
+        //Devuelve true si es valido el DNI
+        public static bool esDNIValido(string dni)
+        {
+            //Comprobamos si el DNI tiene 8 digitos
+            if (dni.Length != 8)
+            {
+                //No es un DNI Valido
+                return false;
+            }
+
+            bool numbersValid = int.TryParse(dni, out int dniInteger);
+            if (!numbersValid)
+            {
+                //No se pudo convertir los números a formato númerico
+                return false;
+            }
+            //DNI Valido
+            return true;
+        }
+
     }
 }
 
