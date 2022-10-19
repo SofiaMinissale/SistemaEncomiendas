@@ -248,18 +248,55 @@ namespace SistemaEncomiendas
                     Console.WriteLine("DATOS DEL DESTINATARIO");
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("");
-                    Console.WriteLine("Ingrese nombre del destinatario:");
-                    nombreDestinatario = Console.ReadLine();
-                    Console.WriteLine("Ingrese apellido del destinatario:");
-                    apellidoDestinatario = Console.ReadLine();
 
+                    //Nombre destinatario
                     numeroIntentos = 0;
                     do
                     {
                         if (numeroIntentos >= 1)
                         {
-                            Console.WriteLine("Los datos ingresados son incorrectos, por favor vuelva a intentarlo");
+                            Console.WriteLine("Debe ingresar un nombre valido, por favor vuelva a intentarlo");
                         }
+                        Console.WriteLine("");
+                        Console.WriteLine("Ingrese nombre del destinatario:");
+                        nombreDestinatario = Console.ReadLine();
+
+                        numeroIntentos++;
+
+                    } while (String.IsNullOrEmpty(nombreDestinatario) ||
+                    nombreDestinatario.Any(char.IsDigit) ||
+                    nombreDestinatario.All(char.IsWhiteSpace)
+                    );
+
+                    //Apellido destinatario
+                    numeroIntentos = 0;
+                    do
+                    {
+                        if (numeroIntentos >= 1)
+                        {
+                            Console.WriteLine("Debe ingresar un apellido valido, por favor vuelva a intentarlo");
+                        }
+                        Console.WriteLine("");
+                        Console.WriteLine("Ingrese apellido del destinatario:");
+                        apellidoDestinatario = Console.ReadLine();
+
+                        numeroIntentos++;
+
+                    } while (String.IsNullOrEmpty(apellidoDestinatario) ||
+                    apellidoDestinatario.Any(char.IsDigit) ||
+                    apellidoDestinatario.All(char.IsWhiteSpace)
+                    );
+
+
+                    //Datos destinatario
+                    numeroIntentos = 0;
+                    do
+                    {
+                        if (numeroIntentos >= 1)
+                        {
+                            Console.WriteLine("Debe ingresar un DNI valido, por favor vuelva a intentarlo");
+                        }
+                        Console.WriteLine("");
                         Console.WriteLine("Ingrese el DNI del destinatario");
                         DNIDestinatario = Console.ReadLine();
 
