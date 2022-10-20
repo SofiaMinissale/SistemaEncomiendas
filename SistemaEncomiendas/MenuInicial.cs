@@ -54,7 +54,7 @@ namespace SistemaEncomiendas
 
             Console.Clear();
             Console.WriteLine($"BIENVENIDO {nombreUsuario}!");
-            MenuPrincipal.mostrar();
+            MenuPrincipal.mostrar(new Servicio());
         }
     }
 }

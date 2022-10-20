@@ -8,7 +8,7 @@ namespace SistemaEncomiendas
     public static class MenuPrincipal
     {
 
-        public static void mostrar()
+        public static void mostrar(Servicio servicio)
         {
 
             string nombreUsuario = "Nicolas Martinez";
@@ -23,9 +23,8 @@ namespace SistemaEncomiendas
             string apellidoDestinatario = "";
             int opcionSeleccionada;
             int numeroIntentos = 0;
-
+            string nroSeguimiento = "0";
             int costoEnvio = 5600;
-            string nroSeguimiento = "82884";
             string estadoOrden = "En centro de Distribución";
 
             Console.WriteLine(" ");
@@ -43,6 +42,17 @@ namespace SistemaEncomiendas
             switch (opcionSeleccionada)
             {
                 case 1:
+
+                    if (!String.IsNullOrEmpty(servicio.nroSeguimiento)){
+                        Console.WriteLine("Por el momento solo se permite una solicitud por usuario");
+                        Console.WriteLine(" ");
+                        Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
+                        Console.ReadKey();
+                        Console.Clear();
+                        MenuPrincipal.mostrar(servicio);
+                        break;
+                    }
+
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("         SOLICITUD DE SERVICIO");
                     Console.WriteLine("------------------------------------------");
@@ -79,6 +89,7 @@ namespace SistemaEncomiendas
 
                     // Unica opcion desarrollada --> Nacional
                     numeroIntentos = 0;
+                    opcionSeleccionada = 0;
                     do
                     {
                         if (numeroIntentos >= 1)
@@ -105,6 +116,7 @@ namespace SistemaEncomiendas
 
                     // Unica opcion desarrollada --> Metropolitana
                     numeroIntentos = 0;
+                    opcionSeleccionada = 0;
                     do
                     {
                         if (numeroIntentos >= 1)
@@ -131,6 +143,7 @@ namespace SistemaEncomiendas
 
                     // Unica opcion desarrollada --> Buenos Aires
                     numeroIntentos = 0;
+                    opcionSeleccionada = 0;
                     do
                     {
                         if (numeroIntentos >= 1)
@@ -156,7 +169,9 @@ namespace SistemaEncomiendas
 
                     // Unica opcion desarrollada --> Martinez
                     numeroIntentos = 0;
+                    opcionSeleccionada = 0;
                     do
+
                     {
                         if (numeroIntentos >= 1)
                         {
@@ -169,6 +184,7 @@ namespace SistemaEncomiendas
                         Console.WriteLine("Seleccione sucursal de origen");
                         Console.WriteLine("1 - Martinez");
                         Console.WriteLine("2 - Olivos");
+                        opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
                         if (opcionSeleccionada == 1)
                         {
                             sucursalOrigen = "Martinez, Buenos Aires, Metropolitana";
@@ -182,6 +198,7 @@ namespace SistemaEncomiendas
                     //DATOS DESTINO
                     // Unica opcion desarrollada --> Metropolitana
                     numeroIntentos = 0;
+                    opcionSeleccionada = 0;
                     Console.Clear();
                     do
                     {
@@ -208,6 +225,7 @@ namespace SistemaEncomiendas
 
                     // Unica opcion desarrollada --> Cordoba
                     numeroIntentos = 0;
+                    opcionSeleccionada = 0;
                     do
                     {
                         if (numeroIntentos >= 1)
@@ -252,7 +270,6 @@ namespace SistemaEncomiendas
                         {
                             Console.WriteLine("Debe ingresar un domicilio valido, por favor vuelva a intentarlo");
                         }
-                        Console.WriteLine("");
                         Console.WriteLine("Ingrese domicilio del destinatario:");
                         string direccion = Console.ReadLine();
 
@@ -322,30 +339,48 @@ namespace SistemaEncomiendas
                     
                     Console.Clear();
 
+                    servicio.nroSeguimiento = "3054";
+                    servicio.peso = peso;
+                    servicio.sucursalOrigen = sucursalOrigen;
+                    servicio.direccionDestino = direccionDestino;
+                    servicio.DNIDestinatario = DNIDestinatario;
+                    servicio.nombreDestinatario = nombreDestinatario;
+                    servicio.apellidoDestinatario = apellidoDestinatario;
+                    servicio.costoEnvio = 455;
+
                     //RESUMEN DE LA SOLICITUD
                     Console.WriteLine("--------------------------------------");
                     Console.WriteLine("       RESUMEN DE SU SOLICITUD");
                     Console.WriteLine("--------------------------------------");
-                    Console.WriteLine($"* Numero de orden de servicio: {nroSeguimiento}");
-                    Console.WriteLine($"* Peso declarado: {peso}kg");
-                    Console.WriteLine($"* Origen: {sucursalOrigen}");
-                    Console.WriteLine($"* Destino: {direccionDestino}, Cordoba, Metropolitana");
-                    Console.WriteLine($"* DNI del receptor:{DNIDestinatario}");
-                    Console.WriteLine($"* Nombre y apellido del receptor:{nombreDestinatario}, {apellidoDestinatario}");
-                    Console.WriteLine($"* Costo del envio: ${costoEnvio}");
+                    Console.WriteLine($"* Numero de orden de servicio: {servicio.nroSeguimiento}");
+                    Console.WriteLine($"* Peso declarado: {servicio.peso}kg");
+                    Console.WriteLine($"* Origen: {servicio.sucursalOrigen}");
+                    Console.WriteLine($"* Destino: {servicio.direccionDestino}, Cordoba, Metropolitana");
+                    Console.WriteLine($"* DNI del receptor:{servicio.DNIDestinatario}");
+                    Console.WriteLine($"* Nombre y apellido del receptor:{servicio.nombreDestinatario}, {servicio.apellidoDestinatario}");
+                    Console.WriteLine($"* Costo del envio: ${servicio.costoEnvio}");
                     Console.WriteLine(" ");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
                     Console.Clear();
-                    MenuPrincipal.mostrar();
+                    MenuPrincipal.mostrar(servicio);
                     break;
                 case 2:
+                    Console.Clear();
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("     CONSULTAR ESTADO DE SERVICIO");
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("");
 
-                    //Datos destinatario
+                    if (String.IsNullOrEmpty(servicio.nroSeguimiento)){
+                        Console.WriteLine("Usted no tiene solicitudes pendientes");
+                        Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
+                        Console.ReadKey();
+                        Console.Clear();
+                        MenuPrincipal.mostrar(servicio);
+                    }
+
+                    //Se valida numero de seguimiento a consultar
                     numeroIntentos = 0;
                     do
                     {
@@ -353,55 +388,45 @@ namespace SistemaEncomiendas
                         {
                             Console.WriteLine("Debe ingresar un  número de orden existente, por favor vuelva a intentarlo");
                         }
-                        Console.WriteLine("");
                         Console.WriteLine("Ingrese el número de orden de servicio que desea consultar");
                         nroSeguimiento = Console.ReadLine();
 
                         numeroIntentos++;
 
-                    } while (!Utils.nroSeguimientoValido(nroSeguimiento));
+                    } while (!nroSeguimiento.Equals(servicio.nroSeguimiento));
 
                     Console.Clear();
-                    Console.WriteLine("Ingrese el nro de orden de servicio que desea consultar"); 
-                    Console.ReadLine();
-                    Console.WriteLine(" ");
-                    Console.WriteLine($"* Numero de orden de servicio: {nroSeguimiento}");
-                    Console.WriteLine($"* Peso declarado: {peso}kg");
-                    Console.WriteLine($"* Origen: {sucursalOrigen}");
-                    Console.WriteLine($"* Destino: {direccionDestino}");
-                    Console.WriteLine($"* DNI del receptor:{DNIDestinatario}");
-                    Console.WriteLine($"* Nombre y apellido del receptor:{nombreDestinatario}, {apellidoDestinatario}");
-                    Console.WriteLine($"* Costo del envio: ${costoEnvio}");
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("           ESTADO DE SERVICIO");
+                    Console.WriteLine("------------------------------------------");
                     Console.WriteLine("");
-                    Console.WriteLine("¿Desea consultar otra orden de servicio?");
-                    Console.WriteLine("1 - SI");
-                    Console.WriteLine("2 - NO");
-                    opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
+                    Console.WriteLine($"* Numero de orden de servicio: {servicio.nroSeguimiento}");
+                    Console.WriteLine($"* Peso declarado: {servicio.peso}kg");
+                    Console.WriteLine($"* Origen: {servicio.sucursalOrigen}");
+                    Console.WriteLine($"* Destino: {servicio.direccionDestino}");
+                    Console.WriteLine($"* DNI del receptor:{servicio.DNIDestinatario}");
+                    Console.WriteLine($"* Nombre y apellido del receptor:{servicio.nombreDestinatario}, {servicio.apellidoDestinatario}");
+                    Console.WriteLine($"* Costo del envio: ${servicio.costoEnvio}");
+                    Console.WriteLine("");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
                     Console.Clear();
-                    MenuPrincipal.mostrar();
+                    MenuPrincipal.mostrar(servicio);
                     break;
                 case 3:
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("        CONSULTAR ESTADO DE CUENTA");
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine(" ");
-                    Console.WriteLine("Ingrese mes/ año(en formato mmAA):");
-                    Console.WriteLine("Sus envios en la fecha: 18/10:");
+                    Console.WriteLine($"Resumen a la fecha: {DateTime.Today}");
                     Console.WriteLine(" ");
-                    Console.WriteLine($"Un paquete con un peso de: {peso}kg");
-                    Console.WriteLine($"Origen {sucursalOrigen}");
-                    Console.WriteLine($"Destino {direccionDestino}");
-                    Console.WriteLine($"Costo de envio: ${costoEnvio}");
-                    Console.WriteLine(" ");
-                    Console.WriteLine($"Monto total de su cuenta ${costoEnvio}");
+                    Console.WriteLine($"Monto total de su cuenta ${servicio.costoEnvio}");
                     Console.WriteLine($"Estado: A PAGAR");
                     Console.WriteLine(" ");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
                     Console.Clear();
-                    MenuPrincipal.mostrar();
+                    MenuPrincipal.mostrar(servicio);
                     break;
                 case 4:
                     Console.WriteLine("CERRANDO SESION, pulse una tecla para continuar");
