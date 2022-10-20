@@ -110,7 +110,7 @@ namespace SistemaEncomiendas
                 return false;
             }
 
-            bool numbersValid = int.TryParse(nroSeguimiento, out int dniInteger);
+            bool numbersValid = int.TryParse(nroSeguimiento, out int nroSeguimientoInteger);
             if (!numbersValid)
             {  
                 return false;
