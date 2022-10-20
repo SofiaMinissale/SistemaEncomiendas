@@ -396,8 +396,6 @@ namespace SistemaEncomiendas
                     } while (opcionSeleccionada != 1);
 
 
-
-
                     //DIRECCION DESTINO Y DATOS DESTINATARIO
 
                     Console.Clear();
@@ -405,10 +403,6 @@ namespace SistemaEncomiendas
                       Console.WriteLine("DATOS DEL DESTINATARIO");
                       Console.WriteLine("------------------------------------------");
                       Console.WriteLine("");
-
-
-
-
 
                     numeroIntentos = 0;
                     do
