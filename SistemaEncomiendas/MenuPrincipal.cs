@@ -25,7 +25,7 @@ namespace SistemaEncomiendas
             int numeroIntentos = 0;
 
             int costoEnvio = 5600;
-            long nroSeguimiento = 828842;
+            string nroSeguimiento = "82884";
             string estadoOrden = "En centro de Distribución";
 
             Console.WriteLine(" ");
@@ -57,7 +57,7 @@ namespace SistemaEncomiendas
                     {
                         if (numeroIntentos >= 1)
                         {
-                            Console.WriteLine("Opcion aun no desarrollada, pulse una tecla para reintentarlo");
+                            Console.WriteLine("Opcion aun no desarrollada, presione ENTER para reintentarlo");
                             Console.ReadLine();
                         }
 
@@ -83,7 +83,7 @@ namespace SistemaEncomiendas
                     {
                         if (numeroIntentos >= 1)
                         {
-                            Console.WriteLine("Opcion aun no desarrollada, pulse una tecla para reintentarlo");
+                            Console.WriteLine("Opcion aun no desarrollada, presione ENTER para reintentarlo");
                             Console.ReadLine();
                         }
 
@@ -109,7 +109,7 @@ namespace SistemaEncomiendas
                     {
                         if (numeroIntentos >= 1)
                         {
-                            Console.WriteLine("Opcion aun no desarrollada, pulse una tecla para reintentarlo");
+                            Console.WriteLine("Opcion aun no desarrollada, presione ENTER para reintentarlo");
                             Console.ReadLine();
                         }
 
@@ -135,7 +135,7 @@ namespace SistemaEncomiendas
                     {
                         if (numeroIntentos >= 1)
                         {
-                            Console.WriteLine("Opcion aun no desarrollada, pulse una tecla para reintentarlo");
+                            Console.WriteLine("Opcion aun no desarrollada, presione ENTER para reintentarlo");
                             Console.ReadLine();
                         }
 
@@ -160,7 +160,7 @@ namespace SistemaEncomiendas
                     {
                         if (numeroIntentos >= 1)
                         {
-                            Console.WriteLine("Opcion aun no desarrollada, pulse una tecla para reintentarlo");
+                            Console.WriteLine("Opcion aun no desarrollada, presione ENTER para reintentarlo");
                             Console.ReadLine();
                         }
 
@@ -237,19 +237,35 @@ namespace SistemaEncomiendas
                     } while (opcionSeleccionada != 2);
 
                     //DIRECCION DESTINO Y DATOS DESTINATARIO
-                    Console.WriteLine("");
-                    Console.WriteLine("Ingrese direccion de destino");
-                    string direccion = Console.ReadLine();
 
-                    direccionDestino = direccion + direccionDestino;
+                      Console.Clear();
+                      Console.WriteLine("------------------------------------------");
+                      Console.WriteLine("DATOS DEL DESTINATARIO");
+                      Console.WriteLine("------------------------------------------");
+                      Console.WriteLine("");
 
-                    Console.Clear();
-                    Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("DATOS DEL DESTINATARIO");
-                    Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("");
 
-                    //Nombre destinatario
+                    numeroIntentos = 0;
+                    do
+                    {
+                        if (numeroIntentos >= 1)
+                        {
+                            Console.WriteLine("Debe ingresar un domicilio valido, por favor vuelva a intentarlo");
+                        }
+                        Console.WriteLine("");
+                        Console.WriteLine("Ingrese domicilio del destinatario:");
+                        string direccion = Console.ReadLine();
+
+                        direccionDestino = direccion + direccionDestino;
+
+                        numeroIntentos++;
+
+                    } while (String.IsNullOrEmpty(direccionDestino) ||
+                    direccionDestino.All(char.IsWhiteSpace)
+                    );
+
+
+                    //nombre destinatario
                     numeroIntentos = 0;
                     do
                     {
@@ -269,12 +285,13 @@ namespace SistemaEncomiendas
                     );
 
                     //Apellido destinatario
+
                     numeroIntentos = 0;
                     do
                     {
                         if (numeroIntentos >= 1)
                         {
-                            Console.WriteLine("Debe ingresar un apellido valido, por favor vuelva a intentarlo");
+                            Console.WriteLine("Debe ingresar un nombre valido, por favor vuelva a intentarlo");
                         }
                         Console.WriteLine("");
                         Console.WriteLine("Ingrese apellido del destinatario:");
@@ -286,7 +303,6 @@ namespace SistemaEncomiendas
                     apellidoDestinatario.Any(char.IsDigit) ||
                     apellidoDestinatario.All(char.IsWhiteSpace)
                     );
-
 
                     //Datos destinatario
                     numeroIntentos = 0;
@@ -313,7 +329,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine($"* Numero de orden de servicio: {nroSeguimiento}");
                     Console.WriteLine($"* Peso declarado: {peso}kg");
                     Console.WriteLine($"* Origen: {sucursalOrigen}");
-                    Console.WriteLine($"* Destino: {direccionDestino}");
+                    Console.WriteLine($"* Destino: {direccionDestino}, Cordoba, Metropolitana");
                     Console.WriteLine($"* DNI del receptor:{DNIDestinatario}");
                     Console.WriteLine($"* Nombre y apellido del receptor:{nombreDestinatario}, {apellidoDestinatario}");
                     Console.WriteLine($"* Costo del envio: ${costoEnvio}");
@@ -328,7 +344,25 @@ namespace SistemaEncomiendas
                     Console.WriteLine("     CONSULTAR ESTADO DE SERVICIO");
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("");
-                    Console.WriteLine("Ingrese el nro de orden de servicio que desea consultar");
+
+                    //Datos destinatario
+                    numeroIntentos = 0;
+                    do
+                    {
+                        if (numeroIntentos >= 1)
+                        {
+                            Console.WriteLine("Debe ingresar un  número de orden existente, por favor vuelva a intentarlo");
+                        }
+                        Console.WriteLine("");
+                        Console.WriteLine("Ingrese el número de orden de servicio que desea consultar");
+                        nroSeguimiento = Console.ReadLine();
+
+                        numeroIntentos++;
+
+                    } while (!Utils.nroSeguimientoValido(nroSeguimiento));
+
+                    Console.Clear();
+                    Console.WriteLine("Ingrese el nro de orden de servicio que desea consultar"); 
                     Console.ReadLine();
                     Console.WriteLine(" ");
                     Console.WriteLine($"* Numero de orden de servicio: {nroSeguimiento}");
@@ -339,6 +373,9 @@ namespace SistemaEncomiendas
                     Console.WriteLine($"* Nombre y apellido del receptor:{nombreDestinatario}, {apellidoDestinatario}");
                     Console.WriteLine($"* Costo del envio: ${costoEnvio}");
                     Console.WriteLine("");
+                    Console.WriteLine("¿Desea consultar otra orden de servicio?");
+                    Console.WriteLine("1 - SI");
+                    Console.WriteLine("2 - NO");
                     opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();

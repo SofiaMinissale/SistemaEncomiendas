@@ -101,6 +101,23 @@ namespace SistemaEncomiendas
             return true;
         }
 
+
+        public static bool nroSeguimientoValido(string nroSeguimiento)
+        {
+            
+            if (nroSeguimiento.Length != 5 && nroSeguimiento != "82884")
+            {
+                return false;
+            }
+
+            bool numbersValid = int.TryParse(nroSeguimiento, out int dniInteger);
+            if (!numbersValid)
+            {  
+                return false;
+            }
+            return true;
+        }
+
     }
 }
 

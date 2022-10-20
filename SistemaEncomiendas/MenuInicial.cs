@@ -27,7 +27,7 @@ namespace SistemaEncomiendas
             {
                 if (numeroIntentos >= 1)
                 {
-                    Console.WriteLine("Los datos ingresados son incorrectos, pulse una tecla para volver a intentarlo");
+                    Console.WriteLine("Los datos ingresados son incorrectos, presione ENTER para volver a intentarlo");
                     Console.ReadLine();
                 }
 
