@@ -20,6 +20,7 @@ namespace SistemaEncomiendas
         public string nroSeguimiento { get; set; }
         public int costoEnvio { get; set; }
         public string estadoOrden { get; set; }
+        public string direccionOrigen { get; set; }
     }
 }
 
