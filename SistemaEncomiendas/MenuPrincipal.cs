@@ -16,6 +16,7 @@ namespace SistemaEncomiendas
             double peso = 0;
             string prioridad;
             string tipoEnvio;
+            string seleccionEnvio = "";
             string sucursalOrigen = "";
             string sucursalDestino = "";
             string direccionDestino = "";
@@ -61,35 +62,8 @@ namespace SistemaEncomiendas
                     Console.WriteLine("");
 
                     //PESO
-                    Console.WriteLine("Ingrese el peso de paquete (KG):");
-                    peso = Utils.solicitarPeso();
-
-                    // Unica opcion desarrollada --> Normal
-                    do
-                    {
-                        if (numeroIntentos >= 1)
-                        {
-                            Console.WriteLine("Opcion aun no desarrollada, presione ENTER para reintentarlo");
-                            Console.ReadLine();
-                        }
-
-                        //PRIORIDAD
-                        Console.WriteLine("");
-                        Console.WriteLine("Seleccione la prioridad del envio:");
-                        Console.WriteLine("1 - Normal");
-                        Console.WriteLine("2 - Urgente");
-                        opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
-                        if (opcionSeleccionada == 1)
-                        {
-                            prioridad = "Normal";
-                        }
-
-                        numeroIntentos++;
-
-                    } while (opcionSeleccionada != 1);
-
-
-                    // Unica opcion desarrollada --> Nacional
+                 
+                    // Unica opcion desarrollada --> Correspondencia
                     numeroIntentos = 0;
                     opcionSeleccionada = 0;
                     do
@@ -102,19 +76,47 @@ namespace SistemaEncomiendas
 
                         //TIPO DE ENVIO
                         Console.WriteLine("");
-                        Console.WriteLine("Seleccione el tipo de envio:");
-                        Console.WriteLine("1 - Nacional");
-                        Console.WriteLine("2 - Internacional");
+                        Console.WriteLine("Por favor, ingrese el tipo de envío que desea realizar");
+                       // Console.WriteLine("");
+                        Console.WriteLine("1 -Correspondencia (sobres hasta 500g)");
+                        Console.WriteLine("2 -Encomienda (bultos de 500g a 30kg)");
                         opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
                         if (opcionSeleccionada == 1)
                         {
-                            tipoEnvio = "Nacional";
+                            seleccionEnvio = "Correspondencia";
                         }
 
                         numeroIntentos++;
 
                     } while (opcionSeleccionada != 1);
                     Console.Clear();
+
+
+                    // Unica opcion desarrollada --> Normal
+                    numeroIntentos = 0;
+                    opcionSeleccionada = 0;
+                    do
+                    {
+                        if (numeroIntentos >= 1)
+                        {
+                            Console.WriteLine("Opcion aun no desarrollada, presione ENTER para reintentarlo");
+                            Console.ReadLine();
+                        }
+
+                        //PRIORIDAD
+                        Console.WriteLine("");
+                        Console.WriteLine("Seleccione la prioridad del envio:");
+                        Console.WriteLine("1 - Normal");
+                        Console.WriteLine("2 - Urgente (48hs)");
+                        opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
+                        if (opcionSeleccionada == 1)
+                        {
+                            prioridad = "Normal";
+                        }
+
+                        numeroIntentos++;
+
+                    } while (opcionSeleccionada != 1);
 
 
                     //  para el prototipo usamos --> Domicilio
@@ -131,8 +133,8 @@ namespace SistemaEncomiendas
                         //TIPO DE ENVIO
                         Console.WriteLine("");
                         Console.WriteLine("Seleccione si el origen del envío es un domicilio particular o sucursal:");
-                        Console.WriteLine("1 - Domicilio");
-                        Console.WriteLine("2 - Sucursal");
+                        Console.WriteLine("1 - Sucursal");
+                        Console.WriteLine("2 - Domicilio");
                         opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
                         if (opcionSeleccionada == 1)
                         {
@@ -143,35 +145,6 @@ namespace SistemaEncomiendas
                     } while (opcionSeleccionada != 1);
                     Console.Clear();
 
-              
-
-
-                    // Unica opcion desarrollada --> Metropolitana
-                    numeroIntentos = 0;
-                    opcionSeleccionada = 0;
-                    do
-                    {
-                        if (numeroIntentos >= 1)
-                        {
-                            Console.WriteLine("Opcion aun no desarrollada, presione ENTER para reintentarlo");
-                            Console.ReadLine();
-                        }
-
-                        //REGION ORIGEN
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine(" SOLICITUD DE SERVICIO - DATOS DE ORIGEN");
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("");
-                        Console.WriteLine("Seleccione region de origen");
-                        Console.WriteLine("1 - Centro");
-                        Console.WriteLine("2 - Metropolitana");
-                        Console.WriteLine("3 - Norte");
-                        Console.WriteLine("4 - Sur");
-                        opcionSeleccionada = Utils.solcitarNumeroEntre(1, 4);
-
-                        numeroIntentos++;
-
-                    } while (opcionSeleccionada != 2);
 
                     // Unica opcion desarrollada --> Buenos Aires
                     numeroIntentos = 0;
@@ -186,14 +159,30 @@ namespace SistemaEncomiendas
 
                         //PROVINCIA ORIGEN
                         Console.WriteLine("");
-                        Console.WriteLine("Seleccione provincia de origen");
+                        Console.WriteLine("Seleccione provincia de origen:");
                         Console.WriteLine("1 - Buenos Aires");
-                        Console.WriteLine("2 - Cordoba");
+                        Console.WriteLine("2 - Catamarca");
                         Console.WriteLine("3 - Chaco");
-                        Console.WriteLine("4 - La Pampa");
-                        Console.WriteLine("5 - Salta");
-                        Console.WriteLine("6 - Jujuy");
-                        opcionSeleccionada = Utils.solcitarNumeroEntre(1, 6);
+                        Console.WriteLine("4 - Chubut");
+                        Console.WriteLine("5 - Cordoba");
+                        Console.WriteLine("6 - Corrientes");
+                        Console.WriteLine("7 - Entre Rios");
+                        Console.WriteLine("8 - Formosa");
+                        Console.WriteLine("9 - Jujuy");
+                        Console.WriteLine("10 - La pampa");
+                        Console.WriteLine("11 - La Rioja");
+                        Console.WriteLine("12 - Mendoza");
+                        Console.WriteLine("13 - Misiones");
+                        Console.WriteLine("14 - Neuquen");
+                        Console.WriteLine("15 - Rio Negro");
+                        Console.WriteLine("16 - San Juan");
+                        Console.WriteLine("17 - San Luis");
+                        Console.WriteLine("18 - Santa Cruz");
+                        Console.WriteLine("19 - Santa Fe");
+                        Console.WriteLine("20 - Santiago Del Estero");
+                        Console.WriteLine("21 - Tierra del fuego");
+
+                        opcionSeleccionada = Utils.solcitarNumeroEntre(1, 21);
 
                         numeroIntentos++;
 
@@ -225,27 +214,6 @@ namespace SistemaEncomiendas
                         numeroIntentos++;
 
                     } while (opcionSeleccionada != 1);
-
-
-                    numeroIntentos = 0;
-                    do
-                    {
-                        if (numeroIntentos >= 1)
-                        {
-                            Console.WriteLine("Debe ingresar un domicilio valido, por favor vuelva a intentarlo");
-                        }
-                        Console.WriteLine("Ingrese domicilio de origen:");
-                        string direccionO = Console.ReadLine();
-
-                        direccionOrigen = direccionO + direccionOrigen;
-
-                        numeroIntentos++;
-
-                    } while (String.IsNullOrEmpty(direccionOrigen) ||
-                    direccionOrigen.All(char.IsWhiteSpace)
-                    );
-
-                    //DATOS DESTINO
 
 
                     // Unica opcion desarrollada --> Nacional
@@ -296,12 +264,12 @@ namespace SistemaEncomiendas
                         //TIPO DE ENVIO
                         Console.WriteLine("");
                         Console.WriteLine("Seleccione si el destino del envío es un domicilio particular o sucursal:");
-                        Console.WriteLine("1 - Domicilio");
-                        Console.WriteLine("2 - Sucursal");
+                        Console.WriteLine("1 - Sucursal");
+                        Console.WriteLine("2 - Destino");
                         opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
                         if (opcionSeleccionada == 1)
                         {
-                            tipoEnvio = "Domicilio";
+                            tipoEnvio = "Sucursal";
                         }
                         numeroIntentos++;
 
@@ -309,10 +277,8 @@ namespace SistemaEncomiendas
                     Console.Clear();
 
 
-                    // Unica opcion desarrollada --> Metropolitana
                     numeroIntentos = 0;
                     opcionSeleccionada = 0;
-                    Console.Clear();
                     do
                     {
                         if (numeroIntentos >= 1)
@@ -321,54 +287,37 @@ namespace SistemaEncomiendas
                             Console.ReadLine();
                         }
 
-                        //REGION DESTINO
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine(" SOLICITUD DE SERVICIO - DATOS DE DESTINO");
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("Seleccione region de destino");
-                        Console.WriteLine("1 - Centro");
-                        Console.WriteLine("2 - Metropolitana");
-                        Console.WriteLine("3 - Norte");
-                        Console.WriteLine("4 - Sur");
-                        opcionSeleccionada = Utils.solcitarNumeroEntre(1, 4);
-
-                        numeroIntentos++;
-
-                    } while (opcionSeleccionada != 2);
-
-                    // Unica opcion desarrollada --> Cordoba
-                    numeroIntentos = 0;
-                    opcionSeleccionada = 0;
-                    do
-                    {
-                        if (numeroIntentos >= 1)
-                        {
-                            Console.WriteLine("Opcion aun no desarrollada, pulse una tecla para reintentarlo");
-                            Console.ReadLine();
-
-                        }
-
                         //PROVINCIA DESTINO
                         Console.WriteLine("");
-                        Console.WriteLine("Seleccione provincia de destino");
+                        Console.WriteLine("Seleccione provincia Destino:");
                         Console.WriteLine("1 - Buenos Aires");
-                        Console.WriteLine("2 - Cordoba");
+                        Console.WriteLine("2 - Catamarca");
                         Console.WriteLine("3 - Chaco");
-                        Console.WriteLine("4 - La Pampa");
-                        Console.WriteLine("5 - Salta");
-                        Console.WriteLine("6 - Jujuy");
-                        opcionSeleccionada = Utils.solcitarNumeroEntre(1, 6);
-                        if (opcionSeleccionada == 1)
-                        {
-                            direccionDestino = "Cordoba, Metropolitana";
-                        }
+                        Console.WriteLine("4 - Chubut");
+                        Console.WriteLine("5 - Cordoba");
+                        Console.WriteLine("6 - Corrientes");
+                        Console.WriteLine("7 - Entre Rios");
+                        Console.WriteLine("8 - Formosa");
+                        Console.WriteLine("9 - Jujuy");
+                        Console.WriteLine("10 - La pampa");
+                        Console.WriteLine("11 - La Rioja");
+                        Console.WriteLine("12 - Mendoza");
+                        Console.WriteLine("13 - Misiones");
+                        Console.WriteLine("14 - Neuquen");
+                        Console.WriteLine("15 - Rio Negro");
+                        Console.WriteLine("16 - San Juan");
+                        Console.WriteLine("17 - San Luis");
+                        Console.WriteLine("18 - Santa Cruz");
+                        Console.WriteLine("19 - Santa Fe");
+                        Console.WriteLine("20 - Santiago Del Estero");
+                        Console.WriteLine("21 - Tierra del fuego");
+
+                        opcionSeleccionada = Utils.solcitarNumeroEntre(1, 21);
 
                         numeroIntentos++;
 
-                    } while (opcionSeleccionada != 2);
+                    } while (opcionSeleccionada != 1);
 
-
-                    // Unica opcion desarrollada --> Martinez
                     numeroIntentos = 0;
                     opcionSeleccionada = 0;
                     do
@@ -383,12 +332,12 @@ namespace SistemaEncomiendas
                         //LOCALIDAD DESTINO
                         Console.WriteLine("");
                         Console.WriteLine("Seleccione localidad destino");
-                        Console.WriteLine("1 - Cosquin");
-                        Console.WriteLine("2 - La Falda");
+                        Console.WriteLine("1 - Bahia Blanca");
+                        Console.WriteLine("2 - Bragado");
                         opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
                         if (opcionSeleccionada == 1)
                         {
-                            sucursalDestino = "Cosquin, Cordoba";
+                            sucursalDestino = "Bahia Blanca, Buenos Aires";
                         }
 
                         numeroIntentos++;
@@ -494,15 +443,53 @@ namespace SistemaEncomiendas
                     Console.WriteLine("--------------------------------------");
                     Console.WriteLine("       RESUMEN DE SU SOLICITUD");
                     Console.WriteLine("--------------------------------------");
-                    Console.WriteLine($"* Numero de orden de servicio: {servicio.nroSeguimiento}");
-                    Console.WriteLine($"* Peso declarado: {servicio.peso}kg");
-                    Console.WriteLine($"* Origen: {servicio.direccionOrigen}, Martinez, Buenos Aires");
-                    Console.WriteLine($"* Destino: {servicio.direccionDestino}, Los Cocos, Cordoba");
-                    Console.WriteLine($"* DNI del receptor:{servicio.DNIDestinatario}");
+
+                    Console.WriteLine($"* Tipo de envío: Correspondencia");
+                    Console.WriteLine($"* Prioridad: Normal");
+                    Console.WriteLine($"* Origen: {servicio.direccionOrigen} Martinez, Buenos Aires");
+                    Console.WriteLine($"* Destino: {servicio.direccionDestino}, Bahia Blanca, Buenos Aires");
                     Console.WriteLine($"* Nombre y apellido del receptor:{servicio.nombreDestinatario}, {servicio.apellidoDestinatario}");
-                    Console.WriteLine($"* Costo del envio: ${servicio.costoEnvio}");
+                    Console.WriteLine($"* DNI del receptor:{servicio.DNIDestinatario}");
+                    Console.WriteLine($"* Cotización del envío: ${servicio.costoEnvio}");
                     Console.WriteLine(" ");
-                    Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
+                   
+
+                    numeroIntentos = 0;
+                    opcionSeleccionada = 0;
+                    do
+                    {
+                        if (numeroIntentos >= 1)
+                        {
+
+                            Console.ReadKey();
+                            Console.Clear();
+                            MenuPrincipal.mostrar(servicio);
+                        }
+
+                        //PRIORIDAD
+                        Console.WriteLine("");
+                        Console.WriteLine("Por favor, indique si desea confirmar o rechazar la solicitud");
+                        Console.WriteLine("1 - CONFIRMAR");
+                        Console.WriteLine("2 - RECHAZAR");
+                        opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
+                        if (opcionSeleccionada == 1)
+                        {
+                            Console.Clear();
+                            Console.WriteLine($"¡Su solicitud se regitró, exitosamente!");
+                            Console.WriteLine($"Su número de Seguimiento es: 30541");
+                            Console.WriteLine($" ");
+                            Console.WriteLine($"¡Gracias por elegirnos!");
+                            Console.WriteLine($" ");
+                            Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
+                            Console.ReadKey();
+                            Console.Clear();
+                            MenuPrincipal.mostrar(servicio);
+                        }
+
+                        numeroIntentos++;
+
+                    } while (opcionSeleccionada != 1);
+
                     Console.ReadKey();
                     Console.Clear();
                     MenuPrincipal.mostrar(servicio);
@@ -542,13 +529,11 @@ namespace SistemaEncomiendas
                     Console.WriteLine("           ESTADO DE SERVICIO");
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("");
+                    Console.WriteLine($" fecha de solicitud: {DateTime.Today}");
                     Console.WriteLine($"* Numero de orden de servicio: {servicio.nroSeguimiento}");
-                    Console.WriteLine($"* Peso declarado: {servicio.peso}kg");
-                    Console.WriteLine($"* Origen: {servicio.direccionOrigen}" + "Martinez, Buenos Aires");
-                    Console.WriteLine($"* Destino: {servicio.direccionDestino}" + "Cosquin, Cordoba");
-                    Console.WriteLine($"* DNI del receptor:{servicio.DNIDestinatario}");
+                    Console.WriteLine($"* Estado de servicio:  {estadoOrden}");
                     Console.WriteLine($"* Nombre y apellido del receptor:{servicio.nombreDestinatario}, {servicio.apellidoDestinatario}");
-                    Console.WriteLine($"* Costo del envio: ${servicio.costoEnvio}");
+                    Console.WriteLine($"* Destino: {servicio.direccionDestino}" + "Cosquin, Cordoba");
                     Console.WriteLine("");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
@@ -557,14 +542,20 @@ namespace SistemaEncomiendas
                     break;
                 case 3:
                     Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("        CONSULTAR ESTADO DE CUENTA");
+                    Console.WriteLine("        ESTADO DE CUENTA");
                     Console.WriteLine("------------------------------------------");
+
+                    Console.WriteLine($" Nicolas Martinez, El detalle de tus ordenes de servicio: ");
                     Console.WriteLine(" ");
-                    Console.WriteLine($"Resumen a la fecha: {DateTime.Today}");
+                    Console.WriteLine($" fecha de solicitud: {DateTime.Today}");
                     Console.WriteLine(" ");
-                    Console.WriteLine($"Monto total de su cuenta ${servicio.costoEnvio}");
-                    Console.WriteLine($"Estado: A PAGAR");
-                    Console.WriteLine(" ");
+                    Console.WriteLine($"* Numero de orden de servicio: {servicio.nroSeguimiento}");
+                    Console.WriteLine($"importe: ${servicio.costoEnvio}");
+                    Console.WriteLine($"Estado del pago: A PAGAR");
+                    Console.WriteLine($"Total envios pendientes de facturacion: 0");
+                    Console.WriteLine($"Total envios impagos: 1");
+                    Console.WriteLine($"Total envios pagos:0");
+                 
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
                     Console.Clear();
