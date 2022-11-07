@@ -353,7 +353,7 @@ namespace SistemaEncomiendas
                       Console.WriteLine("------------------------------------------");
                       Console.WriteLine("");
 
-                    numeroIntentos = 0;
+                  /*  numeroIntentos = 0;
                     do
                     {
                         if (numeroIntentos >= 1)
@@ -369,7 +369,7 @@ namespace SistemaEncomiendas
 
                     } while (String.IsNullOrEmpty(direccionDestino) ||
                     direccionDestino.All(char.IsWhiteSpace)
-                    );
+                    );*/
 
 
                     //nombre destinatario
@@ -446,8 +446,8 @@ namespace SistemaEncomiendas
 
                     Console.WriteLine($"* Tipo de envío: Correspondencia");
                     Console.WriteLine($"* Prioridad: Normal");
-                    Console.WriteLine($"* Origen: {servicio.direccionOrigen} Martinez, Buenos Aires");
-                    Console.WriteLine($"* Destino: {servicio.direccionDestino}, Bahia Blanca, Buenos Aires");
+                    Console.WriteLine($"* Origen:  SUCURSAL 06, Av Libertador 146,  Martinez, Buenos Aires");
+                    Console.WriteLine($"* Destino: SUCURSAL 24, Los Condores 860, Bahia Blanca, Buenos Aires");
                     Console.WriteLine($"* Nombre y apellido del receptor:{servicio.nombreDestinatario}, {servicio.apellidoDestinatario}");
                     Console.WriteLine($"* DNI del receptor:{servicio.DNIDestinatario}");
                     Console.WriteLine($"* Cotización del envío: ${servicio.costoEnvio}");
