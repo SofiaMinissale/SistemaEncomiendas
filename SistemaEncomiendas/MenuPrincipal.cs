@@ -265,7 +265,7 @@ namespace SistemaEncomiendas
                         Console.WriteLine("");
                         Console.WriteLine("Seleccione si el destino del envío es un domicilio particular o sucursal:");
                         Console.WriteLine("1 - Sucursal");
-                        Console.WriteLine("2 - Destino");
+                        Console.WriteLine("2 - Domicilio");
                         opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
                         if (opcionSeleccionada == 1)
                         {
