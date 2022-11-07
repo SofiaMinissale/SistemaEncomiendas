@@ -138,7 +138,7 @@ namespace SistemaEncomiendas
                         opcionSeleccionada = Utils.solcitarNumeroEntre(1, 2);
                         if (opcionSeleccionada == 1)
                         {
-                            tipoEnvio = "Domicilio";
+                            tipoEnvio = "Sucursal";
                         }
                         numeroIntentos++;
 
