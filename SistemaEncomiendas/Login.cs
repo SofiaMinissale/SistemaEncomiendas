@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace SistemaEncomiendas
 {
-    internal class Login
+    public class Login
     {
         public string cuit { get; set; }
         public string nombreUsuario { get; set; }
         public string contraseña { get; set; }
 
-        public string archivoDatosUsuarios = @"../../datos/Usuarios.txt";
+        public string archivoDatosUsuarios = @"../../../usuarios.csv";
 
         public Login(string cuit, string nombreUsuario, string contraseña)
         {
@@ -27,19 +27,26 @@ namespace SistemaEncomiendas
             var stream = File.OpenRead(archivoDatosUsuarios);
             var reader = new StreamReader(stream);
 
+            var counter = 0;
+
             while (!reader.EndOfStream)
             {
                 var linea = reader.ReadLine();
 
-                string[] datos = linea.Split(';');
-
-                if (datos[0].Equals(cuit) &&
-                    datos[1].Equals(nombreUsuario) &&
-                    datos[2].Equals(contraseña))
+                if (counter > 0)
                 {
-                    usuarioValido = true;
-                    break;
+                    string[] datos = linea.Split(';');
+
+                    if (datos[0].Equals(cuit) &&
+                        datos[1].Equals(nombreUsuario) &&
+                        datos[2].Equals(contraseña))
+                    {
+                        usuarioValido = true;
+                        break;
+                    }
                 }
+                    
+                counter++;
             }
 
             stream.Close();

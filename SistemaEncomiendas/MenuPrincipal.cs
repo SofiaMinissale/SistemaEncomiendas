@@ -49,15 +49,15 @@ namespace SistemaEncomiendas
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("");
 
-                    if (cliente.IdOrdenServicio == null)
-                    {
-                        Console.WriteLine("USTED NO TIENE ENVIOS PARA MOSTRAR");
-                        Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
-                        Console.ReadKey();
-                        Console.Clear();
-                        MenuPrincipal.mostrar(cliente);
-                        break;
-                    }
+                    //if (cliente.IdOrdenServicio == null)
+                    //{
+                    //    Console.WriteLine("USTED NO TIENE ENVIOS PARA MOSTRAR");
+                    //    Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
+                    //    Console.ReadKey();
+                    //    Console.Clear();
+                    //    MenuPrincipal.mostrar(cliente);
+                    //    break;
+                    //}
                     
                     Console.Clear();
                     Console.WriteLine("------------------------------------------");
@@ -94,35 +94,8 @@ namespace SistemaEncomiendas
                     break;
             }
 
-        
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    
 
         /*  switch (opcionSeleccionada)
            {
@@ -1206,6 +1179,7 @@ namespace SistemaEncomiendas
   }*/
 
     }
+
     }
 
 }

@@ -1,0 +1,1039 @@
+region;provincia;localidad;calle;altura
+Centro;Mendoza;Tupungato;LOPEZ;5489
+Norte;San Juan;Angaco;MARTINEZ;599
+Sur;Chubut;Paso de Indios;CERRITO;8777
+Metropolitana;Buenos Aires;Ciudad Libertador San Martin;CORRIENTES;127
+Norte;Chaco;Libertad;CABILDO;12998
+Norte;Corrientes;San Luis del Palmar;LIBERTADOR;29872
+Centro;Entre Rios;Victoria;18 DE marzo;1111
+Sur;Neuquen;Picun Leufu;18 DE marzo;1111
+Sur;Rio Negro;Avellaneda;18 DE marzo;1111
+Centro;La Pampa;Catrilo;CABILDO;187
+Metropolitana;Buenos Aires;San Antonio de Areco;CORDOBA;188
+Norte;Misiones;Candelaria;MATIENZO;109972
+Sur;Chubut;Rio Senguer;TRIUNVIRATO;6577
+Metropolitana;Buenos Aires;Patagones;2 DE abril;2877
+Sur;Neuquen;Anelo;CABILDO;1234
+Centro;La Pampa;Maraco;11 PONIENTE;5798
+Metropolitana;Buenos Aires;Daireaux;11 PONIENTE;5798
+Norte;Chaco;Sargento Cabral;11 PONIENTE;5798
+Centro;Mendoza;San Carlos;20 DE NOVIEMBRE;1422
+Norte;Salta;Cerrillos;20 DE NOVIEMBRE;1422
+Centro;Entre Rios;Uruguay;20 DE noviembre;5482
+Norte;Formosa;Patino;20 DE noviembre;5887
+Sur;Neuquen;Anelo;20 DE noviembre;1874
+Centro;Cordoba;Tulumba;20 DE noviembre;0955
+Norte;Catamarca;Ambato;20 DE noviembre;0955
+Norte;Catamarca;Paclin;20 DE noviembre;0955
+Metropolitana;Buenos Aires;Bragado;20 DE noviembre;1081
+Norte;San Juan;Rawson;20 DE noviembre;1081
+Centro;Mendoza;Maipu;20 DE noviembre;1858
+Norte;San Juan;Santa Lucia;20 DE noviembre;1858
+Sur;Santa Cruz;Corpen Aike;20 DE noviembre;1858
+Centro;Mendoza;General Alvear;ADOLFO LOPEZ MATEOS;25
+Norte;Santiago del Estero;Guasayan;ALDAMA;1212
+Sur;Neuquen;Lacar;ALDAMA;1212
+Centro;San Luis;Ayacucho;ALDAMA 19-13
+Centro;Santa Fe;Villa Constitucion;ALDAMA 19-13
+Sur;Neuquen;Picunches;ALDAMA 19-13
+Norte;La Rioja;General Juan F. Quiroga;ALDAMA 50
+Norte;La Rioja;Independencia;ALDAMA 50
+Centro;Mendoza;Godoy Cruz;ALDAMA ESQ 20 DE NOVIEMBRE
+Metropolitana;Buenos Aires;La Costa;ALDAMA ESQ 20 DE NOVIEMBRE
+Centro;Mendoza;San Carlos;ALDAMA;720
+Norte;San Juan;Caucete;ALDAMA;720
+Centro;Entre Rios;Gualeguaychu;ARTEAGA;729
+Metropolitana;Buenos Aires;La Plata;ARTEAGA;729
+Centro;Santa Fe;San Martin;AV 3 ESQUINA CALLE 2
+Norte;Chaco;Libertador General San Martin;AV 3 ESQUINA CALLE 2
+Sur;Neuquen;Collon Cura;AV 3 ESQUINA CALLE 2
+Metropolitana;Buenos Aires;Carlos Tejedor;AV 5 DE MAYO 659
+Metropolitana;Buenos Aires;Salliquelo;AV 5 DE MAYO 659
+Centro;Cordoba;Cruz del Eje;AV 5 DE MAYO;1006
+Norte;Catamarca;Santa Maria;AV 5 DE MAYO;1006
+Norte;Chaco;Maipu;AV 5 DE MAYO;1006
+Metropolitana;Buenos Aires;Balcarce;AV DANIEL SOTO 738
+Metropolitana;Buenos Aires;Villarino;AV DANIEL SOTO 738
+Sur;Rio Negro;Pilcaniyeu;AV DANIEL SOTO 738
+Centro;Cordoba;Sobremonte;AV INDEPENDENCIA;1189
+Norte;Corrientes;Mercedes;AV INDEPENDENCIA;1189
+Norte;Misiones;Eldorado;AV INDEPENDENCIA;1189
+Metropolitana;Buenos Aires;Baradero;AV INDEPENDENCIA;219
+Norte;San Juan;Pocito;AV INDEPENDENCIA;219
+Sur;Neuquen;Zapala;AV INDEPENDENCIA;219
+Norte;Catamarca;Ancasti;AV INDEPENDENCIA 565-A
+Norte;Jujuy;Palpala;AV INDEPENDENCIA 565-A
+Norte;Jujuy;Tumbaya;AV INDEPENDENCIA 565-A
+Norte;Salta;Cachi;AV INDEPENDENCIA;545-B
+Sur;Santa Cruz;Rio Chico;AV INDEPENDENCIA;545-B
+Norte;Chaco;Bermejo;AV 18 DE MARZO ESQ BLVDM AVILA CAMACHO;1372
+Norte;Chaco;Quitilipi;AV 18 DE MARZO ESQ BLVDM AVILA CAMACHO;1372
+Norte;Chaco;General Donovan;AV 1O DE MAYO;102
+Sur;Neuquen;Huiliches;AV 1O DE MAYO;102
+Norte;Chaco;General Güemes;AV 1O DE MAYO;108
+Norte;Jujuy;Humahuaca;AV 1O DE MAYO;108
+Centro;La Pampa;Catrilo;AV 1O DE MAYO;240
+Norte;La Rioja;San Blas de Los Sauces;AV 1O DE MAYO;240
+Centro;Mendoza;Capital;AV 1O DE MAYO;29
+Norte;Salta;Rivadavia;AV 1O DE MAYO;29
+Centro;Cordoba;Rio Segundo;AV 20 DE;V;1372
+Norte;San Juan;Calingasta;AV 20 DE;V;1372
+Centro;La Pampa;Toay;AV 20 DE;V;881 ESQ ALDAMA
+Metropolitana;Buenos Aires;Adolfo Gonzales Chaves;AV 20 DE;V;881 ESQ ALDAMA
+Metropolitana;Buenos Aires;Navarro;AV 20 DE;V;881 ESQ ALDAMA
+Metropolitana;Buenos Aires;Adolfo Gonzales Chaves;AV 20 DE NOVIEMBRE;1046
+Norte;Catamarca;Tinogasta;AV 20 DE NOVIEMBRE;1046
+Norte;Santiago del Estero;Moreno;AV 20 DE NOVIEMBRE;1046
+Centro;Cordoba;Minas;AV 20 DE NOVIEMBRE;1053
+Norte;San Juan;25 de mayo;AV 20 DE NOVIEMBRE;1053
+Norte;Tucuman;Tafi Viejo;AV 20 DE NOVIEMBRE;1053
+Metropolitana;Buenos Aires;Guamini;AV 20 DE NOVIEMBRE;1137
+Norte;Salta;La Poma;AV 20 DE NOVIEMBRE;1137
+Centro;Cordoba;Colon;AV 20 DE NOVIEMBRE;1225
+Norte;Chaco;Libertador General San Martin;AV 20 DE NOVIEMBRE;1225
+Norte;San Juan;San Martin;AV 20 DE NOVIEMBRE;1225
+Centro;Cordoba;Totoral;AV 20 DE NOVIEMBRE;1320
+Centro;Entre Rios;Nogoya;AV 20 DE NOVIEMBRE;1320
+Norte;San Juan;Albardon;AV 20 DE NOVIEMBRE;1320
+Centro;Cordoba;General San Martin;AV 20 DE NOVIEMBRE;1371
+Centro;San Luis;Junin;AV 20 DE NOVIEMBRE;1371
+Centro;Entre Rios;Gualeguay;AV 20 DE NOVIEMBRE;1518
+Norte;Catamarca;La Paz;AV 20 DE NOVIEMBRE;1518
+Norte;Chaco;1° de Mayo;AV 20 DE NOVIEMBRE;1540
+Norte;Misiones;Montecarlo;AV 20 DE NOVIEMBRE;1540
+Sur;Tierra del Fuego;Tierra del Fuego;AV 20 DE NOVIEMBRE;1540
+Metropolitana;Buenos Aires;Junin;AV 20 DE NOVIEMBRE;822
+Norte;La Rioja;General San Martin;AV 20 DE NOVIEMBRE;822
+Centro;Cordoba;Ischilin;AV 20 DE NOVIEMBRE;1022
+Metropolitana;Buenos Aires;General Las Heras;AV 20 DE NOVIEMBRE;1022
+Metropolitana;Buenos Aires;25 de mayo;AV 20 DE NOVIEMBRE;1024
+Centro;Cordoba;Colon;AV 20 DE NOVIEMBRE;1041
+Centro;La Pampa;Lihuel Calel;AV 20 DE NOVIEMBRE;1041
+Norte;Corrientes;San Martin;AV 20 DE NOVIEMBRE;1041
+Centro;Entre Rios;Diamante;AV 20 DE NOVIEMBRE;1636
+Metropolitana;Buenos Aires;Marcos Paz;AV 20 DE NOVIEMBRE;1636
+Norte;San Juan;Sarmiento;AV 20 DE NOVIEMBRE;1636
+Centro;Cordoba;Union;AV 20 DE NOVIEMBRE;1896
+Metropolitana;Buenos Aires;Patagones;AV 20 DE NOVIEMBRE;1896
+Norte;Catamarca;Antofagasta de la Sierra;AV 20 DE NOVIEMBRE;1896
+Centro;Santa Fe;General Obligado;AV 20 DE NOVIEMBRE;2244
+Norte;Corrientes;Ituzaingo;AV 20 DE NOVIEMBRE;2244
+Metropolitana;Buenos Aires;Saavedra;AV 20 DE NOVIEMBRE;50221
+Norte;Santiago del Estero;Capital;AV 20 DE NOVIEMBRE;50221
+Metropolitana;Buenos Aires;Coronel Pringles;AV 20 DE NOVIEMBRE;772
+Norte;Jujuy;Santa Catalina;AV 20 DE NOVIEMBRE;772
+Sur;Santa Cruz;Magallanes;AV 20 DE NOVIEMBRE;772
+Norte;Misiones;25 de mayo;AV 20 DE NOVIEMBRE;859-B
+Norte;Salta;Metan;AV 20 DE NOVIEMBRE;859-B
+Norte;Tucuman;Tafi Viejo;AV 20 DE NOVIEMBRE;859-B
+Centro;Cordoba;Pocho;AV 20 DE NOVIEMBRE 795
+Metropolitana;Buenos Aires;Baradero;AV 20 DE NOVIEMBRE 795
+Norte;Tucuman;Yerba Buena;AV 20 DE NOVIEMBRE 795
+Centro;Mendoza;Lavalle;AV 20 DE NOVIEMBRE 813
+Centro;Santa Fe;San Jeronimo;AV 20 DE NOVIEMBRE 813
+Norte;La Rioja;Chilecito;AV 20 DE NOVIEMBRE 813
+Metropolitana;Buenos Aires;Olavarria;AV 20 DE NOVIEMBRE;579
+Metropolitana;Buenos Aires;Tres Lomas;AV 20 DE NOVIEMBRE;67997
+Sur;Neuquen;Alumine;AV 20 DE NOVIEMBRE. 1348
+Centro;Entre Rios;Federal;AV 20 DE NOVIEMBRE;267
+Norte;La Rioja;Famatina;AV 20 DE NOVIEMBRE;2667
+Metropolitana;Buenos Aires;Chascomus;AV 20 DE NOVIEMBRE;5798
+Metropolitana;Buenos Aires;Laprida;AV 20 DE NOVIEMBRE;5798
+Norte;Misiones;San Ignacio;AV 20 DE NOVIEMBRE;5798
+Norte;La Rioja;Famatina;AV 20 DE NOVIEMBRE;3897
+Centro;La Pampa;Atreuco;AV 20 DE NOVIEMBRE;1020
+Norte;Catamarca;Valle Viejo;AV 20 DE NOVIEMBRE;1020
+Norte;Santiago del Estero;Pellegrini;AV 20 DE NOVIEMBRE;1020
+Centro;Cordoba;Calamuchita;AV 20 DE NOVIEMBRE;1027
+Centro;Cordoba;Rio Primero;AV 20 DE NOVIEMBRE;1027
+Norte;La Rioja;Rosario Vera Penaloza;AV 20 DE NOVIEMBRE;1037
+Norte;La Rioja;Rosario Vera Penaloza;AV 20 DE NOVIEMBRE;1037
+Norte;Misiones;Capital;AV 20 DE NOVIEMBRE;1037
+Norte;Salta;Capital;AV 20 DE NOVIEMBRE;1037
+Norte;Misiones;25 de mayo;AV 20 DE NOVIEMBRE;1060
+Metropolitana;Buenos Aires;Carmen de Areco;AV 20 DE NOVIEMBRE;1070
+Metropolitana;Buenos Aires;Salto;AV 20 DE NOVIEMBRE;1070
+Metropolitana;Buenos Aires;Bragado;AV 20 DE NOVIEMBRE;1081
+Sur;Chubut;Rawson;AV 20 DE NOVIEMBRE;1081
+Centro;Cordoba;Rio Cuarto;AV 20 DE NOVIEMBRE;1105
+Norte;Misiones;Cainguas;AV 20 DE NOVIEMBRE;1105
+Metropolitana;Buenos Aires;Berisso;AV 20 DE NOVIEMBRE;1121
+Metropolitana;Buenos Aires;Quilmes;AV 20 DE NOVIEMBRE;1121
+Metropolitana;Buenos Aires;Saavedra;AV 20 DE NOVIEMBRE;1139-B
+Norte;San Juan;Capital;AV 20 DE NOVIEMBRE;1139-B
+Metropolitana;Buenos Aires;Adolfo Gonzales Chaves;AV 20 DE NOVIEMBRE;1178
+Metropolitana;Buenos Aires;Navarro;AV 20 DE NOVIEMBRE;1178
+Metropolitana;Buenos Aires;Tordillo;AV 20 DE NOVIEMBRE;1178
+Norte;Jujuy;Humahuaca;AV 20 DE NOVIEMBRE;1210
+Norte;Salta;General Güemes;AV 20 DE NOVIEMBRE;1210
+Centro;Entre Rios;Parana;AV 20 DE NOVIEMBRE;1291
+Centro;Mendoza;Tupungato;AV 20 DE NOVIEMBRE;1291
+Norte;San Juan;Angaco;AV 20 DE NOVIEMBRE;1291
+Centro;La Pampa;Hucal;AV 20 DE NOVIEMBRE;1371
+Norte;Chaco;General Belgrano;AV 20 DE NOVIEMBRE;1371
+Metropolitana;Buenos Aires;Lobos;AV 20 DE NOVIEMBRE;1950
+Metropolitana;Buenos Aires;San Pedro;AV 20 DE NOVIEMBRE;1950
+Norte;Misiones;Concepcion;AV 20 DE NOVIEMBRE;1950
+Centro;Mendoza;Lavalle;AV 20 DE NOVIEMBRE;1960
+Norte;La Rioja;Chilecito;AV 20 DE NOVIEMBRE;1960
+Norte;Misiones;San Javier;AV 20 DE NOVIEMBRE;1960
+Centro;Santa Fe;Castellanos;AV 20 DE NOVIEMBRE;933
+Metropolitana;Buenos Aires;San Andres de Giles;AV 20 DE NOVIEMBRE;933
+Norte;Corrientes;Paso de los Libres;AV 20 DE NOVIEMBRE;963
+Norte;Salta;Anta;AV 20 DE NOVIEMBRE;963
+Norte;San Juan;Ullum;AV 20 DE NOVIEMBRE;963
+Centro;Cordoba;San Alberto;AV 20 DE NOVIEMBRE;964
+Centro;Santa Fe;Castellanos;AV 20 DE NOVIEMBRE;964
+Centro;La Pampa;Rancul;AV 20 DE NOVIEMBRE;970-B
+Norte;Corrientes;Beron de Astrada;AV 20 DE NOVIEMBRE;970-B
+Metropolitana;Buenos Aires;Olavarria;AV 5;1186-A
+Metropolitana;Buenos Aires;Tres de Febrero;AV 5;1186-A
+Norte;Chaco;Almirante Brown;AV 5;1186-A
+Metropolitana;Buenos Aires;Exaltacion de la Cruz;AV 5 DE MAYO;1014
+Centro;Cordoba;Tercero Arriba;AV 5 DE MAYO;1100-A
+Norte;Chaco;12 de octubre;AV 5 DE MAYO;1100-A
+Norte;Misiones;Montecarlo;AV 5 DE MAYO;1100-A
+Metropolitana;Buenos Aires;Loberia;AV 5 DE MAYO;1189
+Metropolitana;Buenos Aires;San Nicolas;AV 5 DE MAYO;1189
+Norte;Misiones;Concepcion;AV 5 DE MAYO;1189
+Centro;Mendoza;La Paz;AV 5 DE MAYO;1219
+Norte;Tucuman;Graneros;AV 5 DE MAYO;1219
+Norte;Chaco;1° de Mayo;AV 5 DE MAYO;1253
+Norte;Tucuman;Monteros;AV 5 DE MAYO;1253
+Sur;Tierra del Fuego;Tierra del Fuego;AV 5 DE MAYO;1253
+Metropolitana;Buenos Aires;Junin;AV 5 DE MAYO;1721
+Norte;La Rioja;General San Martin;AV 5 DE MAYO;1721
+Metropolitana;Buenos Aires;Exaltacion de la Cruz;AV 5 DE MAYO;1850
+Metropolitana;Buenos Aires;Florencio Varela;AV 5 DE MAYO;1911
+Metropolitana;Buenos Aires;General Alvear;AV 5 DE MAYO;954
+Norte;Santiago del Estero;Guasayan;AV 5 DE MAYO;954
+Centro;Cordoba;Rio Segundo;AV 5 DE MAYO;1380
+Metropolitana;Buenos Aires;Campana;AV 5 DE MAYO;1380
+Norte;Corrientes;Capital;AV 5 DE MAYO;1544
+Norte;Salta;Rosario de Lerma;AV 5 DE MAYO;1544
+Norte;La Rioja;General Lamadrid;AV 5 DE MAYO;1987
+Norte;Salta;Iruya;AV 5 DE MAYO;1987
+Sur;Chubut;Gaiman;AV 5 DE MAYO;801
+Centro;Entre Rios;Diamante;AV 5 DE MAYO 1281
+Metropolitana;Buenos Aires;Marcos Paz;AV 5 DE MAYO 1281
+Norte;Santiago del Estero;Sarmiento;AV 5 DE MAYO 1281
+Metropolitana;Buenos Aires;Roque Perez;AV 5 DE MAYO 1634
+Norte;Salta;Capital;AV 5 DE MAYO 1634
+Metropolitana;Buenos Aires;Ituzaingo;AV 5 DE MAYO ESQ ALDAMA;991
+Norte;Misiones;General Manuel Belgrano;AV 5 DE MAYO ESQ ALDAMA;991
+Metropolitana;Buenos Aires;General Paz;AV 5 DE MAYO ESQ MATAMOROS;1070
+Norte;Santiago del Estero;Jimenez;AV 5 DE MAYO ESQ MATAMOROS;1070
+Centro;San Luis;Gobernador Dupuy;AV 5 DE MAYO;105
+Norte;Tucuman;La Cocha;AV 5 DE MAYO;105
+Metropolitana;Buenos Aires;Monte;AV 5 DE MAYO;1108
+Norte;Chaco;Tapenaga;AV 5 DE MAYO;1108
+Norte;San Juan;9 de julio;AV 5 DE MAYO;1108
+Metropolitana;Buenos Aires;Adolfo Gonzales Chaves;AV 5 DE MAYO;1226
+Metropolitana;Buenos Aires;Necochea;AV 5 DE MAYO;1226
+Metropolitana;Buenos Aires;Tordillo;AV 5 DE MAYO;1226
+Norte;Jujuy;San Pedro;AV 5 DE MAYO;1230-B
+Norte;Santiago del Estero;Loreto;AV 5 DE MAYO;1230-B
+Sur;Neuquen;Confluencia;AV 5 DE MAYO;1230-B
+Centro;Cordoba;Marcos Juarez;AV 5 DE MAYO;1259
+Norte;San Juan;Sarmiento;AV 5 DE MAYO;1259
+Sur;Santa Cruz;Deseado;AV 5 DE MAYO;1259
+Norte;Corrientes;Saladas;AV 5 DE MAYO;1350
+Norte;Tucuman;Capital;AV 5 DE MAYO;1350
+Metropolitana;Buenos Aires;Florentino Ameghino;AV 5 DE MAYO;1400
+Metropolitana;Buenos Aires;Florentino Ameghino;AV 5 DE MAYO;1400
+Centro;Santa Fe;Caseros;AV 5 DE MAYO;1401
+Metropolitana;Buenos Aires;Salto;AV 5 DE MAYO;1401
+Metropolitana;Buenos Aires;Roque Perez;AV 5 DE MAYO;1637
+Norte;Misiones;Capital;AV 5 DE MAYO;1637
+Norte;Chaco;9 de julio;AV 5 DE MAYO;1652
+Norte;Chaco;Tapenaga;AV 5 DE MAYO;1652
+Norte;Salta;Molinos;AV 5 DE MAYO;1652
+Metropolitana;Buenos Aires;Chacabuco;AV 5 DE MAYO;1683
+Metropolitana;Buenos Aires;San Cayetano;AV 5 DE MAYO;1683
+Sur;Santa Cruz;Lago Argentino;AV 5 DE MAYO;1683
+Norte;Misiones;Iguazu;AV 5 DE MAYO;1690
+Norte;Salta;General Jose de San Martin;AV 5 DE MAYO;1690
+Norte;Tucuman;Famailla;AV 5 DE MAYO;1763
+Centro;Santa Fe;San Justo;AV 5 DE MAYO;1906
+Metropolitana;Buenos Aires;Leandro N. Alem;AV 5 DE MAYO;1906
+Sur;Neuquen;Chos Malal;AV 5 DE MAYO;1906
+Metropolitana;Buenos Aires;Quilmes;AV 5 DE MAYO;1953
+Norte;Chaco;Bermejo;AV 5 DE MAYO;1953
+Metropolitana;Buenos Aires;General Pinto;AV 5 DE MAYO;2061
+Norte;Tucuman;Juan Bautista Alberdi;AV 5 DE MAYO;2061
+Centro;La Pampa;Limay Mahuida;AV 5 DE MAYO;357
+Centro;La Pampa;Limay Mahuida;AV 5 DE MAYO;357
+Metropolitana;Buenos Aires;Colon;AV 5 DE MAYO;357
+Metropolitana;Buenos Aires;Colon;AV 5 DE MAYO;357
+Metropolitana;Buenos Aires;San Miguel;AV 5 DE MAYO;357
+Norte;Santiago del Estero;San Martin;AV 5 DE MAYO;357
+Centro;La Pampa;Quemu Quemu;AV 5 DE MAYO;551
+Metropolitana;Buenos Aires;Berazategui;AV 5 DE MAYO;551
+Metropolitana;Buenos Aires;Balcarce;AV 5 DE MAYO;583
+Metropolitana;Buenos Aires;Pinamar;AV 5 DE MAYO;583
+Norte;La Rioja;Vinchina;AV 5 DE MAYO;583
+Norte;La Rioja;General Ocampo;AV 5 DE MAYO;631
+Norte;San Juan;Jachal;AV 5 DE MAYO;631
+Centro;La Pampa;Chical Co;AV 5 DE MAYO;660
+Centro;Santa Fe;Las Colonias;AV 5 DE MAYO;660
+Metropolitana;Buenos Aires;San Isidro;AV 5 DE MAYO;660
+Centro;Entre Rios;Islas del Ibicuy;AV 5 DE MAYO;954
+Metropolitana;Buenos Aires;General Lavalle;AV 5 DE MAYO;954
+Metropolitana;Buenos Aires;Tres de Febrero;AV 5;1186 A
+Norte;Chaco;Almirante Brown;AV 5;1186 A
+Norte;Santiago del Estero;Ojo de Agua;AV 5;1186 A
+Centro;Cordoba;San Javier;AV ALFONSO CASO;15
+Centro;La Pampa;Chical Co;AV ALFONSO CASO;15
+Centro;Santa Fe;Las Colonias;AV ALFONSO CASO;15
+Centro;La Pampa;Guatrache;AV FERROCARRIL;5798
+Norte;Catamarca;Capital;AV FERROCARRIL;5798
+Norte;Corrientes;General Alvear;AV FERROCARRIL;5798
+Norte;Salta;Rosario de la Frontera;AV FERROCARRIL;5798
+Centro;San Luis;Gobernador Dupuy;AV INDENDENCIA;1381
+Norte;Tucuman;La Cocha;AV INDENDENCIA;1381
+Centro;La Pampa;Realico;AV INDEPENDENCIA;1021
+Metropolitana;Buenos Aires;Brandsen;AV INDEPENDENCIA;1021
+Centro;San Luis;Chacabuco;AV INDEPENDENCIA;1023
+Norte;Salta;San Carlos;AV INDEPENDENCIA;1023
+Sur;Chubut;Futaleufu;AV INDEPENDENCIA;1125
+Metropolitana;Buenos Aires;Escobar;AV INDEPENDENCIA;117
+Norte;Santiago del Estero;Figueroa;AV INDEPENDENCIA;1247
+Norte;Jujuy;Tilcara;AV INDEPENDENCIA;145
+Norte;Santiago del Estero;Moreno;AV INDEPENDENCIA;145
+Sur;Rio Negro;Adolfo Alsina;AV INDEPENDENCIA;145
+Metropolitana;Buenos Aires;Ensenada;AV INDEPENDENCIA;1683
+Norte;Jujuy;Susques;AV INDEPENDENCIA;1683
+Sur;Chubut;Gaiman;AV INDEPENDENCIA;171
+Centro;Mendoza;General Alvear;AV INDEPENDENCIA;1950
+Centro;Entre Rios;La Paz;AV INDEPENDENCIA;49
+Norte;Salta;Guachipas;AV INDEPENDENCIA;49
+Metropolitana;CABA;Ciudad de Buenos Aires;AV INDEPENDENCIA;511 A
+Norte;Corrientes;San Luis del Palmar;AV INDEPENDENCIA;511 A
+Norte;Jujuy;Ledesma;AV INDEPENDENCIA;511 A
+Norte;Chaco;Fray Justo Santa Maria de Oro;AV INDEPENDENCIA;531
+Metropolitana;Buenos Aires;Rojas;AV INDEPENDENCIA;1004
+Norte;La Rioja;Capital;AV INDEPENDENCIA;1004
+Metropolitana;Buenos Aires;Campana;AV INDEPENDENCIA;117
+Sur;Chubut;Rio Senguer;AV INDEPENDENCIA;117
+Centro;La Pampa;Capital;AV INDEPENDENCIA;147
+Norte;Santiago del Estero;Rivadavia;AV INDEPENDENCIA;147
+Centro;Santa Fe;Garay;AV INDEPENDENCIA;166
+Norte;Chaco;Independencia;AV INDEPENDENCIA;309
+Norte;La Rioja;General Juan F. Quiroga;AV INDEPENDENCIA;309
+Centro;La Pampa;Conhelo;AV INDEPENDENCIA;528
+Norte;Misiones;San Pedro;AV INDEPENDENCIA;528
+Norte;Salta;Los Andes;AV INDEPENDENCIA;528
+Metropolitana;Buenos Aires;Chacabuco;AV INDEPENDENCIA;587
+Norte;Corrientes;San Cosme;AV INDEPENDENCIA;587
+Sur;Santa Cruz;Lago Argentino;AV INDEPENDENCIA;587
+Centro;Santa Fe;San Cristobal;AV INDEPENDENCIA;677
+Norte;Chaco;Chacabuco;AV INDEPENDENCIA;677
+Sur;Santa Cruz;Lago Buenos Aires;AV INDEPENDENCIA;677
+Centro;Santa Fe;Garay;AV INDEPENDENCIA;725
+Centro;Cordoba;Rio Primero;AV INDEPENDENCIA;745-BIS
+Centro;La Pampa;Caleu Caleu;AV INDEPENDENCIA;745-BIS
+Metropolitana;Buenos Aires;General Paz;AV INDEPENDENCIA;787
+Norte;Santiago del Estero;Jimenez;AV INDEPENDENCIA;787
+Centro;Santa Fe;Iriondo;AV INDEPENDENCIA;864
+Metropolitana;Buenos Aires;General La Madrid;AV INDEPENDENCIA;864
+Sur;Neuquen;Catan Lil;AV INDEPENDENCIA;900
+Sur;Rio Negro;San Antonio;AV INDEPENDENCIA;900
+Metropolitana;CABA;Ciudad de Buenos Aires;AV INDEPENDENCIA;908
+Norte;Chaco;San Lorenzo;AV INDEPENDENCIA;908
+Norte;Jujuy;Ledesma;AV INDEPENDENCIA;908
+Metropolitana;Buenos Aires;General Arenales;AV INDEPENDENCIA;932
+Sur;Santa Cruz;Güer Aike;AV INDEPENDENCIA;932
+Norte;Misiones;Iguazu;AV INDEPENDENCIA 1019
+Norte;Salta;General Jose de San Martin;AV INDEPENDENCIA 1019
+Centro;La Pampa;Curaco;AV INDEPENDENCIA 666
+Centro;Mendoza;Malargüe;AV INDEPENDENCIA 666
+Norte;Catamarca;Santa Rosa;AV INDEPENDENCIA 666
+Norte;Catamarca;Ancasti;AV INDEPENDENCIA 918
+Norte;Catamarca;Paclin;AV INDEPENDENCIA 918
+Norte;Jujuy;Tumbaya;AV INDEPENDENCIA 918
+Centro;Entre Rios;Gualeguaychu;AV INDEPENDENCIA N 1282-A
+Metropolitana;Buenos Aires;La Plata;AV INDEPENDENCIA N 1282-A
+Centro;Cordoba;San Alberto;AV INDEPENDENCIA N01166
+Centro;Santa Fe;Caseros;AV INDEPENDENCIA N01166
+Norte;Corrientes;Mburucuya;AV INDEPENDENCIA N0405
+Norte;Jujuy;El Carmen;AV INDEPENDENCIA N0405
+Norte;Tucuman;Simoca;AV INDEPENDENCIA N0405
+Metropolitana;Buenos Aires;Baradero;AV INDEPENDENCIA N0562
+Norte;Formosa;Pirane;AV INDEPENDENCIA N0562
+Norte;Tucuman;Yerba Buena;AV INDEPENDENCIA N0562
+Metropolitana;Buenos Aires;Tres Lomas;AV INDEPENDENCIA N0670
+Norte;Salta;Oran;AV INDEPENDENCIA N0670
+Sur;Neuquen;Alumine;AV INDEPENDENCIA N0670
+Norte;Santiago del Estero;Alberdi;AV INDEPENDENCIA N0677
+Norte;Tucuman;Trancas;AV INDEPENDENCIA N0677
+Sur;Rio Negro;norquinco;AV INDEPENDENCIA N0677
+Centro;Entre Rios;Federacion;AV INDEPENDENCIA N0691
+Norte;La Rioja;Castro Barros;AV INDEPENDENCIA N0900
+Sur;Rio Negro;San Antonio;AV INDEPENDENCIA N0900
+Metropolitana;Buenos Aires;Necochea;AV INDEPENDENCIA;5798
+Metropolitana;Buenos Aires;Tornquist;AV INDEPENDENCIA;5799
+Norte;Santiago del Estero;Aguirre;AV INDEPENDENCIA;5755
+Norte;Chaco;San Lorenzo;AV INDEPENDENCIA;5798
+Norte;Misiones;Leandro N. Alem;AV INDEPENDENCIA;5798
+Norte;Santiago del Estero;Choya;AV INDEPENDENCIA;5798
+Centro;Entre Rios;Feliciano;AV INDEPENDENCIA;1001
+Centro;Mendoza;Lujan de Cuyo;AV INDEPENDENCIA;1029
+Metropolitana;Buenos Aires;Mar Chiquita;AV INDEPENDENCIA;1029
+Norte;La Rioja;Coronel Felipe Varela;AV INDEPENDENCIA;1029
+Norte;La Rioja;Sanagasta;AV INDEPENDENCIA;1029
+Norte;Salta;Santa Victoria;AV INDEPENDENCIA;1029
+Sur;Chubut;Cushamen;AV INDEPENDENCIA;1029
+Centro;Entre Rios;Victoria;AV INDEPENDENCIA;1054
+Sur;Neuquen;Picunches;AV INDEPENDENCIA;1054
+Sur;Rio Negro;Avellaneda;AV INDEPENDENCIA;1054
+Norte;Jujuy;San Antonio;AV INDEPENDENCIA;1162
+Norte;La Rioja;Castro Barros;AV INDEPENDENCIA;1162
+Metropolitana;Buenos Aires;Balcarce;AV INDEPENDENCIA;1231 A
+Metropolitana;Buenos Aires;Villarino;AV INDEPENDENCIA;1231 A
+Norte;Formosa;Pilcomayo;AV INDEPENDENCIA;1231 A
+Centro;Santa Fe;9 de julio;AV INDEPENDENCIA;1282-A
+Metropolitana;Buenos Aires;Tandil;AV INDEPENDENCIA;1282-A
+Norte;Santiago del Estero;Mitre;AV INDEPENDENCIA;1282-A
+Norte;La Rioja;General Lamadrid;AV INDEPENDENCIA;1370-B
+Norte;Salta;Iruya;AV INDEPENDENCIA;1370-B
+Metropolitana;Buenos Aires;Berazategui;AV INDEPENDENCIA;1457
+Norte;Santiago del Estero;Quebrachos;AV INDEPENDENCIA;1457
+Norte;Catamarca;Belen;AV INDEPENDENCIA;1639
+Norte;Chaco;Presidencia de la Plaza;AV INDEPENDENCIA;1639
+Metropolitana;Buenos Aires;Castelli;AV INDEPENDENCIA;1811
+Metropolitana;Buenos Aires;San Andres de Giles;AV INDEPENDENCIA;1811
+Centro;La Pampa;Curaco;AV INDEPENDENCIA;21
+Centro;Mendoza;Malargüe;AV INDEPENDENCIA;21
+Centro;Mendoza;Santa Rosa;AV INDEPENDENCIA;21
+Metropolitana;Buenos Aires;Pehuajo;AV INDEPENDENCIA;240
+Norte;La Rioja;Arauco;AV INDEPENDENCIA;240
+Sur;Rio Negro;Valcheta;AV INDEPENDENCIA;240
+Norte;Chaco;2 de abril;AV INDEPENDENCIA;241
+Centro;Cordoba;Juarez Celman;AV INDEPENDENCIA;246
+Sur;Rio Negro;General Roca;AV INDEPENDENCIA;246
+Centro;Mendoza;Godoy Cruz;AV INDEPENDENCIA;346
+Metropolitana;Buenos Aires;La Costa;AV INDEPENDENCIA;346
+Metropolitana;Buenos Aires;Coronel Suarez;AV INDEPENDENCIA;374
+Metropolitana;Buenos Aires;Magdalena;AV INDEPENDENCIA;374
+Norte;Jujuy;Santa Catalina;AV INDEPENDENCIA;374
+Metropolitana;Buenos Aires;Coronel Pringles;AV INDEPENDENCIA;377
+Norte;Jujuy;Santa Barbara;AV INDEPENDENCIA;377
+Sur;Santa Cruz;Magallanes;AV INDEPENDENCIA;377
+Centro;Cordoba;Calamuchita;AV INDEPENDENCIA;390  396
+Norte;Santiago del Estero;Rio Hondo;AV INDEPENDENCIA;390  396
+Metropolitana;Buenos Aires;Capitan Sarmiento;AV INDEPENDENCIA;393
+Norte;Corrientes;Saladas;AV INDEPENDENCIA;393
+Centro;Entre Rios;Concordia;AV INDEPENDENCIA;395
+Metropolitana;Buenos Aires;Lomas de Zamora;AV INDEPENDENCIA;395
+Metropolitana;Buenos Aires;San Pedro;AV INDEPENDENCIA;395
+Metropolitana;Buenos Aires;Mercedes;AV INDEPENDENCIA;405
+Norte;Tucuman;Simoca;AV INDEPENDENCIA;405
+Sur;Rio Negro;El Cuy;AV INDEPENDENCIA;405
+Centro;San Luis;General Pedernera;AV INDEPENDENCIA;409
+Metropolitana;Buenos Aires;Jose C. Paz;AV INDEPENDENCIA;409
+Metropolitana;Buenos Aires;Jose M. Ezeiza;AV INDEPENDENCIA;409
+Norte;Corrientes;General Paz;AV INDEPENDENCIA;409
+Metropolitana;Buenos Aires;Rivadavia;AV INDEPENDENCIA;413
+Norte;Catamarca;Capayan;AV INDEPENDENCIA;413
+Metropolitana;Buenos Aires;Lincoln;AV INDEPENDENCIA;427
+Metropolitana;Buenos Aires;San Miguel;AV INDEPENDENCIA;427
+Norte;Chaco;Comandante Fernandez;AV INDEPENDENCIA;427
+Centro;Mendoza;San Rafael;AV INDEPENDENCIA;47
+Norte;Santiago del Estero;Copo;AV INDEPENDENCIA;47
+Sur;Neuquen;Los Lagos;AV INDEPENDENCIA;47
+Norte;Jujuy;Rinconada;AV INDEPENDENCIA;497
+Norte;Tucuman;Burruyacu;AV INDEPENDENCIA;497
+Norte;Tucuman;Burruyacu;AV INDEPENDENCIA;497
+Norte;Tucuman;Rio Chico;AV INDEPENDENCIA;497
+Norte;Formosa;Pirane;AV INDEPENDENCIA;500
+Norte;Jujuy;Yavi;AV INDEPENDENCIA;500
+Norte;Santiago del Estero;Banda;AV INDEPENDENCIA;500
+Centro;Santa Fe;9 de julio;AV INDEPENDENCIA;545
+Metropolitana;Buenos Aires;Tandil;AV INDEPENDENCIA;545
+Sur;Neuquen;Minas;AV INDEPENDENCIA;545
+Metropolitana;Buenos Aires;Baradero;AV INDEPENDENCIA;545-D
+Metropolitana;Buenos Aires;Zarate;AV INDEPENDENCIA;545-D
+Norte;La Rioja;Arauco;AV INDEPENDENCIA;545-D
+Norte;San Juan;Pocito;AV INDEPENDENCIA;545-D
+Sur;Neuquen;Pehuenches;AV INDEPENDENCIA;545-D
+Sur;Rio Negro;Valcheta;AV INDEPENDENCIA;545-D
+Metropolitana;Buenos Aires;Balcarce;AV INDEPENDENCIA;562
+Norte;Formosa;Pilcomayo;AV INDEPENDENCIA;562
+Norte;La Rioja;Vinchina;AV INDEPENDENCIA;562
+Centro;La Pampa;Puelen;AV INDEPENDENCIA;565-A
+Metropolitana;Buenos Aires;Benito Juarez;AV INDEPENDENCIA;565-A
+Centro;La Pampa;Maraco;AV INDEPENDENCIA;568
+Metropolitana;Buenos Aires;Daireaux;AV INDEPENDENCIA;568
+Norte;Corrientes;Santo Tome;AV INDEPENDENCIA;568
+Metropolitana;Buenos Aires;Bragado;AV INDEPENDENCIA;574
+Sur;Chubut;Rawson;AV INDEPENDENCIA;574
+Centro;Santa Fe;Vera;AV INDEPENDENCIA;579
+Metropolitana;Buenos Aires;Avellaneda;AV INDEPENDENCIA;579
+Metropolitana;Buenos Aires;Pergamino;AV INDEPENDENCIA;579
+Centro;Santa Fe;San Lorenzo;AV INDEPENDENCIA;584
+Norte;Misiones;Leandro N. Alem;AV INDEPENDENCIA;584
+Norte;Santiago del Estero;Choya;AV INDEPENDENCIA;584
+Metropolitana;Buenos Aires;Exaltacion de la Cruz;AV INDEPENDENCIA;608
+Metropolitana;Buenos Aires;Canuelas;AV INDEPENDENCIA;611
+Metropolitana;Buenos Aires;Rivadavia;AV INDEPENDENCIA;611
+Norte;Catamarca;El Alto;AV INDEPENDENCIA;643 (425)
+Norte;Chaco;Mayor Luis J. Fontana;AV INDEPENDENCIA;643 (425)
+Norte;Corrientes;Sauce;AV INDEPENDENCIA;643 (425)
+Centro;Entre Rios;San Salvador;AV INDEPENDENCIA;666
+Metropolitana;Buenos Aires;Coronel Dorrego;AV INDEPENDENCIA;666
+Metropolitana;Buenos Aires;Lujan;AV INDEPENDENCIA;666
+Metropolitana;Buenos Aires;Alberti;AV INDEPENDENCIA;670
+Metropolitana;Buenos Aires;Trenque Lauquen;AV INDEPENDENCIA;670
+Norte;Misiones;Obera;AV INDEPENDENCIA;670
+Centro;La Pampa;Chapaleufu;AV INDEPENDENCIA;684
+Metropolitana;Buenos Aires;Lanus;AV INDEPENDENCIA;684
+Norte;Misiones;San Ignacio;AV INDEPENDENCIA;684
+Norte;Corrientes;San Roque;AV INDEPENDENCIA;701
+Norte;Santiago del Estero;Copo;AV INDEPENDENCIA;701
+Sur;Neuquen;Los Lagos;AV INDEPENDENCIA;701
+Centro;La Pampa;Capital;AV INDEPENDENCIA;718
+Norte;Santiago del Estero;Rivadavia;AV INDEPENDENCIA;718
+Metropolitana;Buenos Aires;Puan;AV INDEPENDENCIA;720
+Norte;Corrientes;Bella Vista;AV INDEPENDENCIA;720
+Metropolitana;Buenos Aires;Coronel Suarez;AV INDEPENDENCIA;727
+Metropolitana;Buenos Aires;Magdalena;AV INDEPENDENCIA;727
+Norte;San Juan;Santa Lucia;AV INDEPENDENCIA;727
+Metropolitana;Buenos Aires;Baradero;AV INDEPENDENCIA;740
+Metropolitana;Buenos Aires;Zarate;AV INDEPENDENCIA;740
+Norte;Catamarca;Poman;AV INDEPENDENCIA;740
+Centro;Cordoba;Union;AV INDEPENDENCIA;748
+Metropolitana;Buenos Aires;Monte;AV INDEPENDENCIA;748
+Norte;Catamarca;Antofagasta de la Sierra;AV INDEPENDENCIA;748
+Norte;Chaco;9 de julio;AV INDEPENDENCIA;748
+Norte;Corrientes;Paso de los Libres;AV INDEPENDENCIA;748
+Sur;Chubut;Tehuelches;AV INDEPENDENCIA;748
+Norte;Salta;La Caldera;AV INDEPENDENCIA;776
+Norte;Santiago del Estero;General Taboada;AV INDEPENDENCIA;776
+Metropolitana;Buenos Aires;25 de mayo;AV INDEPENDENCIA;779
+Metropolitana;Buenos Aires;Ayacucho;AV INDEPENDENCIA;85
+Metropolitana;Buenos Aires;Pila;AV INDEPENDENCIA;85
+Metropolitana;Buenos Aires;Villa Gesell;AV INDEPENDENCIA;85
+Metropolitana;Buenos Aires;La Matanza;AV INDEPENDENCIA;858
+Norte;Corrientes;Goya;AV INDEPENDENCIA;858
+Norte;Corrientes;Monte Caseros;AV INDEPENDENCIA;985-A
+Norte;Corrientes;Monte Caseros;AV INDEPENDENCIA;985-A
+Norte;San Juan;9 de julio;AV INDEPENDENCIA;985-A
+Sur;Chubut;Tehuelches;AV INDEPENDENCIA;985-A
+Sur;Chubut;Telsen;AV INDEPENDENCIA;985-A
+Sur;Rio Negro;9 de julio;AV INDEPENDENCIA;985-A
+Metropolitana;Buenos Aires;Escobar;AV JESUS CARRANZA;1651
+Centro;Cordoba;General Roca;AV JESUS CARRANZA;1063
+Centro;San Luis;Juan Martin de Pueyrredon;AV JESUS CARRANZA;1063
+Norte;Misiones;San Pedro;AV JESUS CARRANZA;73
+Norte;Santiago del Estero;Loreto;AV JESUS CARRANZA;73
+Sur;Neuquen;Confluencia;AV JESUS CARRANZA;73
+Centro;La Pampa;Conhelo;AV JESUS CARRANZA;765
+Centro;Mendoza;San Rafael;AV JESUS CARRANZA;765
+Norte;Salta;Los Andes;AV JESUS CARRANZA;765
+Norte;Salta;Rosario de la Frontera;AV JESUS CARRANZA;1067
+Norte;Tucuman;Capital;AV JESUS CARRANZA;1067
+Centro;Cordoba;Rio Seco;AV JESUS CARRANZA;123
+Centro;Cordoba;Rio Seco;AV JESUS CARRANZA;123
+Centro;La Pampa;Caleu Caleu;AV JESUS CARRANZA;123
+Norte;San Juan;Calingasta;AV JESUS CARRANZA;123
+Metropolitana;Buenos Aires;Arrecifes;AV JESUS CARRANZA;60
+Norte;San Juan;Valle Fertil;AV JESUS CARRANZA;60
+Sur;Chubut;Gastre;AV JESUS CARRANZA;60
+Sur;Neuquen;Pehuenches;AV JESUS CARRANZA;60
+Metropolitana;Buenos Aires;General Pueyrredon;AV JESUS CARRANZA;812
+Norte;Santiago del Estero;Juan F. Ibarra;AV JESUS CARRANZA;812
+Centro;La Pampa;Utracan;AV JESUS CARRANZA;991
+Norte;Formosa;Patino;AV JESUS CARRANZA;991
+Norte;Misiones;Apostoles;AV JESUS CARRANZA;991
+Metropolitana;Buenos Aires;Hipolito Yrigoyen;AV LIBERTAD;1294
+Norte;La Rioja;General Belgrano;AV LIBERTAD;1294
+Metropolitana;Buenos Aires;Florencio Varela;AV LIBERTAD;387 ESQ MORELOS
+Centro;San Luis;Chacabuco;AV LIBERTAD;1046
+Metropolitana;Buenos Aires;San Cayetano;AV LIBERTAD;1046
+Sur;Neuquen;Lacar;AV LIBERTAD;1046
+Metropolitana;Buenos Aires;Chascomus;AV LIBERTAD;1207
+Metropolitana;Buenos Aires;Laprida;AV LIBERTAD;1207
+Metropolitana;Buenos Aires;San Isidro;AV LIBERTAD;1207
+Metropolitana;Buenos Aires;General Guido;AV LIBERTAD;1961
+Norte;San Juan;Iglesia;AV LIBERTAD;1961
+Norte;Jujuy;Valle Grande;AV LIBERTAD;34
+Norte;Santiago del Estero;Atamisqui;AV LIBERTAD;34
+Norte;Santiago del Estero;Pellegrini;AV LIBERTAD;34
+Metropolitana;Buenos Aires;Almirante Brown;AV LIBERTAD;495
+Metropolitana;Buenos Aires;Tres Arroyos;AV LIBERTAD;495
+Norte;Santiago del Estero;Ojo de Agua;AV LIBERTAD;495
+Metropolitana;Buenos Aires;Pinamar;AV LIBERTAD;56
+Norte;Jujuy;Yavi;AV LIBERTAD;56
+Norte;Santiago del Estero;Banda;AV LIBERTAD;56
+Centro;Cordoba;Punilla;AV LIBERTAD;897
+Metropolitana;Buenos Aires;Benito Juarez;AV LIBERTAD;897
+Centro;Cordoba;Punilla;AV LIBERTAD;956
+Metropolitana;Buenos Aires;Benito Juarez;AV LIBERTAD;956
+Metropolitana;Buenos Aires;La Matanza;AV MANCILLA ESQ ALDAMA;5798
+Norte;Corrientes;Goya;AV MANCILLA ESQ ALDAMA;5798
+Metropolitana;Buenos Aires;Dolores;AV MANCILLA ESQ ALDAMA;5798
+Norte;Santiago del Estero;Sarmiento;AV MANCILLA ESQ ALDAMA;5798
+Sur;Chubut;Martires;AV MANCILLA ESQ ALDAMA;5798
+Centro;Cordoba;Pocho;AV PRINCIPAL;5798
+Metropolitana;Buenos Aires;Baradero;AV PRINCIPAL;5798
+Sur;Neuquen;Zapala;AV PRINCIPAL;5798
+Centro;Mendoza;Lujan de Cuyo;AV REFORMA;587
+Metropolitana;Buenos Aires;San Vicente;AV REFORMA;587
+Norte;La Rioja;Coronel Felipe Varela;AV REFORMA;587
+Metropolitana;Buenos Aires;Arrecifes;AV ROBERTYO COLORADO 1350
+Metropolitana;Buenos Aires;Pellegrini;AV ROBERTYO COLORADO 1350
+Norte;San Juan;Valle Fertil;AV ROBERTYO COLORADO 1350
+Metropolitana;Buenos Aires;Ituzaingo;AV SEBASTIAN ORTIZ;229
+Norte;Misiones;General Manuel Belgrano;AV SEBASTIAN ORTIZ;229
+Metropolitana;Buenos Aires;Presidente Peron;AVINDEPEND;1065
+Norte;Catamarca;Belen;AVINDEPEND;1065
+Centro;La Pampa;Loventue;AVINDEPENDENCIA;623
+Metropolitana;Buenos Aires;Coronel de Marina Leonardo Rosales;AVINDEPENDENCIA;623
+Norte;Corrientes;San Roque;AVINDEPENDENCIA;623
+Sur;Chubut;Florentino Ameghino;AVINDEPENDENCIA;672
+Metropolitana;Buenos Aires;9 de julio;AVINDEPENDENCIA;1010
+Metropolitana;Buenos Aires;Tapalque;AVINDEPENDENCIA;1010
+Norte;Salta;Molinos;AVINDEPENDENCIA;1010
+Metropolitana;Buenos Aires;San Pedro;AVINDEPENDENCIA;246
+Sur;Neuquen;Loncopue;AVINDEPENDENCIA;246
+Sur;Rio Negro;Conesa;AVINDEPENDENCIA;246
+Centro;La Pampa;Puelen;AVINDEPENDENCIA;574
+Norte;Corrientes;Bella Vista;AVINDEPENDENCIA;574
+Norte;Santiago del Estero;Alberdi;AVINDEPENDENCIA;678
+Norte;Tucuman;Trancas;AVINDEPENDENCIA;678
+Sur;Neuquen;norquin;AVINDEPENDENCIA;678
+Centro;San Luis;Ayacucho;AVLIBERTAD;33
+Centro;Santa Fe;Villa Constitucion;AVLIBERTAD;33
+Metropolitana;Buenos Aires;Pila;AVLIBERTAD;33
+Norte;Catamarca;Fray Mamerto Esquiu;AVENIDA 3 CALLE 2
+Norte;Salta;Cachi;AVENIDA 5 DE MAYO;1226
+Norte;Tucuman;Rio Chico;AVENIDA 5 DE MAYO;1226
+Metropolitana;Buenos Aires;Hurlingham;BENITO JUAREZ;25
+Norte;Chaco;General Güemes;BENITO JUAREZ;25
+Centro;Entre Rios;Concordia;BENITO JUAREZ;568
+Metropolitana;Buenos Aires;Lomas de Zamora;BENITO JUAREZ;568
+Metropolitana;Buenos Aires;San Pedro;BENITO JUAREZ;568
+Norte;Chaco;General Donovan;BENITO JUAREZ 25
+Sur;Neuquen;Huiliches;BENITO JUAREZ 25
+Centro;Cordoba;Juarez Celman;BLVD BENITO JUAREZ;2222 ESQ AV INDEPENDENCIA
+Sur;Rio Negro;General Roca;BLVD BENITO JUAREZ;2222 ESQ AV INDEPENDENCIA
+Sur;Chubut;Futaleufu;BLVD BENITO JUAREZ;409
+Metropolitana;Buenos Aires;Lobos;BLVD BENITO JUAREZ;439 B
+Metropolitana;Buenos Aires;San Nicolas;BLVD BENITO JUAREZ;439 B
+Norte;Corrientes;Concepcion;BLVD BENITO JUAREZ;439 B
+Centro;Cordoba;General San Martin;BLVD BENITO JUAREZ;568
+Centro;Mendoza;Junin;BLVD BENITO JUAREZ;568
+Metropolitana;Buenos Aires;General Viamonte;BLVD BENITO JUAREZ 1684
+Norte;Salta;La Candelaria;BLVD BENITO JUAREZ 1684
+Metropolitana;Buenos Aires;Adolfo Alsina;BLVD BENITO JUAREZ ESQ 20 DE NOVIEMBRE;5798
+Metropolitana;Buenos Aires;Moreno;BLVD BENITO JUAREZ ESQ 20 DE NOVIEMBRE;5798
+Metropolitana;Buenos Aires;Tigre;BLVD BENITO JUAREZ ESQ 20 DE NOVIEMBRE;5798
+Metropolitana;Buenos Aires;Guamini;BLVD BENITO JUAREZ ESQ AV 5 DE MAYO;670
+Norte;Salta;La Poma;BLVD BENITO JUAREZ ESQ AV 5 DE MAYO;670
+Metropolitana;Buenos Aires;San Fernando;BLVD BENITO JUAREZ ESQ IGNACIO MATIAS;5798
+Norte;La Rioja;Chamical;BLVD BENITO JUAREZ ESQ IGNACIO MATIAS;5798
+Sur;Chubut;Languineo;BLVD BENITO JUAREZ ESQ IGNACIO MATIAS;5798
+Metropolitana;Buenos Aires;Monte Hermoso;BLVD BENITO JUAREZ S / N
+Sur;Chubut;Telsen;BLVD BENITO JUAREZ S / N
+Sur;Rio Negro;9 de julio;BLVD BENITO JUAREZ S / N
+Norte;Corrientes;Beron de Astrada;BLVD BENITO JUAREZ;1291
+Norte;Formosa;Ramon Lista;BLVD BENITO JUAREZ;1291
+Centro;Cordoba;Minas;BLVD BENITO JUAREZ;1466-A
+Centro;Entre Rios;Tala;BLVD BENITO JUAREZ;1466-A
+Sur;Rio Negro;25 de mayo;BLVD BENITO JUAREZ;1466-A
+Centro;Entre Rios;Islas del Ibicuy;BLVD BENITO JUAREZ;197-A
+Metropolitana;Buenos Aires;General Lavalle;BLVD BENITO JUAREZ;197-A
+Centro;La Pampa;Chalileo;BLVD FRANCISCO FERNANDEZ ARTEAGA;1984
+Metropolitana;Buenos Aires;San Fernando;BLVD FRANCISCO FERNANDEZ ARTEAGA;1984
+Norte;Formosa;Laishi;BLVD FRANCISCO FERNANDEZ ARTEAGA;1984
+Centro;Cordoba;Rio Cuarto;BLVD MANUEL AVILA CAMACHO 435
+Norte;Salta;Cafayate;BLVD MANUEL AVILA CAMACHO 435
+Metropolitana;Buenos Aires;Hipolito Yrigoyen;BLVDBENITO JUAREZ;786
+Norte;Chaco;General Belgrano;BLVDBENITO JUAREZ;786
+Metropolitana;Buenos Aires;Malvinas Argentinas;BLVDBENITO JUAREZ;42-C
+Norte;Catamarca;Santa Rosa;BLVDBENITO JUAREZ;42-C
+Norte;Corrientes;Curuzu Cuatia;BLVDBENITO JUAREZ;42-C
+Centro;San Luis;Belgrano;BOULEVAR BENITO JUAREZ;197 -A
+Metropolitana;Buenos Aires;Presidente Peron;BOULEVAR BENITO JUAREZ;197 -A
+Metropolitana;Buenos Aires;Bolivar;BOULEVAR BGENITO JUAREZ 1291
+Norte;San Juan;Rawson;BOULEVAR BGENITO JUAREZ 1291
+Metropolitana;Buenos Aires;Esteban Echeverria;BOULEVARD BENITO JUAREZ ESQ INDEPENDENCIA
+Metropolitana;Buenos Aires;Capitan Sarmiento;BULEVAR;810
+Metropolitana;Buenos Aires;Saladillo;BULEVAR;810
+Norte;Chaco;San Fernando;BULEVAR BENITO JUAREZ ESQUINA I MATIAS;5798
+Norte;La Rioja;Chamical;BULEVAR BENITO JUAREZ ESQUINA I MATIAS;5798
+Sur;Chubut;Languineo;BULEVAR BENITO JUAREZ ESQUINA I MATIAS;5798
+Norte;Jujuy;Susques;C 1O DE MAYO;4
+Sur;Chubut;Escalante;C 1O DE MAYO;4
+Metropolitana;Buenos Aires;Pellegrini;C ALDAMA;153
+Norte;Jujuy;Valle Grande;C ALDAMA;153
+Norte;Santiago del Estero;Atamisqui;C ALDAMA;153
+Centro;Entre Rios;La Paz;C ALDAMA;25
+Norte;Tucuman;Graneros;C ALDAMA;25
+Centro;La Pampa;Chapaleufu;C BENITO JUAREZ;72
+Metropolitana;Buenos Aires;Lanus;C BENITO JUAREZ;72
+Norte;Chaco;San Fernando;C BENITO JUAREZ;72
+Centro;Cordoba;General Roca;C GUADALUPE VICTORIA;373
+Centro;San Luis;Juan Martin de Pueyrredon;C GUADALUPE VICTORIA;373
+Metropolitana;Buenos Aires;General Pueyrredon;C GUADALUPE VICTORIA N0373
+Norte;Santiago del Estero;Juan F. Ibarra;C GUADALUPE VICTORIA N0373
+Norte;Corrientes;Mburucuya;C MARINA HERNANDEZ N 5
+Norte;Jujuy;El Carmen;C MARINA HERNANDEZ N 5
+Norte;Santiago del Estero;Silipica;C MARINA HERNANDEZ N 5
+Norte;Catamarca;El Alto;C ZARAGOZA;329
+Norte;Chaco;Mayor Luis J. Fontana;C ZARAGOZA;329
+Norte;Santiago del Estero;Silipica;C ZARAGOZA;329
+Centro;Santa Fe;Vera;CALLE 21 DE MARZO;17
+Metropolitana;Buenos Aires;Avellaneda;CALLE 21 DE MARZO;17
+Sur;Rio Negro;Pichi Mahuida;CALLE 21 DE MARZO;17
+Norte;Chaco;2 de abril;CALLE AGUSTIN LARA;69-B
+Metropolitana;Buenos Aires;Moreno;CALLE ALDAMA;156
+Norte;Jujuy;Tilcara;CALLE ALDAMA;156
+Sur;Rio Negro;Adolfo Alsina;CALLE ALDAMA;156
+Metropolitana;Buenos Aires;Merlo;CALLE ALDAMA;64
+Metropolitana;Buenos Aires;Suipacha;CALLE ALDAMA;64
+Norte;Corrientes;Empedrado;CALLE ALDAMA;64
+Centro;Cordoba;Capital;CALLE ALDAMA;233-A
+Norte;San Juan;Rivadavia;CALLE ALDAMA;233-A
+Centro;La Pampa;Trenel;CALLE ALDAMA;50
+Metropolitana;Buenos Aires;Alberti;CALLE ALDAMA;50
+Norte;Chaco;O'Higgins;CALLE ALDAMA;50
+Metropolitana;Buenos Aires;San Antonio de Areco;CALLE ALDAMA;53
+Sur;Neuquen;Catan Lil;CALLE ALDAMA;53
+Centro;Santa Fe;San Javier;CALLE ALDAMA;70
+Metropolitana;Buenos Aires;Las Flores;CALLE ALDAMA;70
+Norte;Tucuman;Chicligasta;CALLE ALDAMA;70
+Norte;Chaco;Quitilipi;CALLE ALDAMA;720
+Norte;Formosa;Bermejo;CALLE ALDAMA;720
+Norte;Formosa;Bermejo;CALLE ALDAMA;144-A
+Norte;Formosa;Ramon Lista;CALLE ALDAMA;144-A
+Centro;La Pampa;Quemu Quemu;CALLE ALDAMA;99
+Metropolitana;Buenos Aires;Berisso;CALLE ALDAMA;99
+Centro;Mendoza;Las Heras;CALLE ARTEAGA;1027
+Centro;Santa Fe;San Javier;CALLE ARTEAGA;1027
+Norte;Salta;Chicoana;CALLE ARTEAGA;1027
+Centro;Cordoba;Tulumba;CALLE BENITO JUAREZ;495
+Norte;Catamarca;Ambato;CALLE BENITO JUAREZ;495
+Norte;Salta;Oran;CALLE BENITO JUAREZ;495
+Metropolitana;Buenos Aires;Maipu;CALLE GUERRERO ESQ MURO BLVD
+Norte;Catamarca;Santa Maria;CALLE GUERRERO ESQ MURO BLVD
+Norte;Tucuman;Cruz Alta;CALLE GUERRERO ESQ MURO BLVD
+Metropolitana;Buenos Aires;Benito Juarez;CALLE HIDALGO;96
+Norte;Santiago del Estero;Quebrachos;CALLE HIDALGO;96
+Norte;La Rioja;San Blas de Los Sauces;CALLE HIDALGO;501
+Norte;San Juan;Caucete;CALLE HIDALGO;501
+Metropolitana;Buenos Aires;Alberti;CALLE IGNACIO MATIAS;6
+Metropolitana;Buenos Aires;Trenque Lauquen;CALLE IGNACIO MATIAS;6
+Norte;Chaco;O'Higgins;CALLE IGNACIO MATIAS;6
+Centro;La Pampa;Toay;CALLE IGNACIO RAYON;934
+Metropolitana;Buenos Aires;Adolfo Gonzales Chaves;CALLE IGNACIO RAYON;934
+Metropolitana;Buenos Aires;Moron;CALLE IGNACIO RAYON;934
+Metropolitana;Buenos Aires;Adolfo Gonzales Chaves;CALLE IGNACIO RAYON;949
+Metropolitana;Buenos Aires;Moron;CALLE IGNACIO RAYON;949
+Norte;Catamarca;Tinogasta;CALLE IGNACIO RAYON;949
+Metropolitana;Buenos Aires;Coronel Dorrego;CALLE ITURBIDE;52
+Metropolitana;Buenos Aires;Lujan;CALLE ITURBIDE;52
+Metropolitana;Buenos Aires;San Vicente;CALLE ITURBIDE;52
+Norte;La Rioja;General Ocampo;CALLE JUAREZ;855
+Norte;San Juan;Jachal;CALLE JUAREZ;855
+Centro;Santa Fe;General Obligado;CALLE LAZARO CARDENAS;5798
+Norte;Corrientes;Ituzaingo;CALLE LAZARO CARDENAS;5798
+Centro;Entre Rios;Tala;CALLE MATAMOROS;280
+Sur;Neuquen;Minas;CALLE MATAMOROS;280
+Sur;Rio Negro;25 de mayo;CALLE MATAMOROS;280
+Centro;Santa Fe;Rosario;CALLE MATAMOROS;29-3
+Norte;Santiago del Estero;Capital;CALLE MATAMOROS;29-3
+Centro;San Luis;Coronel Pringles;CALLE MATAMOROS;11
+Norte;Jujuy;Santa Barbara;CALLE MATAMOROS;11
+Norte;Tucuman;Lules;CALLE MATAMOROS;11
+Centro;Santa Fe;Iriondo;CALLE MATAMOROS;123
+Metropolitana;Buenos Aires;General La Madrid;CALLE MATAMOROS;123
+Metropolitana;Buenos Aires;9 de julio;CALLE MATAMOROS;127
+Metropolitana;Buenos Aires;Tapalque;CALLE MATAMOROS;127
+Norte;Santiago del Estero;Mitre;CALLE MATAMOROS;127
+Norte;Misiones;Cainguas;CALLE MATAMOROS;147
+Norte;Santiago del Estero;Rio Hondo;CALLE MATAMOROS;147
+Metropolitana;Buenos Aires;Vicente Lopez;CALLE MATAMOROS;2-B
+Norte;Santiago del Estero;Avellaneda;CALLE MATAMOROS;2-B
+Sur;Rio Negro;Pichi Mahuida;CALLE MATAMOROS;2-B
+Metropolitana;Buenos Aires;Puan;CALLE MATAMOROS;225
+Norte;Santiago del Estero;Belgrano;CALLE MATAMOROS;225
+Metropolitana;Buenos Aires;General Guido;CALLE MATAMOROS;236
+Norte;San Juan;Iglesia;CALLE MATAMOROS;236
+Metropolitana;Buenos Aires;Ayacucho;CALLE MATAMOROS;237
+Metropolitana;Buenos Aires;Villa Gesell;CALLE MATAMOROS;237
+Norte;Formosa;Pilagas;CALLE MATAMOROS;237
+Centro;Santa Fe;General Lopez;CALLE MATAMOROS;31
+Norte;Corrientes;Itati;CALLE MATAMOROS;31
+Norte;Chaco;25 de mayo;CALLE MATAMOROS;310
+Norte;Salta;Metan;CALLE MATAMOROS;310
+Norte;Tucuman;Tafi del Valle;CALLE MATAMOROS;310
+Centro;Mendoza;Tunuyan;CALLE MATAMOROS;325
+Norte;Catamarca;Andalgala;CALLE MATAMOROS;325
+Norte;Jujuy;Palpala;CALLE MATAMOROS;325
+Metropolitana;Buenos Aires;General Juan Madariaga;CALLE MATAMOROS;40
+Norte;Chaco;Independencia;CALLE MATAMOROS;40
+Norte;Salta;Cafayate;CALLE MATAMOROS;40
+Sur;Santa Cruz;Rio Chico;CALLE MATAMOROS;40
+Metropolitana;Buenos Aires;General Pinto;CALLE MATAMOROS;415
+Norte;Tucuman;Juan Bautista Alberdi;CALLE MATAMOROS;415
+Centro;San Luis;Coronel Pringles;CALLE MATAMOROS;78
+Norte;La Rioja;Sanagasta;CALLE MATAMOROS;78
+Norte;Tucuman;Lules;CALLE MATAMOROS;78
+Metropolitana;Buenos Aires;Rojas;CALLE MELCHOR OCAMPO;635
+Norte;Corrientes;Capital;CALLE MELCHOR OCAMPO;635
+Centro;La Pampa;Rancul;CALLE MORELOS;426
+Sur;Chubut;Biedma;CALLE MORELOS;426
+Centro;Entre Rios;San Salvador;CALLE MORELOS;72
+Centro;La Pampa;Loventue;CALLE MORELOS;72
+Metropolitana;Buenos Aires;Coronel de Marina Leonardo Rosales;CALLE MORELOS;72
+Centro;Cordoba;Presidente Roque Saenz Pena;CALLE MORELOS;24
+Norte;Santiago del Estero;Belgrano;CALLE MORELOS;24
+Metropolitana;Buenos Aires;Carlos Casares;CALLE MORELOS;30
+Norte;Santiago del Estero;Salavina;CALLE MORELOS;30
+Metropolitana;Buenos Aires;Carlos Tejedor;CALLE MORELOS;330 INT2
+Norte;Santiago del Estero;Salavina;CALLE MORELOS;330 INT2
+Centro;Entre Rios;Villaguay;CALLE MORELOS;44
+Metropolitana;Buenos Aires;Bahia Blanca;CALLE MORELOS;44
+Sur;Rio Negro;Pilcaniyeu;CALLE MORELOS;44
+Centro;La Pampa;Trenel;CALLE MORELOS;72-B
+Metropolitana;Buenos Aires;Alberti;CALLE MORELOS;72-B
+Sur;Rio Negro;norquinco;CALLE MORELOS;72-B
+Norte;Tucuman;Famailla;CALLE OCAMPO;5579
+Metropolitana;Buenos Aires;Adolfo Alsina;CALLE OCAMPO;14
+Metropolitana;Buenos Aires;Tigre;CALLE OCAMPO;14
+Norte;Tucuman;Monteros;CALLE OCAMPO;14
+Metropolitana;Buenos Aires;Castelli;CALLE OCAMPO;266
+Norte;Jujuy;San Antonio;CALLE OCAMPO;266
+Norte;Catamarca;Capayan;CALLE OCAMPO;420
+Norte;Salta;Rivadavia;CALLE OCAMPO;420
+Centro;Santa Fe;La Capital;CALLE OCAMPO S/M
+Metropolitana;Buenos Aires;General Villegas;CALLE OCAMPO S/M
+Metropolitana;Buenos Aires;Azul;CALLE OCAMPO;231
+Metropolitana;Buenos Aires;Pilar;CALLE OCAMPO;231
+Metropolitana;Buenos Aires;Villa Gesell;CALLE OCAMPO;231
+Centro;Cordoba;Totoral;CALLE OCAMPO;254
+Norte;San Juan;Albardon;CALLE OCAMPO;254
+Sur;Neuquen;norquin;CALLE OCAMPO;254
+Norte;Salta;La Caldera;CALLE PRINCIPAL;5798
+Norte;Santiago del Estero;General Taboada;CALLE PRINCIPAL;5798
+Centro;Entre Rios;Parana;CALLE RIVA PALACIOS;465
+Centro;Mendoza;Tunuyan;CALLE RIVA PALACIOS;465
+Norte;Catamarca;Andalgala;CALLE RIVA PALACIOS;465
+Norte;Formosa;Formosa;CALLE SEBASTIAN ORTIZ;690
+Metropolitana;Buenos Aires;Carlos Casares;CALLE SEBASTIAN ORTIZ;549
+Metropolitana;Buenos Aires;Saladillo;CALLE SEBASTIAN ORTIZ;549
+Metropolitana;Buenos Aires;General Viamonte;CALLE SEBASTIAN ORTIZ;849
+Norte;Salta;La Candelaria;CALLE SEBASTIAN ORTIZ;849
+Norte;San Juan;25 de mayo;CALLE ZARAGOZA;1010
+Norte;Tucuman;Tafi del Valle;CALLE ZARAGOZA;1010
+Metropolitana;Buenos Aires;Azul;CALLEJON DE LA;CHE TRISTE;23
+Metropolitana;Buenos Aires;Villa Gesell;CALLEJON DE LA;CHE TRISTE;23
+Norte;Formosa;Pilagas;CALLEJON DE LA;CHE TRISTE;23
+Centro;La Pampa;Atreuco;CAMI;LOMA ALTA;1000
+Metropolitana;Buenos Aires;Pergamino;CAMI;LOMA ALTA;1000
+Norte;Catamarca;Valle Viejo;CAMI;LOMA ALTA;1000
+Metropolitana;Buenos Aires;Loberia;CARR A OJITALN;951-A
+Norte;Corrientes;Concepcion;CARR A OJITALN;951-A
+Norte;Corrientes;San Miguel;CARR A OJITALN;951-A
+Centro;Santa Fe;La Capital;CARR A OJITLAN;951-A
+Metropolitana;Buenos Aires;General Villegas;CARR A OJITLAN;951-A
+Centro;Cordoba;Santa Maria;CARROJITLAN;43
+Metropolitana;Buenos Aires;Maipu;CARROJITLAN;43
+Norte;Tucuman;Cruz Alta;CARROJITLAN;43
+Norte;Chaco;25 de mayo;CARRETERA A LOMA ALTA;5798
+Sur;Chubut;Gastre;CENTRO PINERO
+Sur;Chubut;Escalante;DANIEL SOTO;354
+Centro;Mendoza;Rivadavia;DANIEL SOTO;370
+Metropolitana;Buenos Aires;Canuelas;DANIEL SOTO;370
+Metropolitana;Buenos Aires;Mar Chiquita;DOMICILIO CO;CIDO KM21
+Norte;Corrientes;Santo Tome;DOMICILIO CO;CIDO KM21
+Sur;Chubut;Cushamen;DOMICILIO CO;CIDO KM21
+Metropolitana;Buenos Aires;Malvinas Argentinas;DOMICILIO CO;CIDO;5798
+Norte;Corrientes;Curuzu Cuatia;DOMICILIO CO;CIDO;5798
+Norte;Salta;Santa Victoria;DOMICILIO CO;CIDO;5798
+Norte;Jujuy;San Pedro;FRANCISCO I MADERO;182
+Sur;Neuquen;Loncopue;FRANCISCO I MADERO;182
+Sur;Rio Negro;Conesa;FRANCISCO I MADERO;182
+Norte;Corrientes;San Martin;GUERRERO ESC MURO
+Norte;Misiones;Libertador General San Martin;GUERRERO ESC MURO
+Sur;Neuquen;Collon Cura;GUERRERO ESC MURO
+Metropolitana;Buenos Aires;General Alvear;HERMENEGILDO GALEANA;5798
+Metropolitana;Buenos Aires;Brandsen;HIDALGO;689
+Norte;Jujuy;Rinconada;HIDALGO;689
+Metropolitana;Buenos Aires;Benito Juarez;HIDALGO;96
+Metropolitana;Buenos Aires;Punta Indio;HIDALGO;96
+Centro;Mendoza;Junin;IGNACIO ZARAGOZA;303
+Metropolitana;Buenos Aires;General Rodriguez;IGNACIO ZARAGOZA;303
+Norte;Misiones;Guarani;INDEPENDENCIA;1231 A
+Norte;Salta;La Vina;INDEPENDENCIA;1231 A
+Metropolitana;Buenos Aires;Esteban Echeverria;INDEPENDENCIA;124
+Metropolitana;Buenos Aires;Exaltacion de la Cruz;INDEPENDENCIA;1655
+Centro;Mendoza;Guaymallen;INDEPENDENCIA;6
+Norte;La Rioja;General angel V. Penaloza;INDEPENDENCIA;6
+Centro;Cordoba;Presidente Roque Saenz Pena;INDEPENDENCIA 1519
+Centro;San Luis;Belgrano;INDEPENDENCIA 1519
+Centro;Entre Rios;Colon;INDEPENDENCIA 1683
+Norte;Misiones;Libertador General San Martin;INDEPENDENCIA 1683
+Norte;Santiago del Estero;San Martin;INDEPENDENCIA 1683
+Metropolitana;Buenos Aires;General Arenales;INDEPENDENCIA 432
+Sur;Santa Cruz;Güer Aike;INDEPENDENCIA 432
+Centro;Cordoba;San Justo;INDEPENDENCIA 623
+Norte;Corrientes;Lavalle;INDEPENDENCIA 623
+Norte;San Juan;Chimbas;INDEPENDENCIA 623
+Norte;Salta;Anta;INDEPENDENCIA 748
+Norte;San Juan;Ullum;INDEPENDENCIA 748
+Sur;Chubut;Paso de Indios;INDEPENDENCIA 748
+Metropolitana;Buenos Aires;Jose C. Paz;INDEPENDENCIA 807
+Norte;Corrientes;General Paz;INDEPENDENCIA 807
+Centro;Cordoba;Sobremonte;INDEPENDENCIA 824
+Metropolitana;Buenos Aires;Mercedes;INDEPENDENCIA 824
+Sur;Rio Negro;El Cuy;INDEPENDENCIA 824
+Centro;Mendoza;Rivadavia;INDEPENDENCIA 85
+Norte;Misiones;Candelaria;INDEPENDENCIA 85
+Centro;Mendoza;Las Heras;INDEPENDENCIA;1420
+Norte;Misiones;San Javier;INDEPENDENCIA;1420
+Norte;Salta;Chicoana;INDEPENDENCIA;1420
+Metropolitana;Buenos Aires;Dolores;INDEPENDENCIA;241
+Sur;Chubut;Martires;INDEPENDENCIA;241
+Sur;Chubut;Sarmiento;INDEPENDENCIA;241
+Centro;Santa Fe;San Lorenzo;INDEPENDENCIA;377
+Metropolitana;Buenos Aires;Leandro N. Alem;INDEPENDENCIA;377
+Sur;Neuquen;Chos Malal;INDEPENDENCIA;377
+Centro;San Luis;General Pedernera;INDEPENDENCIA;409
+Metropolitana;Buenos Aires;Jose M. Ezeiza;INDEPENDENCIA;409
+Metropolitana;Buenos Aires;Lincoln;INDEPENDENCIA;427
+Norte;Chaco;Comandante Fernandez;INDEPENDENCIA;427
+Norte;Corrientes;San Miguel;INDEPENDENCIA;427
+Centro;Mendoza;Capital;INDEPENDENCIA;569 B
+Norte;Santiago del Estero;Robles;INDEPENDENCIA;569 B
+Norte;Chaco;Chacabuco;INDEPENDENCIA;587
+Norte;Corrientes;San Cosme;INDEPENDENCIA;587
+Sur;Santa Cruz;Lago Buenos Aires;INDEPENDENCIA;587
+Centro;La Pampa;Realico;INDEPENDENCIA;605
+Metropolitana;Buenos Aires;Bragado;INDEPENDENCIA;605
+Metropolitana;Buenos Aires;Vicente Lopez;INDEPENDENCIA;717
+Norte;Santiago del Estero;Avellaneda;INDEPENDENCIA;717
+Sur;Neuquen;Picun Leufu;INDEPENDENCIA;717
+Centro;La Pampa;Guatrache;INT PASAJE COMERCIAL LOCAL;4
+Norte;Corrientes;General Alvear;INT PASAJE COMERCIAL LOCAL;4
+Centro;Mendoza;San Martin;JESUS CARRANZA 991
+Metropolitana;Buenos Aires;Ciudad Libertador San Martin;JESUS CARRANZA 991
+Norte;Chaco;Libertad;JESUS CARRANZA 991
+Centro;Cordoba;Marcos Juarez;JESUS CARRANZA;139
+Norte;Chaco;Sargento Cabral;JESUS CARRANZA;139
+Sur;Santa Cruz;Deseado;JESUS CARRANZA;139
+Centro;Cordoba;San Javier;KM 1 CARRETERA A TUXTEPEC PTE EL CARACOL
+Metropolitana;Buenos Aires;Las Flores;KM 1 CARRETERA A TUXTEPEC PTE EL CARACOL
+Norte;Tucuman;Chicligasta;KM 1 CARRETERA A TUXTEPEC PTE EL CARACOL
+Centro;San Luis;Libertador General San Martin;KM 35 CARRETERA TUXTEPEC CD ALEMAN
+Centro;Santa Fe;San Martin;KM 35 CARRETERA TUXTEPEC CD ALEMAN
+Norte;Jujuy;Cochinoca;KM 35 CARRETERA TUXTEPEC CD ALEMAN
+Norte;Corrientes;Sauce;KM 13 CARR MIGUEL ALEM¦N
+Norte;Formosa;Matacos;KM 13 CARR MIGUEL ALEM¦N
+Norte;Jujuy;Dr. Manuel Belgrano;KM 13 CARR MIGUEL ALEM¦N
+Norte;Catamarca;Fray Mamerto Esquiu;KM 2 CARRETERA TUXTEPEC OAXACA
+Centro;Entre Rios;Gualeguay;KM 2 CARRETERA TUXTEPEC- VALLE NACIONAL
+Norte;Catamarca;La Paz;KM 2 CARRETERA TUXTEPEC- VALLE NACIONAL
+Norte;Chaco;Presidencia de la Plaza;KM13 CARRET CD ALEMAN-TUXTEPEC
+Norte;San Juan;Zonda;KM13 CARRET CD ALEMAN-TUXTEPEC
+Sur;Rio Negro;Bariloche;KM13 CARRET CD ALEMAN-TUXTEPEC
+Centro;La Pampa;Hucal;KM13 CARRETCD ALEMAN-TUXTEPEC
+Norte;La Rioja;General Belgrano;KM13 CARRETCD ALEMAN-TUXTEPEC
+Norte;Formosa;Matacos;KM2 CARRFEDERAL TUX-OAXACA
+Norte;Jujuy;Dr. Manuel Belgrano;KM2 CARRFEDERAL TUX-OAXACA
+Sur;Chubut;Sarmiento;KM2 CARRFEDERAL TUX-OAXACA
+Centro;Mendoza;San Martin;KM35 CARRETFED TUX-CD ALEMAN
+Centro;San Luis;Libertador General San Martin;KM35 CARRETFED TUX-CD ALEMAN
+Norte;Jujuy;Cochinoca;KM35 CARRETFED TUX-CD ALEMAN
+Centro;Cordoba;San Justo;KM5 CARRETTUX-PTE CARACOL
+Metropolitana;Buenos Aires;Chivilcoy;KM5 CARRETTUX-PTE CARACOL
+Norte;Tucuman;Leales;KM5 CARRETTUX-PTE CARACOL
+Centro;Entre Rios;Colon;LAZARO CARDENAS;195
+Centro;La Pampa;Lihuel Calel;LAZARO CARDENAS;195
+Norte;San Juan;San Martin;LAZARO CARDENAS;195
+Norte;Chaco;Fray Justo Santa Maria de Oro;LIBERTAD 1024
+Norte;Catamarca;Capital;LIBERTAD 56
+Norte;Santiago del Estero;Robles;LIBERTAD 56
+Centro;Cordoba;Ischilin;LIBERTAD ESQ MORELOS 834
+Metropolitana;Buenos Aires;General Las Heras;LIBERTAD ESQ MORELOS 834
+Norte;Salta;Cerrillos;LIBERTAD;1046
+Norte;Salta;San Carlos;LIBERTAD;1046
+Metropolitana;Buenos Aires;Bolivar;LIBERTAD;2005
+Metropolitana;Buenos Aires;Rauch;LIBERTAD;2005
+Norte;Corrientes;Esquina;MARIA;ARISTA;454
+Centro;Entre Rios;Uruguay;MARTINEZ;123
+Centro;Cordoba;Tercero Arriba;MATAMOROS;149
+Metropolitana;Buenos Aires;Merlo;MATAMOROS;149
+Metropolitana;Buenos Aires;Monte Hermoso;MATAMOROS;149
+Metropolitana;Buenos Aires;Suipacha;MATAMOROS;149
+Norte;Chaco;12 de octubre;MATAMOROS;149
+Norte;Corrientes;Empedrado;MATAMOROS;149
+Norte;Corrientes;Esquina;MATAMOROS;149
+Norte;Misiones;Guarani;MATAMOROS;350
+Norte;Salta;La Vina;MATAMOROS;350
+Norte;Santiago del Estero;Figueroa;MATAMOROS;360
+Centro;Entre Rios;Nogoya;MATAMOROS;85 ESQ 20 DE NOVIEMBRE
+Metropolitana;Buenos Aires;Tornquist;MATAMOROS;85 ESQ 20 DE NOVIEMBRE
+Norte;Santiago del Estero;Aguirre;MATAMOROS;85 ESQ 20 DE NOVIEMBRE
+Metropolitana;Buenos Aires;General Juan Madariaga;MATAMOROS 123
+Norte;La Rioja;Independencia;MATAMOROS 123
+Centro;Cordoba;Cruz del Eje;MATAMOROS 127
+Centro;Mendoza;Santa Rosa;MATAMOROS 127
+Norte;Chaco;Maipu;MATAMOROS 127
+Centro;La Pampa;Chalileo;MATAMOROS 2
+Centro;Santa Fe;San Cristobal;MATAMOROS 2
+Norte;Formosa;Laishi;MATAMOROS 2
+Metropolitana;Buenos Aires;Hurlingham;MATAMOROS 29
+Norte;Salta;General Güemes;MATAMOROS 29
+Centro;Mendoza;Guaymallen;MATAMOROS 40
+Norte;La Rioja;General angel V. Penaloza;MATAMOROS 40
+Norte;La Rioja;Capital;MATAMOROS;138
+Norte;Salta;Rosario de Lerma;MATAMOROS;138
+Centro;Santa Fe;San Justo;MATAMOROS;225
+Metropolitana;Buenos Aires;Chivilcoy;MATAMOROS;225
+Norte;Tucuman;Leales;MATAMOROS;225
+Centro;Entre Rios;Federal;MATAMOROS;325
+Norte;Catamarca;Poman;MATAMOROS;327
+Norte;San Juan;Zonda;MATAMOROS;327
+Sur;Rio Negro;Bariloche;MATAMOROS;327
+Sur;Chubut;Florentino Ameghino;MIGUEL HIDALGO;409
+Centro;San Luis;Junin;MIGUEL HIDALGO;689
+Metropolitana;Buenos Aires;General Rodriguez;MIGUEL HIDALGO;689
+Centro;Entre Rios;Federacion;NICOLAS BRAVO;1270
+Centro;Santa Fe;General Lopez;OAXACA;5798
+Norte;Corrientes;Itati;OAXACA;5798
+Centro;La Pampa;Utracan;OCAMPO 254-B
+Metropolitana;Buenos Aires;Pehuajo;OCAMPO 254-B
+Norte;Misiones;Apostoles;OCAMPO 254-B
+Metropolitana;Buenos Aires;Carmen de Areco;OCAMPO 38
+Metropolitana;Buenos Aires;Salliquelo;OCAMPO 38
+Centro;Entre Rios;Villaguay;OCAMPO;231
+Metropolitana;Buenos Aires;Bahia Blanca;OCAMPO;231
+Metropolitana;Buenos Aires;Pilar;OCAMPO;231
+Centro;Entre Rios;Feliciano;PLAN DE AYALA;5798
+Metropolitana;Buenos Aires;Ensenada;PONCIA;ARRIAGA;45
+Metropolitana;Buenos Aires;Suipacha;PONCIA;ARRIAGA;45
+Centro;Santa Fe;Rosario;PONCIA;ARRIAGA;43
+Norte;San Juan;Capital;PONCIA;ARRIAGA;43
+Metropolitana;Buenos Aires;Suipacha;PRIMERO DE MAYO;48 ALTOS
+Norte;Corrientes;Mercedes;PRIMERO DE MAYO;48 ALTOS
+Norte;Misiones;Eldorado;PRIMERO DE MAYO;48 ALTOS
+Metropolitana;Buenos Aires;Benito Juarez;PRINCIPAL;5798 TEMAZCAL
+Metropolitana;Buenos Aires;Punta Indio;PRINCIPAL;5798 TEMAZCAL
+Norte;Formosa;Formosa;PROL AV 5 DE MAYO;109
+Centro;Mendoza;La Paz;PROL AV 5 DE MAYO;1145- A
+Norte;Salta;Guachipas;PROL AV 5 DE MAYO;1145- A
+Metropolitana;Buenos Aires;Rauch;PROL AV 5 DE MAYO;270
+Sur;Chubut;Biedma;PROL AV 5 DE MAYO;270
+Metropolitana;Buenos Aires;Almirante Brown;PROL5 DE MAYO;786
+Metropolitana;Buenos Aires;Tres Arroyos;PROL5 DE MAYO;786
+Norte;Misiones;Obera;PROL5 DE MAYO;786
+Centro;Cordoba;Capital;PROLONG INDEPENDENCIA;2237
+Norte;San Juan;Rivadavia;PROLONG INDEPENDENCIA;2237
+Centro;Cordoba;Santa Maria;PROLONGINDEPENDENCIA;468-B
+Centro;Mendoza;Maipu;PROLONGINDEPENDENCIA;468-B
+Sur;Santa Cruz;Corpen Aike;PROLONGINDEPENDENCIA;468-B
+Centro;Santa Fe;San Jeronimo;MAURE;4578
+Norte;Corrientes;Lavalle;CORDOBA;1479
+Norte;San Juan;Chimbas;CABILDO;12762

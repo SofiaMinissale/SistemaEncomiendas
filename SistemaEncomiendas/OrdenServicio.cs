@@ -28,8 +28,10 @@ namespace SistemaEncomiendas
             int numeroIngresado;
             double peso;
             string prioridadPedido = null;
-            string origen = null;
-            string destino = null;
+
+            Direccion origen = null;
+            Direccion destino = null; ;
+
             string tipoEnvio = null;
 
             Console.WriteLine(" ");
@@ -56,7 +58,7 @@ namespace SistemaEncomiendas
 
             Console.Clear();
 
-            //TIPO DE ENVIO 
+            // CARGA DE ORIGEN 
             Console.WriteLine("Seleccione si el origen del envío es un domicilio particular o sucursal");
             Console.WriteLine("1 - Domicilio");
             Console.WriteLine("2 - Sucursal");
@@ -64,18 +66,15 @@ namespace SistemaEncomiendas
             switch (numeroIngresado)
             {
                 case 1:
-                    tipoEnvio = "Domicilio";
+                    origen = cargarDireccion();
                     break;
                 case 2:
-                    tipoEnvio = "Sucursal";
+                    origen = seleccionarSucursal();
                     break;
             }
 
-
-            //AGREGARIAMOS METODO PARA QUE EL USUARIO ELIJA SUCURSAL O DOMICILIO, ETC
             Console.Clear();
            
-
             //DIRECCION DESTINO Y DATOS DESTINATARIO
 
             Console.Clear();
@@ -86,16 +85,31 @@ namespace SistemaEncomiendas
 
             //TIPO DE ENVIO 
             Console.WriteLine("Seleccione si el alcance del envío es Nacional o Internacional");
-            Console.WriteLine("1 -Nacional ");
+            Console.WriteLine("1 - Nacional ");
             Console.WriteLine("2 - Internacional");
             numeroIngresado = Utils.solcitarNumeroEntre(1, 2);
             switch (numeroIngresado)
             {
                 case 1:
-                    prioridadPedido = "Domicilio";
+                    Console.WriteLine("Seleccione si el destino del envío es un domicilio particular o sucursal");
+                    Console.WriteLine("1 - Domicilio");
+                    Console.WriteLine("2 - Sucursal");
+                    numeroIngresado = Utils.solcitarNumeroEntre(1, 2);
+                    switch (numeroIngresado)
+                    {
+                        case 1:
+                            destino = cargarDireccion();
+                            break;
+                        case 2:
+                            destino = seleccionarSucursal();
+                            break;
+                    }
+
+                    Console.Clear();
                     break;
                 case 2:
-                    prioridadPedido = "Sucursal";
+                    prioridadPedido = "Internacional";
+                    //A desarrollar
                     break;
             }
 
@@ -136,17 +150,16 @@ namespace SistemaEncomiendas
             Console.WriteLine("Ingrese el DNI, del destinatario");
             int documentoReceptor = Utils.solicitarDocumento();
 
-            string nombreUsuario = cliente.nombreUsuario;
+            //SE PERSISTEN DATOS
             Envio envio = new Envio(
                INGRESADO_EN_SISTEMA,
-               nombreUsuario,
+               cliente.cuit,
                peso,
-               origen,
-               destino,
+               origen.ToString(),
+               destino.ToString(),
                documentoReceptor
                );
             envio.cargarEnvioEnTXTEnvios();
-            envio.cargarEnvioEnTXTClientes(cliente.nombreUsuario, envio.IdOrdenServicio);
             return envio;
         }
 
@@ -158,17 +171,142 @@ namespace SistemaEncomiendas
 
             Console.WriteLine($"* Tipo de envío: ");
             Console.WriteLine($"* Prioridad: ");
-            Console.WriteLine($"* Origen: ");
-            Console.WriteLine($"* Destino: SUCURSAL: ");
+            Console.WriteLine($"* Origen: {envio.origen}");
+            Console.WriteLine($"* Destino: {envio.destino}");
             Console.WriteLine($"* Nombre y apellido del receptor:{envio.nombreDestinatario}, {envio.apellidoDestinatario}");
-            Console.WriteLine($"* DNI del receptor:{envio.documentoReceptor}");
+            Console.WriteLine($"* DNI del receptor:{envio.documenoDestinatario}");
             Console.WriteLine($"* Cotización del envío: ${envio.costo}");
             Console.WriteLine(" ");
 
         }
 
-    }
+        public static Direccion seleccionarSucursal()
+        {
+            int opcionSeleccionada;
 
+            // FLUJO SELECCION DE SUCURSAL
+            var listadoSucursales = Sucursal.listar();
+            var sucursalesAgrupadasRegion = listadoSucursales.GroupBy(sucursal => sucursal.Direccion.Region);
+
+            // SELECCIONAR REGION
+            Console.WriteLine("");
+            Console.WriteLine("Seleccione region para la sucursal:");
+            foreach (var item in sucursalesAgrupadasRegion.Select((value, index) => (value, index)))
+            {
+                var index = item.index + 1;
+                var region = item.value.Key;
+
+                Console.WriteLine(index + "-" + region);
+            }
+
+            opcionSeleccionada = Utils.solcitarNumeroEntre(1, sucursalesAgrupadasRegion.Count());
+
+            // SELECCIONAR PROVINCIA
+            var sucursalesRegionSeleccionada = sucursalesAgrupadasRegion.ElementAt(opcionSeleccionada - 1);
+            var sucursalesAgrupadasProvincia = sucursalesRegionSeleccionada.GroupBy(sucursal => sucursal.Direccion.Provincia);
+            Console.WriteLine("");
+            Console.WriteLine("Seleccione provincia para la sucursal:");
+            foreach (var item in sucursalesAgrupadasProvincia.Select((value, index) => (value, index)))
+            {
+                var index = item.index + 1;
+                var region = item.value.Key;
+
+                Console.WriteLine(index + "-" + region);
+            }
+
+            opcionSeleccionada = Utils.solcitarNumeroEntre(1, sucursalesAgrupadasProvincia.Count());
+
+            // SELECCIONAR LOCALIDAD
+            var sucursalesProvinciaSeleccionada = sucursalesAgrupadasProvincia.ElementAt(opcionSeleccionada - 1);
+            var sucursalesAgrupadasLocalidad = sucursalesProvinciaSeleccionada.GroupBy(sucursal => sucursal.Direccion.Localidad);
+            Console.WriteLine("");
+            Console.WriteLine("Seleccione localidad para la sucursal:");
+            foreach (var item in sucursalesAgrupadasLocalidad.Select((value, index) => (value, index)))
+            {
+                var index = item.index + 1;
+                var region = item.value.Key;
+
+                Console.WriteLine(index + "-" + region);
+            }
+
+            opcionSeleccionada = Utils.solcitarNumeroEntre(1, sucursalesAgrupadasLocalidad.Count());
+
+            // SELECCIONAR SUCURSAL
+            var sucursalesFiltradas = sucursalesAgrupadasLocalidad.ElementAt(opcionSeleccionada - 1);
+            Console.WriteLine("");
+            Console.WriteLine("Seleccione la sucursal para el envio:");
+            foreach (var item in sucursalesFiltradas.Select((sucursal, index) => (sucursal, index)))
+            {
+                var index = item.index + 1;
+
+                Console.WriteLine(index + "-" + item.sucursal.Direccion.mostrar());
+            }
+
+            opcionSeleccionada = Utils.solcitarNumeroEntre(1, sucursalesFiltradas.Count());
+            var sucursalSeleccionada = sucursalesFiltradas.ElementAt(opcionSeleccionada - 1);
+            return sucursalSeleccionada.Direccion;
+        }
+
+        public static Direccion cargarDireccion()
+        {
+            int opcionSeleccionada;
+
+            // FLUJO CARGA DE DOMICILIO
+            var listadoLocalidades = Direccion.listarLocalidades();
+            var localidadesAgrupadasRegion = listadoLocalidades.GroupBy(localidad => localidad.Region);
+
+            // SELECCIONAR REGION
+            Console.WriteLine("");
+            Console.WriteLine("Seleccione la region a la que pertenece la direccion:");
+            foreach (var item in localidadesAgrupadasRegion.Select((value, index) => (value, index)))
+            {
+                var index = item.index + 1;
+                var region = item.value.Key;
+
+                Console.WriteLine(index + "-" + region);
+            }
+
+            opcionSeleccionada = Utils.solcitarNumeroEntre(1, localidadesAgrupadasRegion.Count());
+
+            // SELECCIONAR PROVINCIA
+            var localidadesRegionSeleccionada = localidadesAgrupadasRegion.ElementAt(opcionSeleccionada - 1);
+            var localidadesAgrupadasProvincia = localidadesRegionSeleccionada.GroupBy(localidad => localidad.Provincia);
+            Console.WriteLine("");
+            Console.WriteLine("Seleccione la provincia a la que pertenece la direccion:");
+            foreach (var item in localidadesAgrupadasProvincia.Select((value, index) => (value, index)))
+            {
+                var index = item.index + 1;
+                var region = item.value.Key;
+
+                Console.WriteLine(index + "-" + region);
+            }
+
+            opcionSeleccionada = Utils.solcitarNumeroEntre(1, localidadesAgrupadasProvincia.Count());
+
+            // SELECCIONAR LOCALIDAD
+            var localidadesProvinciaSeleccionada = localidadesAgrupadasProvincia.ElementAt(opcionSeleccionada - 1);
+            Console.WriteLine("");
+            Console.WriteLine("Seleccione la localidad a la que pertenece la direccion:");
+            foreach (var item in localidadesProvinciaSeleccionada.Select((direccion, index) => (direccion, index)))
+            {
+                var index = item.index + 1;
+
+                Console.WriteLine(index + "-" + item.direccion.Localidad);
+            }
+
+            opcionSeleccionada = Utils.solcitarNumeroEntre(1, localidadesProvinciaSeleccionada.Count());
+            var direccion = localidadesProvinciaSeleccionada.ElementAt(opcionSeleccionada - 1);
+
+            Console.WriteLine("Cargar la calle:");
+            direccion.Calle = Console.ReadLine();
+
+            Console.WriteLine("Carga la altura:");
+            direccion.Altura = Utils.solcitarNumeroEntre(1, 99999).ToString();
+
+            return direccion;
+        }
+
+    }
 
 }
 

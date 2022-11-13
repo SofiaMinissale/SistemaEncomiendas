@@ -11,31 +11,29 @@ namespace SistemaEncomiendas
     {
         public int IdOrdenServicio { get; set; }
         public string estado { get; set; }
-        public string nombreUsuario { get; set; }
+        public string cuitUsuario { get; set; }
         public double peso { get; set; }
         public string origen { get; set; }
         public string destino { get; set; }
-        public int documentoReceptor { get; set; }
         public string prioridad { get; set; }
-        public string correoElectronicoReceptor { get; set; }
         public double costo { get; set; }
 
         public string nombreDestinatario { get; set; }
-
         public string apellidoDestinatario { get; set;}
+        public int documenoDestinatario { get; set; }
 
 
-        private string archivoDatosEnvios = "../../datos/Envios.txt";
-        private string archivoDatosClientes = @"../../datos/ClienteCorporativo.txt";
+        private string archivoDatosEnvios = "../../../envios.txt";
+        private string archivoDatosClientes = @"../../../clientes_corporativos.txt";
 
-        public Envio(string estado, string nombreUsuario, double peso, string origen, string destino, int documentoReceptor)
+        public Envio(string estado, string cuitUsuario, double peso, string origen, string destino, int documentoReceptor)
         {
             this.estado = estado;
-            this.nombreUsuario = nombreUsuario;
+            this.cuitUsuario = cuitUsuario;
             this.peso = peso;
             this.origen = origen;
             this.destino = destino;
-            this.documentoReceptor = documentoReceptor;
+            this.documenoDestinatario = documentoReceptor;
 
         }
 
@@ -68,8 +66,8 @@ namespace SistemaEncomiendas
             var stream = File.OpenRead(archivoDatosEnvios);
             var reader = new StreamReader(stream);
 
+            // Leemos el archivo y guardamos en memoria todas las lineas previas
             List<string> lineas = new List<string>();
-
             if (new FileInfo(archivoDatosEnvios).Length != 0)
             {
                 while (!reader.EndOfStream)
@@ -81,18 +79,20 @@ namespace SistemaEncomiendas
 
             stream.Close();
 
+            int id = 1;
+            var conteoEnvios = lineas.Count();
+            if (conteoEnvios > 1) {
+                var ultimoEnvio = lineas.ElementAt(conteoEnvios - 1);
+                id = int.Parse(ultimoEnvio.Split(';')[0]) + 1;
+            }
+            this.IdOrdenServicio = id;
 
-            using (StreamWriter writer = new StreamWriter(archivoDatosEnvios))
+
+            using (StreamWriter writer = File.AppendText(archivoDatosEnvios))
             {
-                foreach (string linea in lineas)
-                {
-                    writer.WriteLine(linea);
-                }
-                writer.WriteLine(this.IdOrdenServicio + ";"
-                    + this.nombreUsuario + ";"
-                    + this.estado + ";"
-                    + this.peso + ";"
-                    + this.costo);
+                // Escribimos el nuevo envio
+                var nuevoEnvio = $"{this.IdOrdenServicio};{this.cuitUsuario};{this.estado};{this.peso};{this.origen};{this.destino};{this.documenoDestinatario};{this.costo}";
+                writer.WriteLine(nuevoEnvio);
 
                 writer.Close();
             }
@@ -102,33 +102,33 @@ namespace SistemaEncomiendas
         public void cargarEnvioEnTXTClientes(string nombreUsuario, int numeroSeguimientoNuevoEnvio)
         {
 
-            string estado = null;
-            var stream = File.OpenRead(archivoDatosClientes);
-            var reader = new StreamReader(stream);
-            int lineToEdit = 1;
+            //string estado = null;
+            //var stream = File.OpenRead(archivoDatosClientes);
+            //var reader = new StreamReader(stream);
+            //int lineToEdit = 1;
 
-            //Datos a sobreescribir
-            string usuario = null;
-            string direccion = null;
-            string IdOrdenServicio = null;
+            ////Datos a sobreescribir
+            //string usuario = null;
+            //string direccion = null;
+            //string IdOrdenServicio = null;
 
-            while (!reader.EndOfStream)
-            {
-                var linea = reader.ReadLine();
+            //while (!reader.EndOfStream)
+            //{
+            //    var linea = reader.ReadLine();
 
-                string[] datos = linea.Split(';');
+            //    string[] datos = linea.Split(';');
 
-                if (datos[0].Equals(nombreUsuario))
-                {
-                    usuario = datos[0];
-                    IdOrdenServicio = datos[1];
-                    break;
-                }
+            //    if (datos[0].Equals(nombreUsuario))
+            //    {
+            //        usuario = datos[0];
+            //        IdOrdenServicio = datos[1];
+            //        break;
+            //    }
 
-                lineToEdit++;
-            }
-            stream.Close();
-            Utils.lineChanger($"{usuario};{direccion};{IdOrdenServicio}|{numeroSeguimientoNuevoEnvio}", archivoDatosClientes, lineToEdit);
+            //    lineToEdit++;
+            //}
+            //stream.Close();
+            //Utils.lineChanger($"{usuario};{direccion};{IdOrdenServicio}|{numeroSeguimientoNuevoEnvio}", archivoDatosClientes, lineToEdit);
 
         }
 

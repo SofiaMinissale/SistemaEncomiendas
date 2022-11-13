@@ -3,39 +3,55 @@ namespace SistemaEncomiendas
 {
 	public class ClienteCorporativo
 	{
+
         public string cuit { get; set; }
         public string nombreUsuario { get; set; }
-        public string contraseña { get; set; }
-        public string IdOrdenServicio { get; set; }
-
-        public string archivoDatosUsuarios = "../../datos/Usuarios.txt";
 
 
-        public ClienteCorporativo traerDatosCliente(String usuario)
+        public ClienteCorporativo()
         {
-            this.nombreUsuario = usuario;
-            
-            var stream = File.OpenRead(archivoDatosUsuarios);
-            var reader = new StreamReader(stream);
-
-            while (!reader.EndOfStream)
-            {
-                var linea = reader.ReadLine();
-
-                string[] datos = linea.Split(';');
-
-                if (datos[0].Equals(usuario))
-                {
-                    this.nombreUsuario = usuario;
-                  
-                    break;
-                }
-            }
-
-            stream.Close();
-
-            return this;
         }
+
+        public ClienteCorporativo(Login login)
+        {
+            this.cuit = login.cuit;
+            this.nombreUsuario = login.nombreUsuario;
+        }
+
+        //public string archivoDatosUsuarios = "../../../usuarios.csv";
+
+        //public ClienteCorporativo traerDatosCliente(String usuario)
+        //{
+        //    this.nombreUsuario = usuario;
+
+        //    var stream = File.OpenRead(archivoDatosUsuarios);
+        //    var reader = new StreamReader(stream);
+
+        //    var counter = 0;
+
+        //    while (!reader.EndOfStream)
+        //    {
+        //        var linea = reader.ReadLine();
+
+        //        if (counter > 0) {
+        //            string[] datos = linea.Split(';');
+
+        //            if (datos[0].Equals(usuario))
+        //            {
+        //                this.nombreUsuario = usuario;
+
+        //                break;
+        //            }
+        //        }
+
+        //        counter++;
+        //    }
+
+        //    stream.Close();
+
+        //    return this;
+        //}
     }
+
 }
 

@@ -8,7 +8,7 @@ namespace SistemaEncomiendas
     {
 
         /* USUARIO DE PRUEBA:  20306578636768; NicolasMartinez; usuario1  */
-   
+
         public static void mostrar()
         {
             ClienteCorporativo cliente = MenuLogueo();
@@ -17,6 +17,7 @@ namespace SistemaEncomiendas
 
         static ClienteCorporativo MenuLogueo()
         {
+            Login login = null;
 
             string nombreUsuario = null;
 
@@ -49,17 +50,15 @@ namespace SistemaEncomiendas
                 string contraseña = Console.ReadLine();
                 Console.Clear();
 
-                Login usuarioIngresado = new Login(cuit, nombreUsuario, contraseña);
+                login = new Login(cuit, nombreUsuario, contraseña);
 
-                usuarioValido = usuarioIngresado.validarUsuario();
+                usuarioValido = login.validarUsuario();
                 esPrimerIntento = false;
             }
 
             Console.WriteLine($"BIENVENIDO {nombreUsuario}");
 
-            ClienteCorporativo cliente = new ClienteCorporativo();
-            cliente.traerDatosCliente(nombreUsuario);
-
+            ClienteCorporativo cliente = new ClienteCorporativo(login);
             return cliente;
         }
 
