@@ -12,7 +12,7 @@ namespace SistemaEncomiendas
         public string nombreUsuario { get; set; }
         public string contraseña { get; set; }
 
-        public string archivoDatosUsuarios = @"../../datos/ClienteCorporativo.txt";
+        public string archivoDatosUsuarios = @"../../datos/Usuarios.txt";
 
         public Login(string cuit, string nombreUsuario, string contraseña)
         {

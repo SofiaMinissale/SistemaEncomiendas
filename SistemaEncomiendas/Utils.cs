@@ -101,6 +101,29 @@ namespace SistemaEncomiendas
             return true;
         }
 
+        public static int solicitarDocumento()
+        {
+            bool esPrimerIntento = true;
+            int nroIngresado;
+            bool esNumeroValido;
+
+            do
+            {
+                if (!esPrimerIntento)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Debe ingresar un numero de documento valido");
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                }
+                esNumeroValido = int.TryParse(Console.ReadLine(), out nroIngresado);
+                esPrimerIntento = false;
+            }
+            while (nroIngresado < 10000000 || nroIngresado > 100000000 || esNumeroValido == false);
+
+            return nroIngresado;
+        }
+
 
         public static bool nroSeguimientoValido(string nroSeguimiento)
         {
@@ -124,6 +147,33 @@ namespace SistemaEncomiendas
             string[] arrLine = File.ReadAllLines(fileName);
             arrLine[line_to_edit - 1] = newText;
             File.WriteAllLines(fileName, arrLine);
+        }
+
+        public static int solicitarNumeroEnvioExistente(List<int> envios)
+        {
+            bool esPrimerIntento = true;
+            int nroIngresado;
+            bool esNumeroValido;
+
+            do
+            {
+                if (!esPrimerIntento)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Debe ingresar un numero de seguimiento valido");
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                }
+
+                esNumeroValido = int.TryParse(Console.ReadLine(), out nroIngresado);
+
+                esPrimerIntento = false;
+            }
+            while (!(envios.IndexOf(nroIngresado) != -1) || esNumeroValido == false);
+
+
+            return nroIngresado;
+
         }
 
     }
