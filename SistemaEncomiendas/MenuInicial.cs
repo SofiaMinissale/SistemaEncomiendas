@@ -7,55 +7,63 @@ namespace SistemaEncomiendas
     public static class MenuInicial
     {
 
+        /* USUARIO DE PRUEBA:  20306578636768; NicolasMartinez; usuario1  */
+   
         public static void mostrar()
         {
-            /* USUARIO DE PRUEBA:  20306578636768; NicolasMartinez; usuario1  */
-            string nombreUsuario = "NicolasMartinez";
-            string cuit = "20306578636768";
-            string contraseña = "usuario1";
+            ClienteCorporativo cliente = MenuLogueo();
+            MenuPrincipal.mostrar(cliente);
+        }
 
-            int numeroIntentos = 0;
-            string cuitIngresado;
-            string usuarioIngresado;
-            string contraseñaIngresada;
+        static ClienteCorporativo MenuLogueo()
+        {
 
-            Console.WriteLine("------------------------------------------");
-            Console.WriteLine("              INICIAR SESION");
-            Console.WriteLine("------------------------------------------");
+            string nombreUsuario = null;
 
-            do
+            bool usuarioValido = false;
+            bool esPrimerIntento = true;
+
+            while (!usuarioValido)
             {
-                if (numeroIntentos >= 1)
+                if (!esPrimerIntento)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Los datos ingresados son incorrectos, presione ENTER para volver a intentarlo");
-                    Console.ReadLine();
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
 
-                Console.WriteLine("");
-                Console.WriteLine("Introduce tu numero de CUIT:");
-                cuitIngresado = Console.ReadLine();
-                //Console.Clear();
 
-                Console.WriteLine("");
-                Console.WriteLine("Introduce tu nombre de usuario:");
-                usuarioIngresado = Console.ReadLine();
-                //Console.Clear();
+                Console.WriteLine("------------------------------------------");
+                Console.WriteLine("              INICIAR SESION");
+                Console.WriteLine("------------------------------------------");
 
-                Console.WriteLine("");
-                Console.WriteLine("Introduce tu contraseña:");
-                contraseñaIngresada = Console.ReadLine();
+                Console.WriteLine("Ingrese su número de CUIT:");
+                string cuit = Console.ReadLine();
                 Console.Clear();
 
-                numeroIntentos++;
+                Console.WriteLine("Ingrese su Usuario");
+                nombreUsuario = Console.ReadLine();
+                Console.Clear();
 
-            } while (!cuitIngresado.Equals(cuit) ||
-                    !usuarioIngresado.Equals(nombreUsuario) ||
-                    !contraseñaIngresada.Equals(contraseña));
+                Console.WriteLine("Ingrese su contraseña");
+                string contraseña = Console.ReadLine();
+                Console.Clear();
 
-            Console.Clear();
-            Console.WriteLine($"BIENVENIDO {nombreUsuario}!");
-            MenuPrincipal.mostrar(new Servicio());
+                Login usuarioIngresado = new Login(cuit, nombreUsuario, contraseña);
+
+                usuarioValido = usuarioIngresado.validarUsuario();
+                esPrimerIntento = false;
+            }
+
+            Console.WriteLine($"BIENVENIDO {nombreUsuario}");
+
+            ClienteCorporativo cliente = new ClienteCorporativo();
+            cliente.traerDatosCliente(nombreUsuario);
+
+            return cliente;
         }
+
+
     }
 }
     

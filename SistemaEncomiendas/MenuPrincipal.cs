@@ -4,11 +4,10 @@ using System.Security.Cryptography;
 
 namespace SistemaEncomiendas
 {
-
-    public static class MenuPrincipal
+     public static class MenuPrincipal
     {
 
-        public static void mostrar(Servicio servicio)
+        public static void mostrar( ClienteCorporativo cliente)
         {
 
             string nombreUsuario = "Nicolas Martinez";
@@ -42,7 +41,7 @@ namespace SistemaEncomiendas
             opcionSeleccionada = Utils.solcitarNumeroEntre(1, 5);
             Console.Clear();
 
-            switch (opcionSeleccionada)
+         /*  switch (opcionSeleccionada)
             {
                 case 1:
 
@@ -373,7 +372,7 @@ namespace SistemaEncomiendas
 
 
                     //nombre destinatario
-                    numeroIntentos = 0;
+                  /*  numeroIntentos = 0;
                     do
                     {
                         if (numeroIntentos >= 1)
@@ -570,7 +569,7 @@ namespace SistemaEncomiendas
                 case 5:
                     Console.WriteLine("SALIENDO DEL PROGRAMA");
                     break;
-            }
+            }*/
 
         }
 
