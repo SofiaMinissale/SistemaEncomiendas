@@ -1,3 +1,5 @@
 id_envio;usuario;estado;peso;origen;destino;cuit;importe
 1;20306578636768;Ingresado en sistema;5;Metropolitana,Buenos Aires,Lujan,Italia,1436;Norte,La Rioja,Chamical,BLVD BENITO JUAREZ ESQ IGNACIO MATIAS,5798;37754499;0
 2;20306578636768;Ingresado en sistema;22;Centro,Cordoba,Rio Primero,AV 20 DE NOVIEMBRE,1027;Metropolitana,CABA,Ciudad de Buenos Aires,AV INDEPENDENCIA,908;40900370;0
+3;20306578636768;Ingresado en sistema;2;Centro,Entre Rios,Nogoya,MATAMOROS,85 ESQ 20 DE NOVIEMBRE;Norte,Chaco,12 de octubre,hola,123;32456456;0
+4;20306578636768;Ingresado en sistema;1;Norte,Chaco,Sargento Cabral,JESUS CARRANZA,139;Limitrofe,Uruguay,Colonia,;40900370;0

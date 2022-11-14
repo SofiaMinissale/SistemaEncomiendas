@@ -33,7 +33,6 @@ namespace SistemaEncomiendas
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("         SOLICITUD DE SERVICIO");
                     Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("");
                     Envio solicitudOrdenServicio = OrdenServicio.cargarDatos(cliente);
                     Console.Clear();
                     OrdenServicio.mostrarResumenSolicitud(solicitudOrdenServicio);

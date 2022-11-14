@@ -14,6 +14,7 @@ namespace SistemaEncomiendas
         public string cuitUsuario { get; set; }
         public double peso { get; set; }
         public string origen { get; set; }
+        public string tipoEnvio { get; set; }
         public string destino { get; set; }
         public string prioridad { get; set; }
         public double costo { get; set; }
@@ -26,15 +27,28 @@ namespace SistemaEncomiendas
         private string archivoDatosEnvios = "../../../envios.txt";
         private string archivoDatosClientes = @"../../../clientes_corporativos.txt";
 
-        public Envio(string estado, string cuitUsuario, double peso, string origen, string destino, int documentoReceptor)
+        public Envio(
+            string estado,
+            string cuitUsuario,
+            double peso,
+            string prioridad,
+            string tipoEnvio,
+            string origen,
+            string destino,
+            string nombreDestinatario,
+            string apellidoDestinatario,
+            int documentoReceptor)
         {
             this.estado = estado;
             this.cuitUsuario = cuitUsuario;
             this.peso = peso;
+            this.prioridad = prioridad;
+            this.tipoEnvio = tipoEnvio;
             this.origen = origen;
             this.destino = destino;
+            this.nombreDestinatario = nombreDestinatario;
+            this.apellidoDestinatario = apellidoDestinatario;
             this.documenoDestinatario = documentoReceptor;
-
         }
 
         public void asignarNumeroDeSeguimiento()

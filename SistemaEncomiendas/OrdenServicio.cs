@@ -27,7 +27,7 @@ namespace SistemaEncomiendas
         {
             int numeroIngresado;
             double peso;
-            string prioridadPedido = null;
+            string prioridad = null;
 
             Direccion origen = null;
             Direccion destino = null; ;
@@ -49,10 +49,10 @@ namespace SistemaEncomiendas
             switch (numeroIngresado)
             {
                 case 1:
-                    prioridadPedido = "NORMAL";
+                    prioridad = "NORMAL";
                     break;
                 case 2:
-                    prioridadPedido = "URGENTE";
+                    prioridad = "URGENTE";
                     break;
             }
 
@@ -66,7 +66,7 @@ namespace SistemaEncomiendas
             switch (numeroIngresado)
             {
                 case 1:
-                    origen = cargarDireccion();
+                    origen = cargarDireccionNacional();
                     break;
                 case 2:
                     origen = seleccionarSucursal();
@@ -91,6 +91,7 @@ namespace SistemaEncomiendas
             switch (numeroIngresado)
             {
                 case 1:
+                    tipoEnvio = "Nacional";
                     Console.WriteLine("Seleccione si el destino del envío es un domicilio particular o sucursal");
                     Console.WriteLine("1 - Domicilio");
                     Console.WriteLine("2 - Sucursal");
@@ -98,7 +99,7 @@ namespace SistemaEncomiendas
                     switch (numeroIngresado)
                     {
                         case 1:
-                            destino = cargarDireccion();
+                            destino = cargarDireccionNacional();
                             break;
                         case 2:
                             destino = seleccionarSucursal();
@@ -108,15 +109,15 @@ namespace SistemaEncomiendas
                     Console.Clear();
                     break;
                 case 2:
-                    prioridadPedido = "Internacional";
-                    //A desarrollar
+                    tipoEnvio = "Internacional";
+                    destino = cargarDireccionInternacional();
                     break;
             }
 
             //nombre
             Console.WriteLine(" ");
             Console.WriteLine("Ingrese nombre del destinatario");
-            string nombreReceptor;
+            string nombreDestinatario;
             bool primerIntento = true;
             do
             {
@@ -124,15 +125,15 @@ namespace SistemaEncomiendas
                 {
                     Console.WriteLine("Por favor, ingrese un nombre valido ");
                 }
-                nombreReceptor = Console.ReadLine();
+                nombreDestinatario = Console.ReadLine();
                 primerIntento = false;
             }
-            while (String.IsNullOrWhiteSpace(nombreReceptor));
+            while (String.IsNullOrWhiteSpace(nombreDestinatario));
 
             //apellido
             Console.WriteLine(" ");
             Console.WriteLine("Ingrese el apellido del destinatario");
-            string apellidoReceptor;
+            string apellidoDestinatario;
             primerIntento = true;
             do
             {
@@ -140,24 +141,28 @@ namespace SistemaEncomiendas
                 {
                     Console.WriteLine("Por favor, ingrese un apellido valido ");
                 }
-                apellidoReceptor = Console.ReadLine();
+                apellidoDestinatario = Console.ReadLine();
                 primerIntento = false;
             }
-            while (String.IsNullOrWhiteSpace(apellidoReceptor));
+            while (String.IsNullOrWhiteSpace(apellidoDestinatario));
 
             //documento
             Console.WriteLine(" ");
             Console.WriteLine("Ingrese el DNI, del destinatario");
-            int documentoReceptor = Utils.solicitarDocumento();
+            int documentoDestinatario = Utils.solicitarDocumento();
 
             //SE PERSISTEN DATOS
             Envio envio = new Envio(
                INGRESADO_EN_SISTEMA,
                cliente.cuit,
                peso,
+               prioridad,
+               tipoEnvio,
                origen.ToString(),
                destino.ToString(),
-               documentoReceptor
+               nombreDestinatario,
+               apellidoDestinatario,
+               documentoDestinatario
                );
             envio.cargarEnvioEnTXTEnvios();
             return envio;
@@ -169,11 +174,11 @@ namespace SistemaEncomiendas
             Console.WriteLine("       RESUMEN DE SU SOLICITUD");
             Console.WriteLine("--------------------------------------");
 
-            Console.WriteLine($"* Tipo de envío: ");
-            Console.WriteLine($"* Prioridad: ");
+            Console.WriteLine($"* Tipo de envío: {envio.tipoEnvio}");
+            Console.WriteLine($"* Prioridad: {envio.prioridad}");
             Console.WriteLine($"* Origen: {envio.origen}");
             Console.WriteLine($"* Destino: {envio.destino}");
-            Console.WriteLine($"* Nombre y apellido del receptor:{envio.nombreDestinatario}, {envio.apellidoDestinatario}");
+            Console.WriteLine($"* Nombre y apellido del destinatario:{envio.nombreDestinatario}, {envio.apellidoDestinatario}");
             Console.WriteLine($"* DNI del receptor:{envio.documenoDestinatario}");
             Console.WriteLine($"* Cotización del envío: ${envio.costo}");
             Console.WriteLine(" ");
@@ -247,7 +252,7 @@ namespace SistemaEncomiendas
             return sucursalSeleccionada.Direccion;
         }
 
-        public static Direccion cargarDireccion()
+        public static Direccion cargarDireccionNacional()
         {
             int opcionSeleccionada;
 
@@ -304,6 +309,60 @@ namespace SistemaEncomiendas
             direccion.Altura = Utils.solcitarNumeroEntre(1, 99999).ToString();
 
             return direccion;
+        }
+
+        public static Direccion cargarDireccionInternacional()
+        {
+   
+            int opcionSeleccionada;
+
+            // FLUJO SELECCION DE DESTINO INTERNACIONAL
+            var listadoInternacional = DestinoInternacional.listar();
+            var destinosInternacionesAgrupadosRegion = listadoInternacional.GroupBy(destino => destino.Direccion.Region); //Agrupo por region
+
+            // SELECCIONAR REGION
+            Console.WriteLine("");
+            Console.WriteLine("Seleccione region de destino:");
+            foreach (var item in destinosInternacionesAgrupadosRegion.Select((value, index) => (value, index)))
+            {
+                var index = item.index + 1;
+                var region = item.value.Key;
+
+                Console.WriteLine(index + "-" + region);
+            }
+
+            opcionSeleccionada = Utils.solcitarNumeroEntre(1, destinosInternacionesAgrupadosRegion.Count());
+
+            // SELECCIONAR PAIS
+            var paisesRegionSeleccionada = destinosInternacionesAgrupadosRegion.ElementAt(opcionSeleccionada - 1);
+            var destinosAgrupadosPais = paisesRegionSeleccionada.GroupBy(destino => destino.Direccion.Provincia);
+            Console.WriteLine("");
+            Console.WriteLine("Seleccione pais de destino:");
+            foreach (var item in destinosAgrupadosPais.Select((value, index) => (value, index)))
+            {
+                var index = item.index + 1;
+                var pais = item.value.Key;
+
+                Console.WriteLine(index + "-" + pais);
+            }
+
+            opcionSeleccionada = Utils.solcitarNumeroEntre(1, destinosAgrupadosPais.Count());
+
+            // SELECCIONAR LOCALIDAD
+            var destinosFiltrados = destinosAgrupadosPais.ElementAt(opcionSeleccionada - 1);
+            Console.WriteLine("");
+            Console.WriteLine("Seleccione la localidad de destino:");
+            foreach (var item in destinosFiltrados.Select((value, index) => (value, index)))
+            {
+                var index = item.index + 1;
+
+                Console.WriteLine(index + "-" + item.value.Direccion.Localidad);
+            }
+
+            opcionSeleccionada = Utils.solcitarNumeroEntre(1, destinosFiltrados.Count());
+            var destinoSeleccionado = destinosFiltrados.ElementAt(opcionSeleccionada - 1);
+            return destinoSeleccionado.Direccion;
+        
         }
 
     }
