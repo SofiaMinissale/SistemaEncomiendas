@@ -28,66 +28,64 @@ namespace SistemaEncomiendas
 			return tarifas;
 		}
 
-		public static String calculatTipoTarifa(String tipoEnvio, Direccion origen, Direccion destino)
+        public static String calcularTipoTarifaNacional(Direccion origen, Direccion destino)
         {
             String tipoTarifa = null;
 
-            if (String.Equals(tipoEnvio, "Nacional"))
+            if (String.Equals(origen.Region, destino.Region))
             {
-                if (String.Equals(origen.Region, destino.Region))
+                if (String.Equals(origen.Provincia, destino.Provincia))
                 {
-                    if (String.Equals(origen.Provincia, destino.Provincia))
-                    {
-                        if (String.Equals(origen.Localidad, destino.Localidad))
-                            tipoTarifa = "local";
-                        else
-                            tipoTarifa = "provincial";
-                    }
+                    if (String.Equals(origen.Localidad, destino.Localidad))
+                        tipoTarifa = "local";
                     else
-                        tipoTarifa = "regional";
+                        tipoTarifa = "provincial";
                 }
                 else
-                    tipoTarifa = "nacional";
+                    tipoTarifa = "regional";
             }
             else
-            {
-                switch (destino.Region)
-                {
-                    case "Limitrofe":
-                        tipoTarifa = "limitrofes";
-                        break;
-                    case "America Latina":
-                        tipoTarifa = "resto america latina";
-                        break;
-                    case "America del Norte":
-                        tipoTarifa = "america del norte";
-                        break;
-                    case "Europa":
-                        tipoTarifa = "europa";
-                        break;
-                    case "Asia":
-                        tipoTarifa = "asia";
-                        break;
+                tipoTarifa = "nacional";
 
-                }
+            return tipoTarifa;
+        }
+
+        public static String calcularTipoTarifaInternacional(Direccion destino)
+        {
+            String tipoTarifa = null;
+
+            switch (destino.Region)
+            {
+                case "Limitrofe":
+                    tipoTarifa = "limitrofes";
+                    break;
+                case "America Latina":
+                    tipoTarifa = "resto america latina";
+                    break;
+                case "America del Norte":
+                    tipoTarifa = "america del norte";
+                    break;
+                case "Europa":
+                    tipoTarifa = "europa";
+                    break;
+                case "Asia":
+                    tipoTarifa = "asia";
+                    break;
             }
 
             return tipoTarifa;
         }
 
-        public static double calcularImporte(String tipoEnvio, Direccion origen, Direccion destino, double peso, String prioridad, bool retiroEnPuerta, bool entregaEnPuerta)
+        public static double calcularImporteTarifa(String tipoTarifa, double peso)
         {
-            String tipoTarifa = Tarifa.calculatTipoTarifa(tipoEnvio, origen, destino);
-            List<Tarifa> tarifas = Tarifa.listar();
-
             double importe = 0;
-
+            List<Tarifa> tarifas = Tarifa.listar();
             var tarifasAgrupadas = tarifas.GroupBy(tarifa => tarifa.Tipo);
+
             foreach (var group in tarifasAgrupadas)
             {
                 if (String.Equals(group.Key, tipoTarifa))
                 {
-
                     var orderedGroup = group.OrderBy(x => double.Parse(x.Peso));
                     foreach (Tarifa tarifa in orderedGroup)
                     {
@@ -102,6 +100,11 @@ namespace SistemaEncomiendas
                 }
             }
 
+            return importe;
+        }
+
+        public static double calcularAdicionales(double importe, String prioridad, bool retiroEnPuerta, bool entregaEnPuerta)
+        {
             if (String.Equals(prioridad, "URGENTE"))
             {
                 double adicional = importe * 0.5;
@@ -112,17 +115,42 @@ namespace SistemaEncomiendas
             }
 
             if (retiroEnPuerta)
-            {
                 importe = importe + 3500;
-            }
 
             if (entregaEnPuerta)
-            {
                 importe = importe + 1500;
-            }
 
             return importe;
         }
+
+        public static double calcularCostoTotal(String tipoEnvio, Direccion origen, Direccion destino, double peso, String prioridad, bool retiroEnPuerta, bool entregaEnPuerta)
+        {
+            double importe = 0;
+
+            if(String.Equals(tipoEnvio, "Nacional"))
+            {
+                String tipoTarifa = calcularTipoTarifaNacional(origen, destino);
+                importe = calcularImporteTarifa(tipoTarifa, peso);
+            } else
+            {
+                Direccion destinoIntermedioCABA = new Direccion();
+                destinoIntermedioCABA.Region = "Metropolitana";
+                destino.Provincia = "CABA";
+                destino.Localidad = "Ciudad de Buenos Aires";
+
+                String tipoTarifaNacional = calcularTipoTarifaNacional(origen, destinoIntermedioCABA);
+                double importeNacional = calcularImporteTarifa(tipoTarifaNacional, peso);
+
+                String tipoTarifaInternacional = calcularTipoTarifaInternacional(destino);
+                double importeInternacional = calcularImporteTarifa(tipoTarifaInternacional, peso);
+
+                importe = importeNacional + importeInternacional;
+            }
+
+            double importeTotal = calcularAdicionales(importe, prioridad, retiroEnPuerta, entregaEnPuerta);
+            return importeTotal;
+        }
+
 
     }
 }

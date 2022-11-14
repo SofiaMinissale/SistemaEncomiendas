@@ -156,7 +156,15 @@ namespace SistemaEncomiendas
             Console.WriteLine("Ingrese el DNI, del destinatario");
             int documentoDestinatario = Utils.solicitarDocumento();
 
-            double importe = Tarifa.calcularImporte(tipoEnvio, origen, destino, peso, prioridad, retiroEnPuerta, entregaEnPuerta);
+            double importe = Tarifa.calcularCostoTotal(
+                tipoEnvio,
+                origen,
+                destino,
+                peso,
+                prioridad,
+                retiroEnPuerta,
+                entregaEnPuerta
+            );
 
             //SE PERSISTEN DATOS
             Envio envio = new Envio(
