@@ -62,7 +62,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("          CONSULTA ESTADO DE  SERVICIO");
                     Console.WriteLine("------------------------------------------");
                     ConsultaEstadoServicio consulta = new ConsultaEstadoServicio();
-                    string estado = consulta.consultarEstadoSolicitud(1);
+                    string estado = consulta.consultarEstadoSolicitud();
                     Console.Clear();
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("           ESTADO DE SERVICIO");
@@ -70,6 +70,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("");
                     Console.WriteLine($"fecha de solicitud de servicio: {DateTime.Today}");
                     Console.WriteLine($"Estado de servicio: {estado}");
+                    Console.WriteLine("");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
                     Console.Clear();
