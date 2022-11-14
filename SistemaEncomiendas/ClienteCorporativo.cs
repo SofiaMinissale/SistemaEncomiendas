@@ -19,7 +19,6 @@ namespace SistemaEncomiendas
             this.cuit = login.cuit;
             this.nombreUsuario = login.nombreUsuario;
 
-
         }
 
         public string archivoDatosUsuarios = "../../../envios.csv";

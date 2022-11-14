@@ -25,7 +25,7 @@ namespace SistemaEncomiendas
 
 
         private string archivoDatosEnvios = "../../../envios.txt";
-    
+        private string archivoDatosClientes = @"../../../clientes_corporativos.txt";
 
         public Envio(
             string estado,
@@ -37,9 +37,7 @@ namespace SistemaEncomiendas
             string destino,
             string nombreDestinatario,
             string apellidoDestinatario,
-            int documentoReceptor,
-            double costo
-            )
+            int documentoReceptor)
         {
             this.estado = estado;
             this.cuitUsuario = cuitUsuario;
@@ -51,7 +49,6 @@ namespace SistemaEncomiendas
             this.nombreDestinatario = nombreDestinatario;
             this.apellidoDestinatario = apellidoDestinatario;
             this.documenoDestinatario = documentoReceptor;
-            this.costo = costo;
         }
 
         public void asignarNumeroDeSeguimiento()
@@ -115,6 +112,7 @@ namespace SistemaEncomiendas
             }
 
         }
+
 
         public void consultarEnvio()
         {
