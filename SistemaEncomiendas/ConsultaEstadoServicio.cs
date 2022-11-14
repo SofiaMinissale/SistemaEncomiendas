@@ -43,14 +43,13 @@ namespace SistemaEncomiendas
                 if (int.Parse(datos[0]).Equals(numeroSeguimiento))
                 {
                     estado = datos[2];
-                    destino = datos[5];
-
+               
                 }
             }
 
             stream.Close();
 
-            return estado + destino;
+            return estado;
         }
 
         /*public static void mostrarEstadoServicio(Envio envio)
