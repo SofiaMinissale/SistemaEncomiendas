@@ -135,8 +135,8 @@ namespace SistemaEncomiendas
             {
                 Direccion destinoIntermedioCABA = new Direccion();
                 destinoIntermedioCABA.Region = "Metropolitana";
-                destino.Provincia = "CABA";
-                destino.Localidad = "Ciudad de Buenos Aires";
+                destinoIntermedioCABA.Provincia = "CABA";
+                destinoIntermedioCABA.Localidad = "Ciudad de Buenos Aires";
 
                 String tipoTarifaNacional = calcularTipoTarifaNacional(origen, destinoIntermedioCABA);
                 double importeNacional = calcularImporteTarifa(tipoTarifaNacional, peso);

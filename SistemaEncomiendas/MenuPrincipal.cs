@@ -58,14 +58,14 @@ namespace SistemaEncomiendas
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("          CONSULTA ESTADO DE  SERVICIO");
                     Console.WriteLine("------------------------------------------");
-                    List<Envio> enviosUsuario = Envio.consultarEnvioCuitUsuario(cliente.cuit);
-                    ConsultaEstadoServicio consulta = new ConsultaEstadoServicio(enviosUsuario);
-                    if (enviosUsuario.Count() > 0)
+                    List<Envio> enviosEstadoServicio = Envio.consultarEnvioCuitUsuario(cliente.cuit);
+                    ConsultaEstadoServicio consulta = new ConsultaEstadoServicio(enviosEstadoServicio);
+                    if (enviosEstadoServicio.Count() > 0)
                     {
                         consulta.mostrarOpciones();
                         Console.WriteLine("");
                         Console.WriteLine("Seleccione la opcion que desee consultar.");
-                        var envioSeleccionado = Utils.solcitarNumeroEntre(1, enviosUsuario.Count());
+                        var envioSeleccionado = Utils.solcitarNumeroEntre(1, enviosEstadoServicio.Count());
                         consulta.mostrarEnvio(envioSeleccionado);
                     } else
                     {
@@ -83,21 +83,18 @@ namespace SistemaEncomiendas
                     Console.WriteLine("        ESTADO DE CUENTA");
                     Console.WriteLine("------------------------------------------");
 
-                    List<Envio> estadoCuenta = Envio.consultarEnvioCuitUsuario(cliente.cuit);
-                    ConsultaEstadoServicio consultaEstado = new ConsultaEstadoServicio(estadoCuenta);
-                   /* if (estadoCuenta.Count() > 0)
+                    List<Envio> enviosEstadoCuenta = Envio.consultarEnvioCuitUsuario(cliente.cuit);
+                    if (enviosEstadoCuenta.Count() > 0)
                     {
-                        consultaEstado.mostrarOpciones();
-                        Console.WriteLine("");
-                        Console.WriteLine("Seleccione la opcion que desee consultar.");
-                        var envioSeleccionado = Utils.solcitarNumeroEntre(1, consultaEstado.Count());
-                        consultaEstado.mostrarEnvio(envioSeleccionado);
+                        ConsultaEstadoCuenta consultaEstadoCuenta = new ConsultaEstadoCuenta(enviosEstadoCuenta);
+                        consultaEstadoCuenta.mostrarEstado();
                     }
                     else
                     {
                         Console.WriteLine("Usted no tiene envios a su nombre'");
-                    }*/
+                    }
 
+                    Console.WriteLine("");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
                     Console.Clear();
