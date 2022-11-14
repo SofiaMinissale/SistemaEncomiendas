@@ -1,4 +1,2 @@
-id_envio;usuario;estado;peso;origen;destino;cuit;importe;estado_pago
-1;20306578636768;Ingresado en sistema;12;Norte,Corrientes,Mercedes,PRIMERO DE MAYO,48 ALTOS;Metropolitana,Buenos Aires,General Arenales,Paunero,490;40900800;12900;Impago
-2;20306578636768;Ingresado en sistema;3;Norte,Chaco,Sargento Cabral,JESUS CARRANZA,139;Norte,Catamarca,Ancasti,2,2;39961099;2250
-3;20306578636768;Ingresado en sistema;1;Metropolitana,Buenos Aires,25 de mayo,1,1;Metropolitana,Buenos Aires,25 de mayo,1,1;23213123;5350
+id_envio;cuit;tipo_envio;prioridad;estado;peso;origen;destino;costo;documento_destinatario;nombre_destinatario;apellido_destinatario;estado_pago;fecha_creacion
+1;20306578636768;Nacional;NORMAL;Ingresado en sistema;4.6;Metropolitana,CABA,Ciudad de Buenos Aires,AV INDEPENDENCIA,511 A;Centro,La Pampa,Utracan,OCAMPO 254-B;9500;12333444;Juan;Perez;IMPAGO;2022-11-14

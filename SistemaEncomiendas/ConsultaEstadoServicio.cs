@@ -6,53 +6,44 @@ using System.Threading.Tasks;
 
 namespace SistemaEncomiendas
 {
-    internal class ConsultaEstadoServicio
+    public class ConsultaEstadoServicio
     {
-        public int numeroSeguimiento { get; set; }
-        private string archivoDatosEnvios = "../../../envios.txt";
 
-        public string consultarEstadoSolicitud()
-        {
-            mostrarOrdenServicio();
-            int numeroIngresado = Utils.solicitarNumeroEnvioExistente();
-            return traerEstadoEnvio(numeroIngresado);
+        List<Envio> envios { get; set; }
 
-        }
-        private void mostrarOrdenServicio()
-        {
-            Console.WriteLine("Ingrese el numero de seguimiento de la orden de servicio que desea consultar");
+        public ConsultaEstadoServicio(List<Envio> envios) {
+            this.envios = envios;
         }
 
-        private string traerEstadoEnvio(int numeroSeguimiento)
+        public void mostrarOpciones()
         {
-            string estado = null;
-            string direccion = null;
-            string numeroOrdenServicio = null;
-            var stream = File.OpenRead(archivoDatosEnvios);
-            var reader = new StreamReader(stream);
-
-            while (!reader.EndOfStream)
+            Console.WriteLine("Sus envios son:");
+            Console.WriteLine("");
+            var enviosConIndice = this.envios.Select((value, index) => (value, index));
+            foreach (var item in enviosConIndice)
             {
-                var linea = reader.ReadLine();
-
-                string[] datos = linea.Split(';');
-
-                if (int.Parse(datos[0]).Equals(numeroSeguimiento))
-                {
-                    estado = datos[2];
-                    direccion = datos[5];
-                    numeroOrdenServicio = datos[0];
-
-                }
+                var index = item.index + 1;
+                Envio envio = item.value;
+                Console.WriteLine($"{index} - Nro Seguimiento: {envio.IdOrdenServicio}, Fecha: {envio.fechaCreacion.ToString("yyyy-MM-dd")}");
             }
-
-            stream.Close();
-
-            return ("Número orden de servicio:") + numeroOrdenServicio +
-                   (", Estado Orden de Servicio:") + estado +
-                   (", Localidad Destino:") + direccion;
-
+            Console.WriteLine("");
         }
 
+        public void mostrarEnvio(int seleccion)
+        {
+            Envio envio = this.envios.ElementAt(seleccion - 1);
+            Console.Clear();
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("           ESTADO DE SERVICIO");
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine($"Fecha: {envio.fechaCreacion.ToString("yyyy-MM-dd")}");
+            Console.WriteLine($"Orden: {envio.IdOrdenServicio}");
+            Console.WriteLine($"Estado: {envio.estado}");
+            Console.WriteLine($"Destinatario: {envio.documenoDestinatario} - {envio.nombreDestinatario} {envio.apellidoDestinatario}");
+            Console.WriteLine($"Destino: {envio.destino}");
+
+
+        }
     }
 }

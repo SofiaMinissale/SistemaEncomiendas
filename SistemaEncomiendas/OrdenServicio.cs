@@ -160,17 +160,17 @@ namespace SistemaEncomiendas
 
             //SE PERSISTEN DATOS
             Envio envio = new Envio(
-               INGRESADO_EN_SISTEMA,
-               cliente.cuit,
-               peso,
-               prioridad,
-               tipoEnvio,
-               origen.ToString(),
-               destino.ToString(),
-               nombreDestinatario,
-               apellidoDestinatario,
-               documentoDestinatario,
-               importe
+                tipoEnvio,
+                prioridad,
+                cliente.cuit,
+                INGRESADO_EN_SISTEMA,
+                peso,
+                origen.ToString(),
+                destino.ToString(),
+                importe,
+                documentoDestinatario,
+                nombreDestinatario,
+                apellidoDestinatario
                );
 
             return envio;
@@ -182,6 +182,7 @@ namespace SistemaEncomiendas
             Console.WriteLine("       RESUMEN DE SU SOLICITUD");
             Console.WriteLine("--------------------------------------");
 
+            Console.WriteLine($"* Numero de seguimiento: {envio.calcularIdOrdenServicio()}");
             Console.WriteLine($"* Tipo de envío: {envio.tipoEnvio}");
             Console.WriteLine($"* Prioridad: {envio.prioridad}");
             Console.WriteLine($"* Origen: {envio.origen}");

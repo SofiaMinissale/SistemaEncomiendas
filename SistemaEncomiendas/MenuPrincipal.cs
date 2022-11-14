@@ -58,15 +58,20 @@ namespace SistemaEncomiendas
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("          CONSULTA ESTADO DE  SERVICIO");
                     Console.WriteLine("------------------------------------------");
-                    ConsultaEstadoServicio consulta = new ConsultaEstadoServicio();
-                    string estado = consulta.consultarEstadoSolicitud();
-                    Console.Clear();
-                    Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("           ESTADO DE SERVICIO");
-                    Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("");
-                    Console.WriteLine($"fecha de solicitud de servicio: {DateTime.Today}");
-                    Console.WriteLine($"{estado}");
+                    List<Envio> enviosUsuario = Envio.consultarEnvioCuitUsuario(cliente.cuit);
+                    ConsultaEstadoServicio consulta = new ConsultaEstadoServicio(enviosUsuario);
+                    if (enviosUsuario.Count() > 0)
+                    {
+                        consulta.mostrarOpciones();
+                        Console.WriteLine("");
+                        Console.WriteLine("Seleccione la opcion que desee consultar.");
+                        var envioSeleccionado = Utils.solcitarNumeroEntre(1, enviosUsuario.Count());
+                        consulta.mostrarEnvio(envioSeleccionado);
+                    } else
+                    {
+                        Console.WriteLine("Usted no tiene envios a su nombre'");
+                    }
+                        
                     Console.WriteLine("");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
