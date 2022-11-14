@@ -83,7 +83,20 @@ namespace SistemaEncomiendas
                     Console.WriteLine("        ESTADO DE CUENTA");
                     Console.WriteLine("------------------------------------------");
 
-                    //METODO RESUMEN ESTADO DE CUENTA 
+                    List<Envio> estadoCuenta = Envio.consultarEnvioCuitUsuario(cliente.cuit);
+                    ConsultaEstadoServicio consultaEstado = new ConsultaEstadoServicio(estadoCuenta);
+                   /* if (estadoCuenta.Count() > 0)
+                    {
+                        consultaEstado.mostrarOpciones();
+                        Console.WriteLine("");
+                        Console.WriteLine("Seleccione la opcion que desee consultar.");
+                        var envioSeleccionado = Utils.solcitarNumeroEntre(1, consultaEstado.Count());
+                        consultaEstado.mostrarEnvio(envioSeleccionado);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Usted no tiene envios a su nombre'");
+                    }*/
 
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
