@@ -36,11 +36,22 @@ namespace SistemaEncomiendas
                     Envio solicitudOrdenServicio = OrdenServicio.cargarDatos(cliente);
                     Console.Clear();
                     OrdenServicio.mostrarResumenSolicitud(solicitudOrdenServicio);
+                    Console.WriteLine("Pulse 1 para confirmar solicitud y volver al menu principal");
+                    Console.WriteLine("Pulse 2 para cancelar solicitud y volver al menu principal");
+                    var seleccion = Utils.solcitarNumeroEntre(1, 2);
 
-                    Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
-                    Console.ReadKey();
-                    Console.Clear();
-                    MenuPrincipal.mostrar(cliente);
+                    switch (seleccion)
+                    {
+                        case 1:
+                            solicitudOrdenServicio.cargarEnvioEnTXTEnvios();
+                            Console.Clear();
+                            MenuPrincipal.mostrar(cliente);
+                            break;
+                        case 2:
+                            Console.Clear();
+                            MenuPrincipal.mostrar(cliente);
+                            break;
+                    }
                     break;
                 case 2:
                    /* if (cliente.idEnvio == null)

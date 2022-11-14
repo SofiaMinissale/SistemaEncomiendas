@@ -3,52 +3,78 @@ namespace SistemaEncomiendas
 {
 	public class Tarifa
 	{
+		private static string archivoTarifas = @"../../../tarifas.csv";
+
 		public Tarifa()
 		{
 		}
 
 		public String Tipo { get; set; }
-		public double Peso { get; set; }
-		public decimal Importe { get; set; }
+		public String Peso { get; set; }
+		public String Importe { get; set; }
 
-		//CSV
-		//Tipo, pesoMax, importe
-		//local, 0.5, 350
-		//local, 10, 3500
-		//local, 20, 4200
-		//local, 30, 5250
-		//provincial, 0.5, 550
-		//provincial, 10, 5500
-		//provincial, 20, 6600
-		//provincial, 30, 8250
-		//regional, 0.5, 750
-		//regional, 10, 7500
-		//regional, 20, 9000
-		//regional, 30, 11250
-		//nacional, 0.5, 950
-		//nacional, 10, 9500
-		//nacional, 20, 11400
-		//nacional, 30, 14250
-		//limitrofes, 0.5, 1620
-		//limitrofes, 10, 16200
-		//limitrofes, 20, 19440
-		//limitrofes, 30, 24300
-		//resto america latina, 0.5, 2900
-		//resto america latina, 10, 29000
-		//resto america latina, 20, 34800
-		//resto america latina, 30, 43500
-		//america del norte, 0.5, 5400
-		//america del norte, 10, 54000
-		//america del norte, 20, 64800
-		//america del norte, 30, 81000
-		//europa, 0.5, 8200
-		//europa, 10, 82000
-		//europa, 20, 98400
-		//europa, 30, 123000
-		//asia, 0.5, 12000
-		//asia, 10, 120000
-		//asia, 20, 144000
-		//asia, 30, 180000
-	}
+		public static List<Tarifa> listar()
+		{
+			List<Dictionary<String,String>> rows = CSVReader.read(archivoTarifas, ";");
+
+			List<Tarifa> tarifas = rows.Select(row => new Tarifa()
+			{
+				Tipo = row["tipo"],
+				Peso = row["peso"],
+				Importe = row["importe"]
+			}
+			).ToList<Tarifa>();
+
+			return tarifas;
+		}
+
+		public static String calculatTipoTarifa(String tipoEnvio, Direccion origen, Direccion destino)
+        {
+            String tipoTarifa = null;
+
+            if (String.Equals(tipoEnvio, "NACIONAL"))
+            {
+                if (String.Equals(origen.Region, destino.Region))
+                {
+                    if (String.Equals(origen.Provincia, destino.Provincia))
+                    {
+                        if (String.Equals(origen.Localidad, destino.Localidad))
+                            tipoTarifa = "local";
+                        else
+                            tipoTarifa = "provincial";
+                    }
+                    else
+                        tipoTarifa = "regional";
+                }
+                else
+                    tipoTarifa = "nacional";
+            }
+            else
+            {
+                switch (destino.Region)
+                {
+                    case "Limitrofe":
+                        tipoTarifa = "limitrofes";
+                        break;
+                    case "America Latina":
+                        tipoTarifa = "resto america latina";
+                        break;
+                    case "America del Norte":
+                        tipoTarifa = "america del norte";
+                        break;
+                    case "Europa":
+                        tipoTarifa = "europa";
+                        break;
+                    case "Asia":
+                        tipoTarifa = "asia";
+                        break;
+
+                }
+            }
+
+            return tipoTarifa;
+        }
+    }
+
 }
 

@@ -37,7 +37,9 @@ namespace SistemaEncomiendas
             string destino,
             string nombreDestinatario,
             string apellidoDestinatario,
-            int documentoReceptor)
+            int documentoReceptor,
+            double costo
+            )
         {
             this.estado = estado;
             this.cuitUsuario = cuitUsuario;
@@ -49,6 +51,7 @@ namespace SistemaEncomiendas
             this.nombreDestinatario = nombreDestinatario;
             this.apellidoDestinatario = apellidoDestinatario;
             this.documenoDestinatario = documentoReceptor;
+            this.costo = costo;
         }
 
         public void asignarNumeroDeSeguimiento()

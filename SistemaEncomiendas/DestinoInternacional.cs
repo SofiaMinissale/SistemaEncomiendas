@@ -34,6 +34,8 @@ namespace SistemaEncomiendas
 					direccion.Region = datos[0];
 					direccion.Provincia = datos[1];
 					direccion.Localidad = datos[2];
+					direccion.Calle = "";
+					direccion.Altura = "";
 
 					destinoInternacional.Direccion = direccion;
 					destinosInternacionales.Add(destinoInternacional);
