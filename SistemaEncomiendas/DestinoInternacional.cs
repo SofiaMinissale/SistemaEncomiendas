@@ -30,10 +30,12 @@ namespace SistemaEncomiendas
 
                     var destinoInternacional = new DestinoInternacional();
                     var direccion = new Direccion();
+					direccion.Region = datos[0];
+					direccion.Provincia = datos[1];
+					direccion.Localidad = datos[2];
+					direccion.Calle = "";
+					direccion.Altura = "";
 
-                    direccion.Region = datos[0];
-                    direccion.Provincia = datos[1];
-                    direccion.Localidad = datos[2];
 
                     destinoInternacional.Direccion = direccion;
                     destinosInternacionales.Add(destinoInternacional);

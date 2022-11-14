@@ -34,6 +34,9 @@ namespace SistemaEncomiendas
 
             string tipoEnvio = null;
 
+            bool retiroEnPuerta = false;
+            bool entregaEnPuerta = false;
+
             Console.WriteLine(" ");
 
             //PESO
@@ -67,6 +70,7 @@ namespace SistemaEncomiendas
             {
                 case 1:
                     origen = cargarDireccionNacional();
+                    retiroEnPuerta = true;
                     break;
                 case 2:
                     origen = seleccionarSucursal();
@@ -100,6 +104,7 @@ namespace SistemaEncomiendas
                     {
                         case 1:
                             destino = cargarDireccionNacional();
+                            entregaEnPuerta = true;
                             break;
                         case 2:
                             destino = seleccionarSucursal();
@@ -151,6 +156,8 @@ namespace SistemaEncomiendas
             Console.WriteLine("Ingrese el DNI, del destinatario");
             int documentoDestinatario = Utils.solicitarDocumento();
 
+            double importe = calcularImporte(tipoEnvio, origen, destino, peso, prioridad, retiroEnPuerta, entregaEnPuerta);
+
             //SE PERSISTEN DATOS
             Envio envio = new Envio(
                INGRESADO_EN_SISTEMA,
@@ -162,9 +169,10 @@ namespace SistemaEncomiendas
                destino.ToString(),
                nombreDestinatario,
                apellidoDestinatario,
-               documentoDestinatario
+               documentoDestinatario,
+               importe
                );
-            envio.cargarEnvioEnTXTEnvios();
+           
             return envio;
         }
 
@@ -363,6 +371,53 @@ namespace SistemaEncomiendas
             var destinoSeleccionado = destinosFiltrados.ElementAt(opcionSeleccionada - 1);
             return destinoSeleccionado.Direccion;
 
+        }
+
+        public static double calcularImporte(String tipoEnvio, Direccion origen, Direccion destino, double peso, String prioridad, bool retiroEnPuerta, bool entregaEnPuerta)
+        {
+            String tipoTarifa = Tarifa.calculatTipoTarifa(tipoEnvio, origen, destino);
+            List<Tarifa> tarifas = Tarifa.listar();
+
+            double importe = 0;
+
+            var tarifasAgrupadas = tarifas.GroupBy(tarifa => tarifa.Tipo);
+            foreach(var group in tarifasAgrupadas)
+            {
+                if(String.Equals(group.Key, tipoTarifa)){
+
+                    var orderedGroup = group.OrderBy(x => double.Parse(x.Peso));
+                    foreach (Tarifa tarifa in orderedGroup)
+                    {
+                        double pesoTarifa = double.Parse(tarifa.Peso);
+                        if(peso < pesoTarifa)
+                        {
+                            importe = double.Parse(tarifa.Importe);
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+
+            if(String.Equals(prioridad, "URGENTE"))
+            {
+                double adicional = importe * 0.5;
+                if (adicional > 15000)
+                    importe = importe + 15000;
+                else
+                    importe = importe + adicional;
+            }
+
+            if (retiroEnPuerta) {
+                importe = importe + 3500;
+            }
+
+            if (entregaEnPuerta)
+            {
+                importe = importe + 1500;
+            }
+
+            return importe;
         }
 
     }
