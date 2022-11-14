@@ -175,6 +175,18 @@ namespace SistemaEncomiendas
             return nroIngresado;
 
         }
+        public static List<int> parsearEnvios(string listaEnvios)
+        {
+            List<int> envios = new List<int>();
+
+            foreach (var envio in envios)
+            {
+                int numeroEnvio = int.Parse(listaEnvios);
+                envios.Add(numeroEnvio);
+            }
+
+            return envios;
+        }
 
     }
 }

@@ -44,28 +44,26 @@ namespace SistemaEncomiendas
                     MenuPrincipal.mostrar(cliente);
                     break;
                 case 2:
-                    Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("     CONSULTAR ESTADO DE SERVICIO");
-                    Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("");
+                   /* if (cliente.idEnvio == null)
+                    {
+                        Console.WriteLine("Usted no registra ordenes de servicio");
+                        Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
+                        Console.ReadKey();
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                    }*/
 
-                    //if (cliente.IdOrdenServicio == null)
-                    //{
-                    //    Console.WriteLine("USTED NO TIENE ENVIOS PARA MOSTRAR");
-                    //    Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
-                    //    Console.ReadKey();
-                    //    Console.Clear();
-                    //    MenuPrincipal.mostrar(cliente);
-                    //    break;
-                    //}
-                    
                     Console.Clear();
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("           ESTADO DE SU SERVICIO");
                     Console.WriteLine("------------------------------------------");
 
-                    //METODO RESUMEN CONSULTA ESTADO DE SERVICIO 
-
+                    List<int> envios = Utils.parsearEnvios(cliente.idEnvio);
+                    ConsultaEstadoServicio consulta = new ConsultaEstadoServicio();
+                    string estado = consulta.consultar(envios);
+                    Console.Clear();
+                    Console.WriteLine($"EL ESTADO DE SU ENVIO ES: {estado}");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
                     Console.Clear();

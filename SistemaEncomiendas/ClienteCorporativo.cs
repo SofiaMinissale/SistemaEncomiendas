@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
+
 namespace SistemaEncomiendas
 {
-	public class ClienteCorporativo
-	{
+    public class ClienteCorporativo
+    {
 
         public string cuit { get; set; }
         public string nombreUsuario { get; set; }
-
+        public string idEnvio { get; set; }
 
         public ClienteCorporativo()
         {
@@ -16,42 +18,50 @@ namespace SistemaEncomiendas
         {
             this.cuit = login.cuit;
             this.nombreUsuario = login.nombreUsuario;
+            this.idEnvio = idEnvio;
+
         }
 
-        //public string archivoDatosUsuarios = "../../../usuarios.csv";
+        public string archivoDatosUsuarios = "../../../usuarios.csv";
 
-        //public ClienteCorporativo traerDatosCliente(String usuario)
-        //{
-        //    this.nombreUsuario = usuario;
+        public ClienteCorporativo traerDatosCliente(String usuario)
+        {
+            this.nombreUsuario = usuario;
+            this.idEnvio = idEnvio;
 
-        //    var stream = File.OpenRead(archivoDatosUsuarios);
-        //    var reader = new StreamReader(stream);
 
-        //    var counter = 0;
+            var stream = File.OpenRead(archivoDatosUsuarios);
+            var reader = new StreamReader(stream);
 
-        //    while (!reader.EndOfStream)
-        //    {
-        //        var linea = reader.ReadLine();
+            var counter = 0;
 
-        //        if (counter > 0) {
-        //            string[] datos = linea.Split(';');
+            while (!reader.EndOfStream)
+            {
+                var linea = reader.ReadLine();
 
-        //            if (datos[0].Equals(usuario))
-        //            {
-        //                this.nombreUsuario = usuario;
+                if (counter > 0)
+                {
+                    string[] datos = linea.Split(';');
 
-        //                break;
-        //            }
-        //        }
+                    if (datos[1].Equals(usuario))
+                    {
+                        this.nombreUsuario = usuario;
+                        this.idEnvio = datos[0];
 
-        //        counter++;
-        //    }
+                        break;
+                    }
+                }
 
-        //    stream.Close();
+                counter++;
+            }
 
-        //    return this;
-        //}
+            stream.Close();
+
+            return this;
+        }    
+
+      }
     }
 
-}
+
 
