@@ -21,7 +21,7 @@ namespace SistemaEncomiendas
 
         }
 
-        public string archivoDatosUsuarios = "../../../envios.csv";
+        public string archivoDatosUsuarios = "../../../envios.txt";
 
         public ClienteCorporativo traerDatosCliente(String nroSeguimiento)
         {

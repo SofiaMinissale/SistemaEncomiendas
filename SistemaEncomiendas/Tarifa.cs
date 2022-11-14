@@ -92,7 +92,7 @@ namespace SistemaEncomiendas
                     foreach (Tarifa tarifa in orderedGroup)
                     {
                         double pesoTarifa = double.Parse(tarifa.Peso);
-                        if (peso < pesoTarifa)
+                        if (peso <= pesoTarifa)
                         {
                             importe = double.Parse(tarifa.Importe);
                             break;

@@ -23,9 +23,11 @@ namespace SistemaEncomiendas
         public string apellidoDestinatario { get; set;}
         public int documenoDestinatario { get; set; }
 
+      
 
         private string archivoDatosEnvios = "../../../envios.txt";
         private string archivoDatosClientes = @"../../../clientes_corporativos.txt";
+        private string archivoDatosEnv = "../../../envios.csv";
 
         public Envio(
             string estado,
@@ -140,7 +142,33 @@ namespace SistemaEncomiendas
             this.IdOrdenServicio = IdOrdenServicio + 1;
         }
 
-       
+    
+        public static List<Envio> listarOrdenesServicio()
+        {
+            var stream = File.OpenRead(archivoDatosEnvios);
+            var reader = new StreamReader(stream);
+
+            var envios = new List<Envio>();
+
+            var counter = 0;
+
+            while (!reader.EndOfStream)
+            {
+                var linea = reader.ReadLine();
+
+                if (counter > 0)
+                {
+                    string[] datos = linea.Split(';');
+
+                }
+            }
+
+            stream.Close();
+
+            return envios;
+        }
+
+
 
     }
 }
