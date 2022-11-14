@@ -30,6 +30,7 @@ namespace SistemaEncomiendas
         private string traerEstadoEnvio(int numeroSeguimiento)
         {
             string estado = null;
+            string destino = null;
             var stream = File.OpenRead(archivoDatosEnvios);
             var reader = new StreamReader(stream);
 
@@ -42,15 +43,17 @@ namespace SistemaEncomiendas
                 if (int.Parse(datos[0]).Equals(numeroSeguimiento))
                 {
                     estado = datos[2];
+                    destino = datos[5];
+
                 }
             }
 
             stream.Close();
 
-            return estado;
+            return estado + destino;
         }
 
-        public static void mostrarEstadoServicio(Envio envio)
+        /*public static void mostrarEstadoServicio(Envio envio)
         {
             Console.WriteLine("------------------------------------------");
             Console.WriteLine("           ESTADO DE SERVICIO");
@@ -58,12 +61,12 @@ namespace SistemaEncomiendas
             Console.WriteLine("");
             Console.WriteLine($" fecha de solicitud: {DateTime.Today}");
             Console.WriteLine($"* Numero de orden de servicio: ");
-            Console.WriteLine($"* Estado de servicio: ");
+            Console.WriteLine($"* Estado de servicio: }");
             Console.WriteLine($"* Nombre y apellido del receptor:");
             Console.WriteLine($"* Destino:");
             Console.WriteLine("");
 
-        }
+        }*/
 
 
     }

@@ -45,25 +45,32 @@ namespace SistemaEncomiendas
                     break;
                 case 2:
                    /* if (cliente.idEnvio == null)
-                    {
-                        Console.WriteLine("Usted no registra ordenes de servicio");
-                        Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
-                        Console.ReadKey();
-                        Console.Clear();
-                        MenuPrincipal.mostrar(cliente);
-                        break;
-                    }*/
+                     {
+                     Console.WriteLine("------------------------------------------");
+                     Console.WriteLine("           CONSULTA ESTADO DE  SERVICIO");
+                     Console.WriteLine("------------------------------------------");
+                     Console.WriteLine(" ");
+                     Console.WriteLine("Usted no registra ordenes de servicio");
+                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
+                     Console.ReadKey();
+                     Console.Clear();
+                     MenuPrincipal.mostrar(cliente);
+                     break;
+                     }*/
 
                     Console.Clear();
                     Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("           ESTADO DE SU SERVICIO");
+                    Console.WriteLine("          CONSULTA ESTADO DE  SERVICIO");
                     Console.WriteLine("------------------------------------------");
-
-                   // List<int> envios = Utils.parsearEnvios(cliente.idEnvio);
                    ConsultaEstadoServicio consulta = new ConsultaEstadoServicio();
                     string estado = consulta.consultarEstadoSolicitud(1);
                     Console.Clear();
-                    Console.WriteLine($"EL ESTADO DE SU ENVIO ES: {estado}");
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("           ESTADO DE SERVICIO");
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("");
+                    Console.WriteLine($"fecha de solicitud de servicio: {DateTime.Today}");
+                    Console.WriteLine($"Estado de servicio: {estado}");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
                     Console.Clear();
