@@ -43,20 +43,6 @@ namespace SistemaEncomiendas
                     MenuPrincipal.mostrar(cliente);
                     break;
                 case 2:
-                    /* if (cliente.idEnvio == null)
-                      {
-                      Console.WriteLine("------------------------------------------");
-                      Console.WriteLine("           CONSULTA ESTADO DE  SERVICIO");
-                      Console.WriteLine("------------------------------------------");
-                      Console.WriteLine(" ");
-                      Console.WriteLine("Usted no registra ordenes de servicio");
-                      Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
-                      Console.ReadKey();
-                      Console.Clear();
-                      MenuPrincipal.mostrar(cliente);
-                      break;
-                      }*/
-
                     Console.Clear();
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("          CONSULTA ESTADO DE  SERVICIO");
@@ -69,7 +55,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("");
                     Console.WriteLine($"fecha de solicitud de servicio: {DateTime.Today}");
-                    Console.WriteLine($"Estado de servicio: {estado}");
+                    Console.WriteLine($"{estado}");
                     Console.WriteLine("");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
@@ -86,7 +72,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
                     Console.ReadKey();
                     Console.Clear();
-                    // MenuPrincipal.mostrar();
+                    MenuPrincipal.mostrar(cliente);
                     break;
                 case 4:
                     Console.WriteLine("CERRANDO SESION, pulse una tecla para continuar");

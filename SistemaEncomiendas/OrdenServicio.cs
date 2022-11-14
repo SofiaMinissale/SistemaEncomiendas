@@ -4,7 +4,7 @@ namespace SistemaEncomiendas
     public class OrdenServicio
     {
         private static string INGRESADO_EN_SISTEMA = "Ingresado en sistema";
-   
+
         public string nombreUsuario { get; set; }
         public long cuit { get; set; }
         public double peso { get; set; }
@@ -74,7 +74,7 @@ namespace SistemaEncomiendas
             }
 
             Console.Clear();
-           
+
             //DIRECCION DESTINO Y DATOS DESTINATARIO
 
             Console.Clear();
@@ -169,7 +169,7 @@ namespace SistemaEncomiendas
         }
 
         public static void mostrarResumenSolicitud(Envio envio)
-        { 
+        {
             Console.WriteLine("--------------------------------------");
             Console.WriteLine("       RESUMEN DE SU SOLICITUD");
             Console.WriteLine("--------------------------------------");
@@ -313,7 +313,7 @@ namespace SistemaEncomiendas
 
         public static Direccion cargarDireccionInternacional()
         {
-   
+
             int opcionSeleccionada;
 
             // FLUJO SELECCION DE DESTINO INTERNACIONAL
@@ -362,7 +362,7 @@ namespace SistemaEncomiendas
             opcionSeleccionada = Utils.solcitarNumeroEntre(1, destinosFiltrados.Count());
             var destinoSeleccionado = destinosFiltrados.ElementAt(opcionSeleccionada - 1);
             return destinoSeleccionado.Direccion;
-        
+
         }
 
     }
