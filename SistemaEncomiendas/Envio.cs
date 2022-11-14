@@ -25,7 +25,7 @@ namespace SistemaEncomiendas
 
 
         private string archivoDatosEnvios = "../../../envios.txt";
-        private string archivoDatosClientes = @"../../../clientes_corporativos.txt";
+    
 
         public Envio(
             string estado,
@@ -113,39 +113,6 @@ namespace SistemaEncomiendas
 
                 writer.Close();
             }
-
-        }
-
-        public void cargarEnvioEnTXTClientes(string nombreUsuario, int numeroSeguimientoNuevoEnvio)
-        {
-
-            //string estado = null;
-            //var stream = File.OpenRead(archivoDatosClientes);
-            //var reader = new StreamReader(stream);
-            //int lineToEdit = 1;
-
-            ////Datos a sobreescribir
-            //string usuario = null;
-            //string direccion = null;
-            //string IdOrdenServicio = null;
-
-            //while (!reader.EndOfStream)
-            //{
-            //    var linea = reader.ReadLine();
-
-            //    string[] datos = linea.Split(';');
-
-            //    if (datos[0].Equals(nombreUsuario))
-            //    {
-            //        usuario = datos[0];
-            //        IdOrdenServicio = datos[1];
-            //        break;
-            //    }
-
-            //    lineToEdit++;
-            //}
-            //stream.Close();
-            //Utils.lineChanger($"{usuario};{direccion};{IdOrdenServicio}|{numeroSeguimientoNuevoEnvio}", archivoDatosClientes, lineToEdit);
 
         }
 

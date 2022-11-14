@@ -8,7 +8,7 @@ namespace SistemaEncomiendas
 
         public string cuit { get; set; }
         public string nombreUsuario { get; set; }
-        public string idEnvio { get; set; }
+        public string nroSeguimiento { get; set; }
 
         public ClienteCorporativo()
         {
@@ -18,16 +18,16 @@ namespace SistemaEncomiendas
         {
             this.cuit = login.cuit;
             this.nombreUsuario = login.nombreUsuario;
-            this.idEnvio = idEnvio;
+
 
         }
 
-        public string archivoDatosUsuarios = "../../../usuarios.csv";
+        public string archivoDatosUsuarios = "../../../envios.csv";
 
-        public ClienteCorporativo traerDatosCliente(String usuario)
+        public ClienteCorporativo traerDatosCliente(String nroSeguimiento)
         {
-            this.nombreUsuario = usuario;
-            this.idEnvio = idEnvio;
+            this.cuit = cuit;
+            this.nroSeguimiento = nroSeguimiento;
 
 
             var stream = File.OpenRead(archivoDatosUsuarios);
@@ -43,10 +43,10 @@ namespace SistemaEncomiendas
                 {
                     string[] datos = linea.Split(';');
 
-                    if (datos[1].Equals(usuario))
+                    if (datos[1].Equals(cuit))
                     {
-                        this.nombreUsuario = usuario;
-                        this.idEnvio = datos[0];
+                        this.cuit = cuit;
+                        this.nroSeguimiento = datos[0];
 
                         break;
                     }
@@ -58,10 +58,10 @@ namespace SistemaEncomiendas
             stream.Close();
 
             return this;
-        }    
+        }
 
-      }
     }
+}
 
 
 

@@ -14,7 +14,7 @@ namespace SistemaEncomiendas
         public string consultarEstadoSolicitud()
         {
             mostrarOrdenServicio();
-            int numeroIngresado = Utils.solicitarNumeroEnvioExistente(1);
+            int numeroIngresado = Utils.solicitarNumeroEnvioExistente();
             return traerEstadoEnvio(numeroIngresado);
 
         }
@@ -26,6 +26,8 @@ namespace SistemaEncomiendas
         private string traerEstadoEnvio(int numeroSeguimiento)
         {
             string estado = null;
+            string direccion = null;
+            string numeroOrdenServicio = null;
             var stream = File.OpenRead(archivoDatosEnvios);
             var reader = new StreamReader(stream);
 
@@ -38,13 +40,18 @@ namespace SistemaEncomiendas
                 if (int.Parse(datos[0]).Equals(numeroSeguimiento))
                 {
                     estado = datos[2];
-               
+                    direccion = datos[5];
+                    numeroOrdenServicio = datos[0];
+
                 }
             }
 
             stream.Close();
 
-            return estado;
+            return ("Número orden de servicio:") + numeroOrdenServicio +
+                   (", Estado Orden de Servicio:") + estado +
+                   (", Localidad Destino:") + direccion;
+
         }
 
     }

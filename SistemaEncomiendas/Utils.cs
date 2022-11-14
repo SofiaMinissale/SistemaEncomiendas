@@ -128,7 +128,7 @@ namespace SistemaEncomiendas
         public static bool nroSeguimientoValido(string nroSeguimiento)
         {
             
-            if (nroSeguimiento.Length != 5 && nroSeguimiento != "82884")
+            if (nroSeguimiento.Length !=5)
             {
                 return false;
             }
@@ -149,7 +149,7 @@ namespace SistemaEncomiendas
             File.WriteAllLines(fileName, arrLine);
         }
 
-        public static int solicitarNumeroEnvioExistente(int idEnvio)
+        public static int solicitarNumeroEnvioExistente()
         {
             bool esPrimerIntento = true;
             int nroIngresado;
@@ -169,24 +169,11 @@ namespace SistemaEncomiendas
 
                 esPrimerIntento = false;
             }
-            while (!(idEnvio != -1) || esNumeroValido == false);
+            while ((nroIngresado < 1 || nroIngresado > 10000 || esNumeroValido == false));
 
 
             return nroIngresado;
 
-        }
-        public static List<int> parsearEnvios(string listaEnvios)
-        {
-            List<int> envios = new List<int>();
-
-
-            foreach (var envio in envios)
-            {
-                int numeroEnvio = int.Parse(listaEnvios);
-                envios.Add(numeroEnvio);
-            }
-
-            return envios;
         }
 
     }
