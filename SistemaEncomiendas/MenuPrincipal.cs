@@ -59,9 +59,9 @@ namespace SistemaEncomiendas
                     Console.WriteLine("           ESTADO DE SU SERVICIO");
                     Console.WriteLine("------------------------------------------");
 
-                    List<int> envios = Utils.parsearEnvios(cliente.idEnvio);
-                    ConsultaEstadoServicio consulta = new ConsultaEstadoServicio();
-                    string estado = consulta.consultar(envios);
+                   // List<int> envios = Utils.parsearEnvios(cliente.idEnvio);
+                   ConsultaEstadoServicio consulta = new ConsultaEstadoServicio();
+                    string estado = consulta.consultarEstadoSolicitud(1);
                     Console.Clear();
                     Console.WriteLine($"EL ESTADO DE SU ENVIO ES: {estado}");
                     Console.WriteLine("Pulse cualquier tecla para volver al menu principal");

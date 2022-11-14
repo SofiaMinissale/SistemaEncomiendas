@@ -11,23 +11,20 @@ namespace SistemaEncomiendas
         public int numeroSeguimiento { get; set; }
         private string archivoDatosEnvios = "../../datos/envios.txt";
 
-        public string consultar(List<int> envios)
+        public string consultarEstadoSolicitud(int idEnvio)
         {
-            listarEnvios(envios);
-            int numeroIngresado = Utils.solicitarNumeroEnvioExistente(envios);
+            this.mostrarEnvio();
+            int numeroIngresado = 1;
             return traerEstadoEnvio(numeroIngresado);
 
         }
 
-        private void listarEnvios(List<int> envios)
+        private void mostrarEnvio()
         {
 
-            Console.WriteLine("Ingrese el número de la orden de servicio, que desea consultar");
+            Console.WriteLine("Ingrese el numero de la orden de servicio por la cual desea consultar");
 
-            foreach (var envio in envios)
-            {
-                Console.WriteLine($"Envio con numero de seguimiento {envio}");
-            }
+          
         }
 
         private string traerEstadoEnvio(int numeroSeguimiento)

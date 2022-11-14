@@ -149,7 +149,7 @@ namespace SistemaEncomiendas
             File.WriteAllLines(fileName, arrLine);
         }
 
-        public static int solicitarNumeroEnvioExistente(List<int> envios)
+        public static int solicitarNumeroEnvioExistente(int idEnvio)
         {
             bool esPrimerIntento = true;
             int nroIngresado;
@@ -169,7 +169,7 @@ namespace SistemaEncomiendas
 
                 esPrimerIntento = false;
             }
-            while (!(envios.IndexOf(nroIngresado) != -1) || esNumeroValido == false);
+            while (!(idEnvio != -1) || esNumeroValido == false);
 
 
             return nroIngresado;
@@ -178,6 +178,7 @@ namespace SistemaEncomiendas
         public static List<int> parsearEnvios(string listaEnvios)
         {
             List<int> envios = new List<int>();
+
 
             foreach (var envio in envios)
             {
