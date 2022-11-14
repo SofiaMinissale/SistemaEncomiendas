@@ -32,7 +32,7 @@ namespace SistemaEncomiendas
         {
             String tipoTarifa = null;
 
-            if (String.Equals(tipoEnvio, "NACIONAL"))
+            if (String.Equals(tipoEnvio, "Nacional"))
             {
                 if (String.Equals(origen.Region, destino.Region))
                 {
