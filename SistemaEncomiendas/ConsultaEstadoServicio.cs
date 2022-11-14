@@ -9,7 +9,7 @@ namespace SistemaEncomiendas
     internal class ConsultaEstadoServicio
     {
         public int numeroSeguimiento { get; set; }
-        private string archivoDatosEnvios = "../../datos/envios.txt";
+        private string archivoDatosEnvios = "../../../envios.txt";
 
         public string consultarEstadoSolicitud()
         {

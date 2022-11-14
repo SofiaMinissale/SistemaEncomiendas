@@ -1,2 +1,3 @@
 id_envio;usuario;estado;peso;origen;destino;cuit;importe;estado_pago
 1;20306578636768;Ingresado en sistema;12;Norte,Corrientes,Mercedes,PRIMERO DE MAYO,48 ALTOS;Metropolitana,Buenos Aires,General Arenales,Paunero,490;40900800;12900;Impago
+2;20306578636768;Ingresado en sistema;3;Norte,Chaco,Sargento Cabral,JESUS CARRANZA,139;Norte,Catamarca,Ancasti,2,2;39961099;2250
