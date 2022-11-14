@@ -74,7 +74,57 @@ namespace SistemaEncomiendas
 
             return tipoTarifa;
         }
-    }
 
+        public static double calcularImporte(String tipoEnvio, Direccion origen, Direccion destino, double peso, String prioridad, bool retiroEnPuerta, bool entregaEnPuerta)
+        {
+            String tipoTarifa = Tarifa.calculatTipoTarifa(tipoEnvio, origen, destino);
+            List<Tarifa> tarifas = Tarifa.listar();
+
+            double importe = 0;
+
+            var tarifasAgrupadas = tarifas.GroupBy(tarifa => tarifa.Tipo);
+            foreach (var group in tarifasAgrupadas)
+            {
+                if (String.Equals(group.Key, tipoTarifa))
+                {
+
+                    var orderedGroup = group.OrderBy(x => double.Parse(x.Peso));
+                    foreach (Tarifa tarifa in orderedGroup)
+                    {
+                        double pesoTarifa = double.Parse(tarifa.Peso);
+                        if (peso < pesoTarifa)
+                        {
+                            importe = double.Parse(tarifa.Importe);
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+
+            if (String.Equals(prioridad, "URGENTE"))
+            {
+                double adicional = importe * 0.5;
+                if (adicional > 15000)
+                    importe = importe + 15000;
+                else
+                    importe = importe + adicional;
+            }
+
+            if (retiroEnPuerta)
+            {
+                importe = importe + 3500;
+            }
+
+            if (entregaEnPuerta)
+            {
+                importe = importe + 1500;
+            }
+
+            return importe;
+        }
+
+    }
 }
+
 
