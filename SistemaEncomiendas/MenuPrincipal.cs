@@ -17,6 +17,7 @@ namespace SistemaEncomiendas
             Console.WriteLine("------------------------------------------");
             Console.WriteLine("INGRESA UN NUMERO PARA NAVEGAR EN EL MENU");
             Console.WriteLine("------------------------------------------");
+            Console.WriteLine("");
             Console.WriteLine("1 - Solicitar servicio");
             Console.WriteLine("2 - Consultar estado de servicio");
             Console.WriteLine("3 - Consultar estado de cuenta");
@@ -33,6 +34,7 @@ namespace SistemaEncomiendas
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("         SOLICITUD DE SERVICIO");
                     Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("");
                     Envio solicitudOrdenServicio = OrdenServicio.cargarDatos(cliente);
                     Console.Clear();
                     OrdenServicio.mostrarResumenSolicitud(solicitudOrdenServicio);

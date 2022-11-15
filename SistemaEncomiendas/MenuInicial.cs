@@ -37,16 +37,17 @@ namespace SistemaEncomiendas
                 Console.WriteLine("------------------------------------------");
                 Console.WriteLine("              INICIAR SESION");
                 Console.WriteLine("------------------------------------------");
+                Console.WriteLine("");
 
-                Console.WriteLine("Ingrese su número de CUIT:");
+                Console.WriteLine("INGRESE SU NUMERO DE CUIT:");
                 string cuit = Console.ReadLine();
-                Console.Clear();
+                Console.WriteLine("");
 
-                Console.WriteLine("Ingrese su Usuario");
+                Console.WriteLine("INGRESE SU NOMBRE DE USUARIO:");
                 nombreUsuario = Console.ReadLine();
-                Console.Clear();
+                Console.WriteLine("");
 
-                Console.WriteLine("Ingrese su contraseña");
+                Console.WriteLine("INGRESE SU CONTRASEÑA:");
                 string contraseña = Console.ReadLine();
                 Console.Clear();
 
@@ -56,7 +57,7 @@ namespace SistemaEncomiendas
                 esPrimerIntento = false;
             }
 
-            Console.WriteLine($"BIENVENIDO {nombreUsuario}");
+            Console.WriteLine($"BIENVENIDO {nombreUsuario}!");
 
             ClienteCorporativo cliente = new ClienteCorporativo(login);
             return cliente;

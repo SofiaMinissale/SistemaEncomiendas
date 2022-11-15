@@ -37,15 +37,13 @@ namespace SistemaEncomiendas
             bool retiroEnPuerta = false;
             bool entregaEnPuerta = false;
 
-            Console.WriteLine(" ");
-
             //PESO
-            Console.WriteLine("Por favor, ingrese el peso de su envio(KG)");
+            Console.WriteLine("INGRESE EL PESO DEL ENVIO (KG)");
             peso = Utils.solicitarPeso();
-            Console.Clear();
+            Console.WriteLine("");
 
             //PRIORIDAD DE ENVIO
-            Console.WriteLine("Seleccione la prioridad que desea darle al envío");
+            Console.WriteLine("SELECCIONE LA PRIORIDAD DEL ENVIO");
             Console.WriteLine("1 - Normal");
             Console.WriteLine("2 - Urgente (48hs)");
             numeroIngresado = Utils.solcitarNumeroEntre(1, 2);
@@ -58,11 +56,14 @@ namespace SistemaEncomiendas
                     prioridad = "URGENTE";
                     break;
             }
-
             Console.Clear();
 
-            // CARGA DE ORIGEN 
-            Console.WriteLine("Seleccione si el origen del envío es un domicilio particular o sucursal");
+            // CARGA DE ORIGEN
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("     SOLICITUD DE SERVICIO - ORIGEN");
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("SELECCIONE EL ORIGEN DEL ENVIO");
             Console.WriteLine("1 - Domicilio");
             Console.WriteLine("2 - Sucursal");
             numeroIngresado = Utils.solcitarNumeroEntre(1, 2);
@@ -76,27 +77,27 @@ namespace SistemaEncomiendas
                     origen = seleccionarSucursal();
                     break;
             }
-
-            Console.Clear();
-
-            //DIRECCION DESTINO Y DATOS DESTINATARIO
-
-            Console.Clear();
-            Console.WriteLine("------------------------------------------");
-            Console.WriteLine("SOLICITUD DE SERVICIO - DATOS DEL DESTINO");
-            Console.WriteLine("------------------------------------------");
             Console.WriteLine("");
 
+            //DIRECCION DESTINO
+            Console.Clear();
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("     SOLICITUD DE SERVICIO - DESTINO");
+            Console.WriteLine("------------------------------------------");
+
+
             //TIPO DE ENVIO 
-            Console.WriteLine("Seleccione si el alcance del envío es Nacional o Internacional");
+            Console.WriteLine("SELECCIONE EL TIPO DE ENVIO");
             Console.WriteLine("1 - Nacional ");
             Console.WriteLine("2 - Internacional");
+            Console.WriteLine("");
             numeroIngresado = Utils.solcitarNumeroEntre(1, 2);
             switch (numeroIngresado)
             {
                 case 1:
                     tipoEnvio = "Nacional";
-                    Console.WriteLine("Seleccione si el destino del envío es un domicilio particular o sucursal");
+                    Console.WriteLine("");
+                    Console.WriteLine("SELECCIONE EL DESTINO DEL ENVIO");
                     Console.WriteLine("1 - Domicilio");
                     Console.WriteLine("2 - Sucursal");
                     numeroIngresado = Utils.solcitarNumeroEntre(1, 2);
@@ -111,17 +112,25 @@ namespace SistemaEncomiendas
                             break;
                     }
 
-                    Console.Clear();
+                    Console.WriteLine("");
                     break;
                 case 2:
+                    Console.WriteLine("");
                     tipoEnvio = "Internacional";
                     destino = cargarDireccionInternacional();
+                    Console.WriteLine("");
                     break;
             }
 
+            //DATOS DESTINATARIO
+            Console.Clear();
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("   SOLICITUD DE SERVICIO - DESTINATARIO");
+            Console.WriteLine("------------------------------------------");
+
             //nombre
             Console.WriteLine(" ");
-            Console.WriteLine("Ingrese nombre del destinatario");
+            Console.WriteLine("INGRESE EL NOMBRE DEL DESTINATARIO");
             string nombreDestinatario;
             bool primerIntento = true;
             do
@@ -137,7 +146,7 @@ namespace SistemaEncomiendas
 
             //apellido
             Console.WriteLine(" ");
-            Console.WriteLine("Ingrese el apellido del destinatario");
+            Console.WriteLine("INGRESE EL APELLIDO DEL DESTINATARIO");
             string apellidoDestinatario;
             primerIntento = true;
             do
@@ -153,7 +162,7 @@ namespace SistemaEncomiendas
 
             //documento
             Console.WriteLine(" ");
-            Console.WriteLine("Ingrese el DNI, del destinatario");
+            Console.WriteLine("INGRESE EL DNI DEL DESTINATARIO");
             int documentoDestinatario = Utils.solicitarDocumento();
 
             double importe = Tarifa.calcularCostoTotal(
@@ -166,7 +175,7 @@ namespace SistemaEncomiendas
                 entregaEnPuerta
             );
 
-            //SE PERSISTEN DATOS
+            //SE CREA ENVIO
             Envio envio = new Envio(
                 tipoEnvio,
                 prioridad,
@@ -189,6 +198,7 @@ namespace SistemaEncomiendas
             Console.WriteLine("--------------------------------------");
             Console.WriteLine("       RESUMEN DE SU SOLICITUD");
             Console.WriteLine("--------------------------------------");
+            Console.WriteLine("");
 
             Console.WriteLine($"* Numero de seguimiento: {envio.calcularIdOrdenServicio()}");
             Console.WriteLine($"* Tipo de envío: {envio.tipoEnvio}");
@@ -212,7 +222,7 @@ namespace SistemaEncomiendas
 
             // SELECCIONAR REGION
             Console.WriteLine("");
-            Console.WriteLine("Seleccione region para la sucursal:");
+            Console.WriteLine("SELECCIONE REGION DE LA SUCURSAL DE ORIGEN DEL ENVIO");
             foreach (var item in sucursalesAgrupadasRegion.Select((value, index) => (value, index)))
             {
                 var index = item.index + 1;
@@ -227,7 +237,7 @@ namespace SistemaEncomiendas
             var sucursalesRegionSeleccionada = sucursalesAgrupadasRegion.ElementAt(opcionSeleccionada - 1);
             var sucursalesAgrupadasProvincia = sucursalesRegionSeleccionada.GroupBy(sucursal => sucursal.Direccion.Provincia);
             Console.WriteLine("");
-            Console.WriteLine("Seleccione provincia para la sucursal:");
+            Console.WriteLine("SELECCIONE PROVINCIA DE LA SUCURSAL DE ORIGEN DEL ENVIO");
             foreach (var item in sucursalesAgrupadasProvincia.Select((value, index) => (value, index)))
             {
                 var index = item.index + 1;
@@ -242,7 +252,7 @@ namespace SistemaEncomiendas
             var sucursalesProvinciaSeleccionada = sucursalesAgrupadasProvincia.ElementAt(opcionSeleccionada - 1);
             var sucursalesAgrupadasLocalidad = sucursalesProvinciaSeleccionada.GroupBy(sucursal => sucursal.Direccion.Localidad);
             Console.WriteLine("");
-            Console.WriteLine("Seleccione localidad para la sucursal:");
+            Console.WriteLine("SELECCIONE LOCALIDAD DE LA SUCURSAL DE ORIGEN DEL ENVIO");
             foreach (var item in sucursalesAgrupadasLocalidad.Select((value, index) => (value, index)))
             {
                 var index = item.index + 1;
@@ -256,7 +266,7 @@ namespace SistemaEncomiendas
             // SELECCIONAR SUCURSAL
             var sucursalesFiltradas = sucursalesAgrupadasLocalidad.ElementAt(opcionSeleccionada - 1);
             Console.WriteLine("");
-            Console.WriteLine("Seleccione la sucursal para el envio:");
+            Console.WriteLine("SELECCIONE LA DIRECCION DE LA SUCURSAL DE ORIGEN DEL ENVIO");
             foreach (var item in sucursalesFiltradas.Select((sucursal, index) => (sucursal, index)))
             {
                 var index = item.index + 1;
@@ -279,7 +289,7 @@ namespace SistemaEncomiendas
 
             // SELECCIONAR REGION
             Console.WriteLine("");
-            Console.WriteLine("Seleccione la region a la que pertenece la direccion:");
+            Console.WriteLine("SELECCIONE LA REGION DE ORIGEN DEL ENVIO");
             foreach (var item in localidadesAgrupadasRegion.Select((value, index) => (value, index)))
             {
                 var index = item.index + 1;
@@ -294,7 +304,7 @@ namespace SistemaEncomiendas
             var localidadesRegionSeleccionada = localidadesAgrupadasRegion.ElementAt(opcionSeleccionada - 1);
             var localidadesAgrupadasProvincia = localidadesRegionSeleccionada.GroupBy(localidad => localidad.Provincia);
             Console.WriteLine("");
-            Console.WriteLine("Seleccione la provincia a la que pertenece la direccion:");
+            Console.WriteLine("SELECCIONE LA PROVINCIA DE ORIGEN DEL ENVIO");
             foreach (var item in localidadesAgrupadasProvincia.Select((value, index) => (value, index)))
             {
                 var index = item.index + 1;
@@ -308,7 +318,7 @@ namespace SistemaEncomiendas
             // SELECCIONAR LOCALIDAD
             var localidadesProvinciaSeleccionada = localidadesAgrupadasProvincia.ElementAt(opcionSeleccionada - 1);
             Console.WriteLine("");
-            Console.WriteLine("Seleccione la localidad a la que pertenece la direccion:");
+            Console.WriteLine("SELECCIONE LA LOCALIDAD DE ORIGEN DEL ENVIO:");
             foreach (var item in localidadesProvinciaSeleccionada.Select((direccion, index) => (direccion, index)))
             {
                 var index = item.index + 1;
@@ -319,10 +329,12 @@ namespace SistemaEncomiendas
             opcionSeleccionada = Utils.solcitarNumeroEntre(1, localidadesProvinciaSeleccionada.Count());
             var direccion = localidadesProvinciaSeleccionada.ElementAt(opcionSeleccionada - 1);
 
-            Console.WriteLine("Cargar la calle:");
+            Console.WriteLine("");
+            Console.WriteLine("INGRESE LA CALLE DE ORIGEN");
             direccion.Calle = Console.ReadLine();
 
-            Console.WriteLine("Carga la altura:");
+            Console.WriteLine("");
+            Console.WriteLine("INGRESE LA ALTURA DE LA CALLE DE ORIGEN");
             direccion.Altura = Utils.solcitarNumeroEntre(1, 99999).ToString();
 
             return direccion;
@@ -339,7 +351,7 @@ namespace SistemaEncomiendas
 
             // SELECCIONAR REGION
             Console.WriteLine("");
-            Console.WriteLine("Seleccione region de destino:");
+            Console.WriteLine("SELECCIONE LA REGION DE DESTINO DEL ENVIO");
             foreach (var item in destinosInternacionesAgrupadosRegion.Select((value, index) => (value, index)))
             {
                 var index = item.index + 1;
@@ -354,7 +366,7 @@ namespace SistemaEncomiendas
             var paisesRegionSeleccionada = destinosInternacionesAgrupadosRegion.ElementAt(opcionSeleccionada - 1);
             var destinosAgrupadosPais = paisesRegionSeleccionada.GroupBy(destino => destino.Direccion.Provincia);
             Console.WriteLine("");
-            Console.WriteLine("Seleccione pais de destino:");
+            Console.WriteLine("SELECCIONE EL PAIS DE DESTINO DEL ENVIO");
             foreach (var item in destinosAgrupadosPais.Select((value, index) => (value, index)))
             {
                 var index = item.index + 1;
@@ -368,7 +380,7 @@ namespace SistemaEncomiendas
             // SELECCIONAR LOCALIDAD
             var destinosFiltrados = destinosAgrupadosPais.ElementAt(opcionSeleccionada - 1);
             Console.WriteLine("");
-            Console.WriteLine("Seleccione la localidad de destino:");
+            Console.WriteLine("SELECCIONE LA LOCALIDAD DE DESTINO DEL ENVIO");
             foreach (var item in destinosFiltrados.Select((value, index) => (value, index)))
             {
                 var index = item.index + 1;
