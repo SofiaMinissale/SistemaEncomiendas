@@ -1,3 +1,5 @@
 id_envio;cuit;tipo_envio;prioridad;estado;peso;origen;destino;costo;documento_destinatario;nombre_destinatario;apellido_destinatario;estado_pago;fecha_creacion
 1;20306578636768;Nacional;NORMAL;Ingresado en sistema;4.6;Metropolitana,CABA,Ciudad de Buenos Aires,AV INDEPENDENCIA,511 A;Centro,La Pampa,Utracan,OCAMPO 254-B;9500;12333444;Juan;Perez;PAGO;2022-11-14
 2;20306578636768;Internacional;NORMAL;Ingresado en sistema;4.6;Centro,Mendoza,Junin,IGNACIO ZARAGOZA,303;Asia,India,Mumbai,;129500;37654333;Franco;Burko;IMPAGO;2022-11-14
+3;20306578636768;Internacional;URGENTE;Ingresado en sistema;30;Metropolitana,CABA,Ciudad de Buenos Aires,Lavalleja,619;Limitrofe,Chile,Vina del Mar,;47825;89654125;Gordo;Falopero;IMPAGO;2022-11-14
+4;20306578636768;Internacional;URGENTE;Ingresado en sistema;11;Metropolitana,CABA,Ciudad de Buenos Aires,Lavalleja,619;Limitrofe,Bolivia,Cochabamba,;38960;58789654;Pachamama;ModoPresentacion;IMPAGO;2022-11-14
